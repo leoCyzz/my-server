@@ -1,26 +1,30 @@
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser')
-const mongoService = require('./services/mongoTest')
+const bodyParser = require('body-parser');
+// const mongoService = require('./services/mongoTest')
+const LdxSmart = require('./services/ldxSmart');
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended : false}))
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended : false}));
 
 app.get('/', function(req, res){
     res.send('Welcome to my Service');
 });
 
-app.get('/connect', function(req, res) {
-    // console.log(req);
-    const result = new mongoService();
-    const aaa = result.init();
-    console.log(aaa);
-    return res.status(200).json({
-        status: 'success',
-        result: aaa
-    });
+// --- LDX Smart Part Start ---
+app.get('/ls/getMenuData', function(req, res) {
+    let ldxSmartObj = new LdxSmart(req, res);
+    ldxSmartObj.getMenuData();
 });
 
+app.post('/ls/login', function(req, res) {
+    let ldxSmartObj = new LdxSmart(req, res);
+    ldxSmartObj.login();
+});
+
+// --- LDX Smart Part End ---
 app.listen(3000, function(){
     console.log('Service listening on port 3000');
 });
+
