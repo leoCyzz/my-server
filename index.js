@@ -22,6 +22,10 @@ app.post('/ls/login', function(req, res) {
     let ldxSmartObj = new LdxSmart(req, res);
     ldxSmartObj.login();
 });
+app.get('/ls/getPageConfig', function(req, res) {
+    let ldxSmartObj = new LdxSmart(req, res);
+    ldxSmartObj.getPageConfig();
+});
 
 // --- LDX Smart Part End ---
 app.listen(3000, function(){
