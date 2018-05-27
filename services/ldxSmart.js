@@ -92,118 +92,119 @@ const new_token = {
 
 const pageConfig = {
     mainPage: {
-        id: '1',
-        title: 'test-page',
-        name: 'pageName',
+        id: '',
+        title: 'Test Show Page',
+        author: 'admin',
+        creationTime: '2018-05-26',
+        name: 'testPage',
+        type: 'page',
+        controlType: 'FormGroup',
+        translate: '',
         children: [
             {
-                type: 'container',
                 name: 'formContainer',
-                control: {
-                    type: 'formGroup',
-                    disabled: false
-                },
+                type: 'container',
+                controlType: 'FormGroup',
+                translate: '',
+                visible: true,
+                disabled: false,
+                events: [],
                 children: [
                     {
                         type: 'form',
                         name: 'form1',
-                        control: {
-                            type: 'formGroup',
-                            disabled: false,
-                            value: '',
-                            validators: [
-                                {
-                                    type: 'compare',
-                                    name: 'compare',
-                                    controlNameA: 'password',
-                                    controlNameB: 'confirmPwd',
-                                    value: 6,
-                                    error: {
-                                        message: ''
-                                    }
-                                }
-                            ]
-                        },
+                        controlType: 'FormGroup',
+                        disabled: false,
+                        translate: '',
+                        visible: true,
+                        events: [],
+                        value: '',
                         children: [
                             {
                                 type: 'inputText',
                                 name: 'account',
-                                props: {
-                                    label: 'account',
-                                    translate: 'account'
-                                },
-                                control: {
-                                    type: 'formControl',
-                                    disabled: false,
-                                    required: true,
-                                    value: '',
-                                    validators: [
-                                        {
-                                            type: 'minLength',
-                                            name: 'minLength',
-                                            value: 6,
-                                            error: {
-                                                message: ''
-                                            }
+                                label: 'account',
+                                translate: 'account',
+                                controlType: 'FormControl',
+                                disabled: false,
+                                required: true,
+                                value: '',
+                                validators: [
+                                    {
+                                        type: 'minLength',
+                                        name: 'minLength',
+                                        value: 6,
+                                        error: {
+                                            message: ''
                                         }
-                                    ]
-                                }
+                                    }
+                                ]
                             },
                             {
                                 type: 'inputText',
                                 name: 'password',
+                                label: 'password',
+                                translate: 'password',
                                 props: {
-                                    label: 'password',
-                                    translate: 'password'
+                                    
                                 },
-                                control: {
-                                    type: 'formControl',
-                                    disabled: false,
-                                    required: true,
-                                    value: '',
-                                    validators: [
-                                        {
-                                            type: 'minLength',
-                                            name: 'minLength',
-                                            value: 6,
-                                            error: {
-                                                message: ''
-                                            }
+                                controlType: 'FormControl',
+                                disabled: false,
+                                required: true,
+                                value: '',
+                                validators: [
+                                    {
+                                        type: 'minLength',
+                                        name: 'minLength',
+                                        value: 6,
+                                        error: {
+                                            message: ''
                                         }
-                                    ]
-                                }
+                                    }
+                                ]
                             },
                             {
                                 type: 'inputText',
                                 name: 'confirmPwd',
+                                label: 'confirmPwd',
+                                translate: 'confirmPwd',
                                 props: {
-                                    label: 'confirmPwd',
-                                    translate: 'confirmPwd'
+                                    
                                 },
-                                control: {
-                                    type: 'formControl',
-                                    disabled: false,
-                                    required: true,
-                                    value: '',
-                                    validators: [
-                                        {
-                                            type: 'minLength',
-                                            name: 'minLength',
-                                            value: 6,
-                                            error: {
-                                                message: ''
-                                            }
+                                controlType: 'FormControl',
+                                disabled: false,
+                                required: true,
+                                value: '',
+                                validators: [
+                                    {
+                                        type: 'minLength',
+                                        name: 'minLength',
+                                        value: 6,
+                                        error: {
+                                            message: ''
                                         }
-                                    ]
-                                }
+                                    }
+                                ]
                             }
                         ]
+                    },
+                    {
+                        name: 'confirmbutton',
+                        type: 'button',
+                        controlType: '',
+                        translate: '',
+                        visible: true,
+                        disabled: false,
+                        label: 'confirm',
+                        children: []
                     }
                 ]
             }
-        ]
+        ],
+        actions: [],
+        dataTables: []
     },
-    modalpages: []
+    modalPages: []
 };
 
 class LdxSmart {
@@ -237,7 +238,20 @@ class LdxSmart {
         return self.res.status(200).json(res);
     }
 
-    getPageConfig() {
+    getShowPageConfig() {
+        let self = this;
+        const { id } = self.req.query;
+       
+        let res = { status: '', errMsg: '' };
+        if (id === '1') {
+            res =  { status: 'success', errMsg: '', page: pageConfig };
+        } else {
+            res =  { status: 'failed', errMsg: '错误ID'};
+        }
+        return self.res.status(200).json(res);
+    }
+
+    getEditPageConfig() {
         let self = this;
         const { id } = self.req.query;
        

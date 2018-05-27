@@ -33,9 +33,14 @@ app.post('/ls/login', function(req, res) {
     let ldxSmartObj = new LdxSmart(req, res);
     ldxSmartObj.login();
 });
-app.get('/ls/getPageConfig', function(req, res) {
+app.get('/ls/getShowPageConfig', function(req, res) {
     let ldxSmartObj = new LdxSmart(req, res);
-    ldxSmartObj.getPageConfig();
+    ldxSmartObj.getShowPageConfig();
+});
+
+app.get('/ls/getEditPageConfig', function(req, res) {
+    let ldxSmartObj = new LdxSmart(req, res);
+    ldxSmartObj.getEditPageConfig();
 });
 
 // --- LDX Smart Part End ---
