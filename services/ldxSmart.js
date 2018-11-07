@@ -1,79 +1,85 @@
 const menu_data = {
-    'app': {
-        'name': 'Ldx Smart',
-        'description': 'LdxSmart'
+    app: {
+        name: 'Ldx Smart',
+        description: 'LdxSmart'
     },
-    'user': {
-        'name': 'Admin',
-        'avatar': './assets/img/zorro.svg',
-        'email': 'abc@abc.com'
+    user: {
+        name: 'Admin',
+        avatar: './assets/zorro.svg',
+        email: 'abc@abc.com'
     },
-    'menu': [
+    menu: [
         {
-            'text': 'Main Navigation',
-            'translate': 'main_navigation',
-            'group': true,
-            'children': [
+            text: 'Main Navigation',
+            translate: 'main_navigation',
+            group: true,
+            children: [
                 {
-                    'text': 'Dashboard',
-                    'link': '/dashboard',
-                    'translate': 'dashboard',
-                    'icon': 'icon-speedometer'
+                    text: 'Dashboard',
+                    link: '/dashboard',
+                    translate: 'dashboard',
+                    icon: { type: 'icon', value: 'appstore' }
                 },
                 {
-                    'text': 'Shortcut Menu',
-                    'translate': 'shortcut_menu',
-                    'icon': 'icon-rocket',
-                    'shortcut_root': true
-                },
-                {
-                    'text': 'Page',
-                    'translate': 'page_design',
-                    'children': [
+                    text: 'Page',
+                    translate: 'page_design',
+                    children: [
                         {
-                            'text': 'Page List',
-                            'translate': 'page_list',
-                            'link': '/formbuilder/index',
-                            'icon': ''
+                            text: 'Page index',
+                            translate: 'formbuilderpage_index',
+                            link: '/fb/index',
+                            icon: { type: 'icon', value: '' }
                         },
                         {
-                            'text': 'Page Edit',
-                            'translate': 'page_edit',
-                            'link': '/formbuilder/edit/0',
-                            'icon': ''
+                            text: 'Page Edit0',
+                            translate: 'formbuilderpage_edit',
+                            link: '/fb/edit/0',
+                            icon: { type: 'icon', value: '' }
                         },
                         {
-                            'text': 'Page Show',
-                            'translate': 'page_show',
-                            'link': '/formbuilder/show/0',
-                            'icon': ''
+                            text: 'Page Edit1',
+                            translate: 'formbuilderpage_edit',
+                            link: '/fb/edit/1',
+                            icon: { type: 'icon', value: '' }
                         },
                         {
-                            'text': 'Page Show1',
-                            'translate': 'page_show1',
-                            'link': '/formbuilder/show/1',
-                            'icon': ''
+                            text: 'Page Edit2',
+                            translate: 'formbuilderpage_edit',
+                            link: '/fb/edit/2',
+                            icon: { type: 'icon', value: '' }
+                        },
+                        {
+                            text: 'Page Show',
+                            translate: 'formbuilderpage_show',
+                            link: '/fb/show/0',
+                            icon: { type: 'icon', value: '' }
+                        },
+                        {
+                            text: 'Page Show1',
+                            translate: 'page_show1',
+                            link: '/fb/show/1',
+                            icon: { type: 'icon', value: '' }
                         }
                     ]
                 }
             ]
         },
         {
-            'text': 'Pro',
-            'translate': 'pro',
-            'group': true,
-            'children': [
+            text: 'Pro',
+            translate: 'pro',
+            group: true,
+            children: [
                 {
-                    'text': 'User',
-                    'translate': 'pro_user',
-                    'link': '/passport',
-                    'icon': 'icon-user',
-                    'children': [
+                    text: 'User',
+                    translate: 'pro_user',
+                    link: '/passport',
+                    icon: { type: 'icon', value: '' },
+                    children: [
                         {
-                            'text': 'login',
-                            'link': '/passport/login',
-                            'translate': 'pro_login',
-                            'reuse': false
+                            text: 'login',
+                            link: '/passport/login',
+                            translate: 'pro_login',
+                            reuse: false
                         }
                     ]
                 }
@@ -207,6 +213,121 @@ const pageConfig = {
     modalPages: []
 };
 
+const editPage = {
+    id: '',
+    title: 'Test Show Page',
+    author: 'admin',
+    creationTime: '2018-05-26',
+    name: 'testPage',
+    type: 'page',
+    controlType: 'FormGroup',
+    translate: 'testPage',
+    children: [
+        {
+            name: 'formContainer',
+            type: 'container',
+            controlType: 'FormGroup',
+            translate: '',
+            visible: true,
+            disabled: false,
+            events: [],
+            children: [
+                {
+                    type: 'form',
+                    name: 'form1',
+                    controlType: 'FormGroup',
+                    disabled: false,
+                    translate: '',
+                    visible: true,
+                    events: [],
+                    value: '',
+                    children: [
+                        {
+                            type: 'inputText',
+                            name: 'account',
+                            label: 'account',
+                            translate: 'account',
+                            controlType: 'FormControl',
+                            disabled: false,
+                            required: true,
+                            value: '',
+                            validators: [
+                                {
+                                    type: 'minLength',
+                                    name: 'minLength',
+                                    value: 6,
+                                    error: {
+                                        message: ''
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            type: 'inputText',
+                            name: 'password',
+                            label: 'password',
+                            translate: 'password',
+                            props: {
+                                
+                            },
+                            controlType: 'FormControl',
+                            disabled: false,
+                            required: true,
+                            value: '',
+                            validators: [
+                                {
+                                    type: 'minLength',
+                                    name: 'minLength',
+                                    value: 6,
+                                    error: {
+                                        message: ''
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            type: 'inputText',
+                            name: 'confirmPwd',
+                            label: 'confirmPwd',
+                            translate: 'confirmPwd',
+                            props: {
+                                
+                            },
+                            controlType: 'FormControl',
+                            disabled: false,
+                            required: true,
+                            value: '',
+                            validators: [
+                                {
+                                    type: 'minLength',
+                                    name: 'minLength',
+                                    value: 6,
+                                    error: {
+                                        message: ''
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: 'confirmbutton',
+                    type: 'button',
+                    controlType: '',
+                    translate: '',
+                    visible: true,
+                    disabled: false,
+                    label: 'confirm',
+                    children: []
+                }
+            ]
+        }
+    ],
+    actions: [],
+    dataTables: []
+}
+
+
 class LdxSmart {
     constructor(req, res){
 		this.req = req
@@ -217,6 +338,7 @@ class LdxSmart {
         let self = this;
         let status = 200;
         let res = {status: '', errMsg: ''};
+        // console.log(self.req.headers);
         if (self.req.headers.token) {
             res = {status: 'success', errMsg: '', menu: menu_data};
         } else {
@@ -238,26 +360,26 @@ class LdxSmart {
         return self.res.status(200).json(res);
     }
 
-    getShowPageConfig() {
+    getShowPageInfo() {
         let self = this;
         const { id } = self.req.query;
        
         let res = { status: '', errMsg: '' };
         if (id === '1') {
-            res =  { status: 'success', errMsg: '', page: pageConfig };
+            res =  { status: 'success', errMsg: '', pageInfo: pageConfig };
         } else {
             res =  { status: 'failed', errMsg: '错误ID'};
         }
         return self.res.status(200).json(res);
     }
 
-    getEditPageConfig() {
+    getEditPageInfo() {
         let self = this;
         const { id } = self.req.query;
        
         let res = { status: '', errMsg: '' };
         if (id === '1') {
-            res =  { status: 'success', errMsg: '', page: pageConfig };
+            res =  { status: 'success', errMsg: '', page: editPage };
         } else {
             res =  { status: 'failed', errMsg: '错误ID'};
         }

@@ -3,6 +3,8 @@ const app = express();
 const bodyParser = require('body-parser');
 // const mongoService = require('./services/mongoTest')
 const LdxSmart = require('./services/ldxSmart');
+const WeChat = require('./services/weChat');
+const IDA = require('./services/ida');
 
 app.all('*',function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -10,7 +12,7 @@ app.all('*',function (req, res, next) {
     res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
   
     if (req.method == 'OPTIONS') {
-      res.send(200); /让options请求快速返回/
+      res.sendStatus(200); // 让options请求快速返回
     }
     else {
       next();
@@ -24,26 +26,104 @@ app.get('/', function(req, res){
 });
 
 // --- LDX Smart Part Start ---
-app.get('/ls/getMenuData', function(req, res) {
-    let ldxSmartObj = new LdxSmart(req, res);
-    ldxSmartObj.getMenuData();
-});
+    app.get('/ls/getMenuData', function(req, res) {
+        let ldxSmartObj = new LdxSmart(req, res);
+        ldxSmartObj.getMenuData();
+    });
 
-app.post('/ls/login', function(req, res) {
-    let ldxSmartObj = new LdxSmart(req, res);
-    ldxSmartObj.login();
-});
-app.get('/ls/getShowPageConfig', function(req, res) {
-    let ldxSmartObj = new LdxSmart(req, res);
-    ldxSmartObj.getShowPageConfig();
-});
+    app.post('/ls/login', function(req, res) {
+        let ldxSmartObj = new LdxSmart(req, res);
+        ldxSmartObj.login();
+    });
 
-app.get('/ls/getEditPageConfig', function(req, res) {
-    let ldxSmartObj = new LdxSmart(req, res);
-    ldxSmartObj.getEditPageConfig();
-});
+    app.get('/ls/getShowPageInfo', function(req, res) {
+        let ldxSmartObj = new LdxSmart(req, res);
+        ldxSmartObj.getShowPageInfo();
+    });
+
+    app.get('/ls/getEditPageInfo', function(req, res) {
+        let ldxSmartObj = new LdxSmart(req, res);
+        ldxSmartObj.getEditPageInfo();
+    });
 
 // --- LDX Smart Part End ---
+
+// --- WeChat Test Part Start ---
+app.get('/lw/getTrackInfo',function(req, res){
+    let weChatObj = new WeChat(req,res);
+    weChatObj.getTrackInfo();
+});
+
+app.get('/lw/getCompanyList',function(req, res){
+    let weChatObj = new WeChat(req,res);
+    weChatObj.getCompanyList();
+});
+
+app.get('/lw/login', function(req, res) {
+    let weChatObj = new WeChat(req,res);
+    weChatObj.login();
+});
+
+app.get('/lw/wechatLogin', function(req, res) {
+    let weChatObj = new WeChat(req,res);
+    weChatObj.wechatLogin();
+});
+
+app.get('/lw/estimate', function(req, res) {
+    let weChatObj = new WeChat(req,res);
+    weChatObj.estimate();
+});
+
+app.get('/lw/queryName', function(req, res) {
+    let weChatObj = new WeChat(req,res);
+    weChatObj.queryName();
+});
+
+app.post('/lw/submitSuggestion', function(req, res) {
+    let weChatObj = new WeChat(req,res);
+    weChatObj.submitSuggestion();
+});
+
+app.get('/lw/getRecordingList', function(req, res) {
+    let weChatObj = new WeChat(req,res);
+    weChatObj.getRecordingList();
+});
+
+app.get('/lw/getPackageDetail', function(req, res) {
+    let weChatObj = new WeChat(req,res);
+    weChatObj.getPackageDetail();
+});
+
+app.get('/lw/getRecordInfo', function(req, res) {
+    let weChatObj = new WeChat(req,res);
+    weChatObj.getRecordInfo();
+});
+
+app.post('/lw/phoneBind', function(req, res) {
+    let weChatObj = new WeChat(req,res);
+    weChatObj.phoneBind();
+});
+
+app.post('/lw/companyBind', function(req, res) {
+    let weChatObj = new WeChat(req,res);
+    weChatObj.companyBind();
+});
+
+app.post('/lw/emailBind', function(req, res) {
+    let weChatObj = new WeChat(req,res);
+    weChatObj.emailBind();
+});
+
+// ---WeChat Test Part End---
+
+// --- IDA Part Start ---
+app.get('/ida/getIDAInfo',function(req, res){
+    let idaObj = new IDA(req,res);
+    idaObj.getIDAInfo();
+});
+// --- IDA Part End ---
+
+
 app.listen(3000, function(){
     console.log('Service listening on port 3000');
 });
