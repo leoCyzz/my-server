@@ -104,107 +104,36 @@ const pageConfig = {
         creationTime: '2018-05-26',
         name: 'testPage',
         type: 'page',
-        controlType: 'FormGroup',
-        translate: '',
         children: [
             {
                 name: 'formContainer',
                 type: 'container',
                 controlType: 'FormGroup',
-                translate: '',
                 visible: true,
                 disabled: false,
                 events: [],
                 children: [
                     {
-                        type: 'form',
-                        name: 'form1',
-                        controlType: 'FormGroup',
+                        type: 'input',
+                        name: 'account',
+                        label: 'account',
+                        labelI18n: 'account',
+                        controlType: 'FormControl',
                         disabled: false,
-                        translate: '',
-                        visible: true,
-                        events: [],
-                        value: '',
-                        children: [
-                            {
-                                type: 'inputText',
-                                name: 'account',
-                                label: 'account',
-                                translate: 'account',
-                                controlType: 'FormControl',
-                                disabled: false,
-                                required: true,
-                                value: '',
-                                validators: [
-                                    {
-                                        type: 'minLength',
-                                        name: 'minLength',
-                                        value: 6,
-                                        error: {
-                                            message: ''
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                type: 'inputText',
-                                name: 'password',
-                                label: 'password',
-                                translate: 'password',
-                                props: {
-                                    
-                                },
-                                controlType: 'FormControl',
-                                disabled: false,
-                                required: true,
-                                value: '',
-                                validators: [
-                                    {
-                                        type: 'minLength',
-                                        name: 'minLength',
-                                        value: 6,
-                                        error: {
-                                            message: ''
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                type: 'inputText',
-                                name: 'confirmPwd',
-                                label: 'confirmPwd',
-                                translate: 'confirmPwd',
-                                props: {
-                                    
-                                },
-                                controlType: 'FormControl',
-                                disabled: false,
-                                required: true,
-                                value: '',
-                                validators: [
-                                    {
-                                        type: 'minLength',
-                                        name: 'minLength',
-                                        value: 6,
-                                        error: {
-                                            message: ''
-                                        }
-                                    }
-                                ]
-                            }
-                        ]
+                        required: true,
+                        defaultValue: ''
                     },
-                    {
-                        name: 'confirmbutton',
-                        type: 'button',
-                        controlType: '',
-                        translate: '',
-                        visible: true,
-                        disabled: false,
-                        label: 'confirm',
-                        children: []
-                    }
+                    
                 ]
+            },
+            {
+                name: 'confirmbutton',
+                type: 'button',
+                controlType: '',
+                textI18n: '',
+                visible: true,
+                disabled: false,
+                text: 'confirm'
             }
         ],
         actions: [],
