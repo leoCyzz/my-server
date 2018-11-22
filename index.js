@@ -46,6 +46,11 @@ app.get('/', function(req, res){
         ldxSmartObj.getEditPageInfo();
     });
 
+    app.get('/ls/getAsyncTest', function(req, res) {
+        let ldxSmartObj = new LdxSmart(req, res);
+        ldxSmartObj.getAsyncTest();
+    });
+
 // --- LDX Smart Part End ---
 
 // --- WeChat Test Part Start ---

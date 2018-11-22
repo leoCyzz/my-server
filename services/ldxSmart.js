@@ -101,43 +101,119 @@ const pageConfig = {
         id: '',
         title: 'Test Show Page',
         author: 'admin',
-        creationTime: '2018-05-26',
+        creationTime: '2018-11-19',
         name: 'testPage',
         type: 'page',
         children: [
             {
-                name: 'formContainer',
+                id: '001',
+                name: 'mainContainer',
                 type: 'container',
                 controlType: 'FormGroup',
                 visible: true,
-                disabled: false,
-                events: [],
+                validators: [
+                    {
+                        type: 'custom',
+                        functionName: ''
+                    }
+                ],
                 children: [
                     {
-                        type: 'input',
+                        id: '002',
                         name: 'account',
-                        label: 'account',
-                        labelI18n: 'account',
+                        type: 'input',
                         controlType: 'FormControl',
-                        disabled: false,
+                        nzSpan: 6,
+                        visible: true,
+                        validators: [
+                            {
+                                type: 'reg',
+                                regText: '',
+                            },
+                            {
+                                type: 'minLength',
+                                minLength: '1'
+                            }
+                            // ,
+                            // {
+                            //     type: 'sync',
+                            //     funcName: 'syncxx',
+                            //     validateName: 'syncxx'
+                            // },
+                            // {
+                            //     type: 'async',
+                            //     funcName: 'syncxx',
+                            //     validateName: 'syncxx'
+                            // }
+                        ],
                         required: true,
-                        defaultValue: ''
+                        disabled: false,
+                        defaultValue: '',
+                        label: 'account',
+                        placeholder: 'account',
+                        events: []
                     },
-                    
+                    {
+                        id: '003',
+                        name: 'text1',
+                        type: 'input',
+                        controlType: 'FormControl',
+                        nzSpan: 6,
+                        visible: true,
+                        required: false,
+                        disabled: false,
+                        defaultValue: '',
+                        label: 'text1',
+                        placeholder: 'text1'
+                    }
                 ]
             },
             {
-                name: 'confirmbutton',
+                id: '004',
+                name: 'btn1',
                 type: 'button',
                 controlType: '',
-                textI18n: '',
+                nzSpan: '',
                 visible: true,
                 disabled: false,
-                text: 'confirm'
+                text: 'Button',
+                events: [
+                    {
+                        type: 'click',
+                        actionQueue: ['001', '002']
+                    }
+                ]
             }
         ],
-        actions: [],
-        dataTables: []
+        actions: [
+            {
+                id: '001',
+                type: 'single',
+                data: ['dataItem', 'dataItem'],
+                functionName: '',
+                result: '??'
+
+            },
+            {
+                id: '002',
+                type: 'group',
+                url: '',
+                group: [
+                    {
+                        type: 'query',
+                        data: ['dataItem', 'dataItem'],
+                        result: []
+                    },
+                    {
+                        type: 'save',
+                        data: ['dataItem', 'dataItem'],
+                        result: []
+                    }
+                ],
+                result: '??'
+            }
+        ],
+        dataGroup: []
     },
     modalPages: []
 };
@@ -312,6 +388,14 @@ class LdxSmart {
         } else {
             res =  { status: 'failed', errMsg: '错误ID'};
         }
+        return self.res.status(200).json(res);
+    }
+
+    getAsyncTest() {
+        let self = this;
+        const { id } = self.req.query;
+       
+        let res = { status: 'success', errMsg: '' };
         return self.res.status(200).json(res);
     }
 }
