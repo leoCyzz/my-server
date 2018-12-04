@@ -106,7 +106,7 @@ const pageConfig = {
         type: 'page',
         children: [
             {
-                id: '001',
+                id: 'container1',
                 name: 'mainContainer',
                 type: 'container',
                 controlType: 'FormGroup',
@@ -119,7 +119,7 @@ const pageConfig = {
                 ],
                 children: [
                     {
-                        id: '002',
+                        id: 'account2',
                         name: 'account',
                         type: 'input',
                         controlType: 'FormControl',
@@ -154,7 +154,7 @@ const pageConfig = {
                         events: []
                     },
                     {
-                        id: '003',
+                        id: 'text3',
                         name: 'text1',
                         type: 'input',
                         controlType: 'FormControl',
@@ -169,7 +169,7 @@ const pageConfig = {
                 ]
             },
             {
-                id: '004',
+                id: 'btn4',
                 name: 'btn1',
                 type: 'button',
                 controlType: '',
@@ -180,23 +180,23 @@ const pageConfig = {
                 events: [
                     {
                         type: 'click',
-                        actionQueue: ['001', '002']
+                        queue: ['ac1', 'ac2']
                     }
                 ]
             }
         ],
         actions: [
             {
-                id: '001',
-                type: 'single',
+                id: 'ac1',
+                type: 'sync',
                 data: ['dataItem', 'dataItem'],
                 functionName: '',
                 result: '??'
 
             },
             {
-                id: '002',
-                type: 'group',
+                id: 'ac2',
+                type: 'async',
                 url: '',
                 group: [
                     {
@@ -219,118 +219,117 @@ const pageConfig = {
 };
 
 const editPage = {
-    id: '',
-    title: 'Test Show Page',
+    id: 'form123',
+    title: 'Test Edit Page',
     author: 'admin',
-    creationTime: '2018-05-26',
+    creationTime: '2018-11-19',
     name: 'testPage',
     type: 'page',
-    controlType: 'FormGroup',
-    translate: 'testPage',
+    layout: 'vertical',
     children: [
         {
-            name: 'formContainer',
+            id: 'container1',
+            name: 'mainContainer',
             type: 'container',
             controlType: 'FormGroup',
-            translate: '',
+            layout: 'horizontal',
             visible: true,
-            disabled: false,
-            events: [],
+            validators: [
+                {
+                    type: 'custom',
+                    functionName: ''
+                }
+            ],
             children: [
                 {
-                    type: 'form',
-                    name: 'form1',
-                    controlType: 'FormGroup',
-                    disabled: false,
-                    translate: '',
+                    id: 'account2',
+                    name: 'account',
+                    type: 'input',
+                    controlType: 'FormControl',
+                    layout: 'horizontal',
+                    nzSpan: 6,
                     visible: true,
-                    events: [],
-                    value: '',
-                    children: [
+                    validators: [
                         {
-                            type: 'inputText',
-                            name: 'account',
-                            label: 'account',
-                            translate: 'account',
-                            controlType: 'FormControl',
-                            disabled: false,
-                            required: true,
-                            value: '',
-                            validators: [
-                                {
-                                    type: 'minLength',
-                                    name: 'minLength',
-                                    value: 6,
-                                    error: {
-                                        message: ''
-                                    }
-                                }
-                            ]
+                            type: 'reg',
+                            regText: '',
                         },
                         {
-                            type: 'inputText',
-                            name: 'password',
-                            label: 'password',
-                            translate: 'password',
-                            props: {
-                                
-                            },
-                            controlType: 'FormControl',
-                            disabled: false,
-                            required: true,
-                            value: '',
-                            validators: [
-                                {
-                                    type: 'minLength',
-                                    name: 'minLength',
-                                    value: 6,
-                                    error: {
-                                        message: ''
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            type: 'inputText',
-                            name: 'confirmPwd',
-                            label: 'confirmPwd',
-                            translate: 'confirmPwd',
-                            props: {
-                                
-                            },
-                            controlType: 'FormControl',
-                            disabled: false,
-                            required: true,
-                            value: '',
-                            validators: [
-                                {
-                                    type: 'minLength',
-                                    name: 'minLength',
-                                    value: 6,
-                                    error: {
-                                        message: ''
-                                    }
-                                }
-                            ]
+                            type: 'minLength',
+                            minLength: '1'
                         }
-                    ]
+                    ],
+                    required: true,
+                    disabled: false,
+                    defaultValue: '',
+                    label: 'account',
+                    placeholder: 'account',
+                    events: []
                 },
                 {
-                    name: 'confirmbutton',
-                    type: 'button',
-                    controlType: '',
-                    translate: '',
+                    id: 'text3',
+                    name: 'text1',
+                    type: 'input',
+                    controlType: 'FormControl',
+                    layout: 'horizontal',
+                    nzSpan: 6,
                     visible: true,
+                    required: false,
                     disabled: false,
-                    label: 'confirm',
-                    children: []
+                    defaultValue: '',
+                    label: 'text1',
+                    placeholder: 'text1'
+                }
+            ]
+        },
+        {
+            id: 'btn4',
+            name: 'btn1',
+            type: 'button',
+            controlType: '',
+            layout: 'horizontal',
+            nzSpan: '',
+            visible: true,
+            disabled: false,
+            text: 'Button',
+            events: [
+                {
+                    type: 'click',
+                    queue: ['ac1', 'ac2']
                 }
             ]
         }
     ],
-    actions: [],
-    dataTables: []
-}
+    actions: [
+        {
+            id: 'ac1',
+            type: 'sync',
+            data: ['dataItem', 'dataItem'],
+            functionName: '',
+            result: '??'
+
+        },
+        {
+            id: 'ac2',
+            type: 'async',
+            url: '',
+            group: [
+                {
+                    type: 'query',
+                    data: ['dataItem', 'dataItem'],
+                    result: []
+                },
+                {
+                    type: 'save',
+                    data: ['dataItem', 'dataItem'],
+                    result: []
+                }
+            ],
+            result: '??'
+        }
+    ],
+    dataGroup: []
+};
 
 
 class LdxSmart {
@@ -396,6 +395,15 @@ class LdxSmart {
         const { id } = self.req.query;
        
         let res = { status: 'success', errMsg: '' };
+        return self.res.status(200).json(res);
+    }
+
+    testAsyncAction () {
+        let self = this;
+        const body = self.req.body;
+
+        let res =  { status: 'success', errMsg: '', value: 3 };
+
         return self.res.status(200).json(res);
     }
 }

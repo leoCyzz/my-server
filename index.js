@@ -51,6 +51,11 @@ app.get('/', function(req, res){
         ldxSmartObj.getAsyncTest();
     });
 
+    app.post('/ls/testAsyncAction', function(req, res) {
+        let ldxSmartObj = new LdxSmart(req, res);
+        ldxSmartObj.testAsyncAction();
+    });
+
 // --- LDX Smart Part End ---
 
 // --- WeChat Test Part Start ---
