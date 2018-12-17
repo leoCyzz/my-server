@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const LdxSmart = require('./services/ldxSmart');
 const WeChat = require('./services/weChat');
 const IDA = require('./services/ida');
+const KdbundWechat = require('./services/kdbund');
 
 app.all('*',function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -132,6 +133,19 @@ app.get('/ida/getIDAInfo',function(req, res){
     idaObj.getIDAInfo();
 });
 // --- IDA Part End ---
+
+// --- kdbund wechat Part Start ---
+app.get('/kw/getCompanyList',function(req, res){
+    let kwObj = new KdbundWechat(req,res);
+    kwObj.getCompanyList();
+});
+
+app.get('/kw/queryTrackInfo',function(req, res){
+    let kwObj = new KdbundWechat(req,res);
+    kwObj.queryTrackInfo();
+});
+
+// --- kdbund wechat Part End ---
 
 
 app.listen(3000, function(){
