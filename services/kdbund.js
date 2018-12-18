@@ -124,12 +124,12 @@ class KdbundWechat {
         let self = this;
         const { trackNo, code } = self.req.query;
         let res = { status: '', errMsg: '' };
-        if (trackNo === "123456" && code === "ldx") {
+        if (trackNo === "123456" && (code === "ldx"|| code === '')) {
             res = { status: 'success', errMsg: '', data: ldxTrackInfo };
         } else if (trackNo === "123456" && code === "sf") {
             res = { status: 'success', errMsg: '', data: sfTrackInfo };
         } else {
-            res = { status: 'error', errMsg: '', data: null }
+            res = { status: 'error', errMsg: '', data: {trackNo: trackNo, code: code, status: -1, detailList: []} }
         }
         
         return self.res.status(200).json(res);
