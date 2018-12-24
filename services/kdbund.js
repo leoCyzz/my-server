@@ -108,6 +108,7 @@ const sfTrackInfo = {
     ]
 };
 
+
 class KdbundWechat { 
     constructor(req, res){
 		this.req = req
@@ -124,7 +125,7 @@ class KdbundWechat {
         let self = this;
         const { trackNo, code } = self.req.query;
         let res = { status: '', errMsg: '' };
-        if (trackNo === "123456" && (code === "ldx"|| code === '')) {
+        if (trackNo === "123456" && code === "ldx") {
             res = { status: 'success', errMsg: '', data: ldxTrackInfo };
         } else if (trackNo === "123456" && code === "sf") {
             res = { status: 'success', errMsg: '', data: sfTrackInfo };
