@@ -108,6 +108,16 @@ const sfTrackInfo = {
     ]
 };
 
+const accoutLoginInfo = {
+    nickName: 'accountKDB',
+    role: 2,
+    session_key: "abcdefg"
+};
+const wechatLoginInfo = {
+    nickName: 'weChatKDB',
+    role: 1,
+    session_key: "gfedcba"
+};
 
 class KdbundWechat { 
     constructor(req, res){
@@ -140,15 +150,17 @@ class KdbundWechat {
         let self = this;
         const queryParams = self.req.query;
         let res = { status: '', errMsg: '' };
-        if (queryParams.type === 1) {
+        console.log(queryParams);
+        if (queryParams.type === '1') {
             if (queryParams.account === '123456' && queryParams.password === "123456" && queryParams.code === 'cc') {
                 res = { status: 'success', errMsg: '', data: accoutLoginInfo };
             } else {
-
+                res = { status: 'error', errMsg: '', data: null }
             }
         } else {
-
+            res = { status: 'success', errMsg: '', data: wechatLoginInfo };
         }
+        return self.res.status(200).json(res);
     }
 }
 

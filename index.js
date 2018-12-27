@@ -144,6 +144,10 @@ app.get('/kw/queryTrackInfo',function(req, res){
     let kwObj = new KdbundWechat(req,res);
     kwObj.queryTrackInfo();
 });
+app.get('/kw/login',function(req, res){
+    let kwObj = new KdbundWechat(req,res);
+    kwObj.login();
+});
 
 // --- kdbund wechat Part End ---
 
