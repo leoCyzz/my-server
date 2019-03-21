@@ -1,91 +1,67 @@
 const menu_data = {
-    app: {
-        name: 'Ldx Smart',
-        description: 'LdxSmart'
-    },
-    user: {
-        name: 'Admin',
-        avatar: './assets/zorro.svg',
-        email: 'abc@abc.com'
-    },
-    menu: [
-        {
-            text: 'Main Navigation',
-            translate: 'main_navigation',
-            group: true,
-            children: [
-                {
-                    text: 'Dashboard',
-                    link: '/dashboard',
-                    translate: 'dashboard',
-                    icon: { type: 'icon', value: 'appstore' }
-                },
-                {
-                    text: 'Page',
-                    translate: 'page_design',
-                    children: [
-                        {
-                            text: 'Page index',
-                            translate: 'formbuilderpage_index',
-                            link: '/fb/index',
-                            icon: { type: 'icon', value: '' }
-                        },
-                        {
-                            text: 'Page Edit0',
-                            translate: 'formbuilderpage_edit',
-                            link: '/fb/edit/0',
-                            icon: { type: 'icon', value: '' }
-                        },
-                        {
-                            text: 'Page Edit1',
-                            translate: 'formbuilderpage_edit',
-                            link: '/fb/edit/1',
-                            icon: { type: 'icon', value: '' }
-                        },
-                        {
-                            text: 'Page Edit2',
-                            translate: 'formbuilderpage_edit',
-                            link: '/fb/edit/2',
-                            icon: { type: 'icon', value: '' }
-                        },
-                        {
-                            text: 'Page Show',
-                            translate: 'formbuilderpage_show',
-                            link: '/fb/show/0',
-                            icon: { type: 'icon', value: '' }
-                        },
-                        {
-                            text: 'Page Show1',
-                            translate: 'page_show1',
-                            link: '/fb/show/1',
-                            icon: { type: 'icon', value: '' }
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            text: 'Pro',
-            translate: 'pro',
-            group: true,
-            children: [
-                {
-                    text: 'User',
-                    translate: 'pro_user',
-                    link: '/passport',
-                    icon: { type: 'icon', value: '' },
-                    children: [
-                        {
-                            text: 'login',
-                            link: '/passport/login',
-                            translate: 'pro_login',
-                            reuse: false
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+	"app": {
+		"name": "zwMid",
+		"description": ""
+	},
+	"user": {
+		"name": "Admin",
+    	"avatar": "./assets/tmp/img/avatar.jpg",
+    	"email": "zwMid@kdbund.com"
+	},
+	"menu": [
+		{
+			"text": "zwMid",
+			"i18n": "zw.menu.main",
+			"group": true,
+			"hideInBreadcrumb": true,
+			"children": [
+				{
+					"text": "仪表盘",
+					"i18n": "menu.dashboard",
+					"icon": "anticon-dashboard",
+					"children": [
+						{
+							"text": "仪表盘",
+							"link": "/dashboard",
+							"i18n": "menu.dashboard"
+						}
+					]
+				},
+				{
+					"text": "页面创造",
+					"i18n": "zw.menu.designer.main",
+					"icon": "anticon-layout",
+					"children": [
+						{
+							"text": "页面列表",
+							"link": "/designer/index",
+							"i18n": "zw.menu.designer.index"
+						},
+						{
+							"text": "页面编辑0",
+							"link": "/designer/edit/0",
+							"i18n": "zw.menu.designer.edit.p0"
+						},
+						{
+							"text": "页面编辑1",
+							"link": "/designer/edit/1",
+							"i18n": "zw.menu.designer.edit.p1"
+						},
+						{
+							"text": "页面显示0",
+							"link": "/designer/show/0",
+							"i18n": "zw.menu.designer.show.p0"
+						},
+						{
+							"text": "页面显示1",
+							"link": "/designer/show/1",
+							"i18n": "zw.menu.designer.show.p1"
+						}
+					]
+				}
+			]
+		}
+	]
 };
 
 const new_token = {
@@ -97,238 +73,436 @@ const new_token = {
 };
 
 const pageConfig = {
-    mainPage: {
+    main: {
         id: '',
-        title: 'Test Show Page',
-        author: 'admin',
-        creationTime: '2018-11-19',
-        name: 'testPage',
-        type: 'page',
-        children: [
-            {
-                id: 'container1',
-                name: 'mainContainer',
-                type: 'container',
-                controlType: 'FormGroup',
+        name: '',
+        title: '',
+        mode: 'page',
+        author: '',
+        updateTime: '2019/03/19 17:11:05',
+        children: [{
+            id: 'c82311b11d094b94a7754badf90c1699',
+            type: 'container',
+            name: '',
+            visible: true,
+            width: 25,
+            layout: 'horizontal',
+            children: [{
+                id: '92b8be16a91c4e0981be20b2dd0af766',
+                type: 'datePicker',
+                name: 'mawbDate',
                 visible: true,
-                validators: [
-                    {
-                        type: 'custom',
-                        functionName: ''
-                    }
-                ],
-                children: [
-                    {
-                        id: 'account2',
-                        name: 'account',
-                        type: 'input',
-                        controlType: 'FormControl',
-                        nzSpan: 6,
-                        visible: true,
-                        validators: [
-                            {
-                                type: 'reg',
-                                regText: '',
-                            },
-                            {
-                                type: 'minLength',
-                                minLength: '1'
-                            }
-                            // ,
-                            // {
-                            //     type: 'sync',
-                            //     funcName: 'syncxx',
-                            //     validateName: 'syncxx'
-                            // },
-                            // {
-                            //     type: 'async',
-                            //     funcName: 'syncxx',
-                            //     validateName: 'syncxx'
-                            // }
-                        ],
-                        required: true,
-                        disabled: false,
-                        defaultValue: '',
-                        label: 'account',
-                        placeholder: 'account',
-                        events: []
-                    },
-                    {
-                        id: 'text3',
-                        name: 'text1',
-                        type: 'input',
-                        controlType: 'FormControl',
-                        nzSpan: 6,
-                        visible: true,
-                        required: false,
-                        disabled: false,
-                        defaultValue: '',
-                        label: 'text1',
-                        placeholder: 'text1'
-                    }
-                ]
-            },
-            {
-                id: 'btn4',
-                name: 'btn1',
-                type: 'button',
-                controlType: '',
-                nzSpan: '',
-                visible: true,
+                width: 25,
                 disabled: false,
-                text: 'Button',
-                events: [
-                    {
-                        type: 'click',
-                        queue: ['ac1', 'ac2']
-                    }
-                ]
-            }
-        ],
-        actions: [
-            {
-                id: 'ac1',
-                type: 'sync',
-                data: ['dataItem', 'dataItem'],
-                functionName: '',
-                result: '??'
-
-            },
-            {
-                id: 'ac2',
-                type: 'async',
-                url: '',
-                group: [
-                    {
-                        type: 'query',
-                        data: ['dataItem', 'dataItem'],
-                        result: []
-                    },
-                    {
-                        type: 'save',
-                        data: ['dataItem', 'dataItem'],
-                        result: []
-                    }
-                ],
-                result: '??'
-            }
-        ],
-        dataGroup: []
+                required: false,
+                defaultValue: null,
+                hasLabel: true,
+                label: 'mawbDate',
+                labelWidth: 20,
+                events: [],
+                mode: 'single',
+                format: 'YYYY/MM/DD',
+                showTime: false,
+                placeholder1: '',
+                placeholder2: '',
+                defaultDate1: '',
+                defaultDate2: '',
+                value: null
+            }, {
+                id: '1da93e6ffe1a46a68af10da742a2241b',
+                type: 'input',
+                name: 'mawbNo',
+                visible: true,
+                width: 25,
+                disabled: false,
+                required: true,
+                defaultValue: '',
+                hasLabel: true,
+                label: 'mawbNo',
+                labelWidth: 20,
+                events: [],
+                placeholder: '',
+                inputType: 'text',
+                readonly: false,
+                areaRows: 3,
+                value: '',
+                prefix: '',
+                suffix: ''
+            }, {
+                id: 'a3b68de855864fc6bcdfb886a399d71b',
+                type: 'selectbox',
+                name: 'flight',
+                visible: true,
+                width: 25,
+                disabled: false,
+                required: false,
+                defaultValue: '',
+                hasLabel: true,
+                label: 'flight',
+                labelWidth: 20,
+                events: [],
+                placeholder: '',
+                dataSource: 'static',
+                dataAction: '',
+                selectOptions: []
+            }, {
+                id: '5a7fbdd4ab9d42f895d38100c20a0126',
+                type: 'input',
+                name: 'airCode',
+                visible: true,
+                width: 25,
+                disabled: false,
+                required: false,
+                defaultValue: '',
+                hasLabel: true,
+                label: 'airCode',
+                labelWidth: 20,
+                events: [],
+                placeholder: '',
+                inputType: 'text',
+                readonly: true,
+                areaRows: 3,
+                value: '',
+                prefix: '',
+                suffix: ''
+            }, {
+                id: '2defcb62ce14415aa8b8a3434defcf69',
+                type: 'input',
+                name: 'shippingPort',
+                visible: true,
+                width: 25,
+                disabled: false,
+                defaultValue: '',
+                hasLabel: true,
+                label: 'shippingPort',
+                labelWidth: 20,
+                events: [],
+                placeholder: '',
+                inputType: 'text',
+                readonly: true,
+                areaRows: 3,
+                value: '',
+                prefix: '',
+                suffix: ''
+            }, {
+                id: 'ab81f460a5764f589b23fccccf2e5241',
+                type: 'input',
+                name: 'destinationPort',
+                visible: true,
+                width: 25,
+                disabled: false,
+                required: false,
+                defaultValue: '',
+                hasLabel: true,
+                label: 'destinatePort',
+                labelWidth: 20,
+                events: [],
+                placeholder: '',
+                inputType: 'text',
+                readonly: true,
+                areaRows: 3,
+                value: '',
+                prefix: '',
+                suffix: ''
+            }, {
+                id: '28fd4fa9c95e42d7a2a39c25c34c7d38',
+                type: 'input',
+                name: 'clearNo',
+                visible: true,
+                width: 25,
+                disabled: false,
+                required: true,
+                defaultValue: '',
+                hasLabel: true,
+                label: 'clearNo',
+                labelWidth: 20,
+                events: [],
+                placeholder: '',
+                inputType: 'text',
+                readonly: true,
+                areaRows: 3,
+                value: '',
+                prefix: '',
+                suffix: ''
+            }, {
+                id: 'e97adb5fef8f4c8197d68d15a7c5fc8f',
+                type: 'input',
+                name: 'fakeNo',
+                visible: true,
+                width: 25,
+                disabled: false,
+                required: true,
+                defaultValue: '',
+                hasLabel: true,
+                label: 'fakeNo',
+                labelWidth: 20,
+                events: [],
+                placeholder: '',
+                inputType: 'text',
+                readonly: true,
+                areaRows: 3,
+                value: '',
+                prefix: '',
+                suffix: ''
+            }, {
+                id: 'dedc62a082ff4f079461aad71ecc7895',
+                type: 'input',
+                name: 'awbNo',
+                visible: true,
+                width: 25,
+                disabled: false,
+                required: true,
+                defaultValue: '',
+                hasLabel: true,
+                label: 'awbNo',
+                labelWidth: 20,
+                events: [],
+                placeholder: '',
+                inputType: 'text',
+                readonly: false,
+                areaRows: 3,
+                value: '',
+                prefix: '',
+                suffix: ''
+            }, {
+                id: 'f33a3730b9e74f9486a7300e3dee6be5',
+                type: 'button',
+                name: '',
+                visible: true,
+                width: 25,
+                disabled: false,
+                text: 'printLabel',
+                btnType: 'default'
+            }, {
+                id: '9ea1925c904d46d284b4be8b8750d3e1',
+                type: 'button',
+                name: 'airPack',
+                visible: true,
+                width: 25,
+                disabled: false,
+                text: 'airPack',
+                btnType: 'default'
+            }]
+        }],
+        actions: [],
+        events: []
     },
-    modalPages: []
+    modals: []
 };
 
 const editPage = {
-    id: 'form123',
-    title: 'Test Edit Page',
-    author: 'admin',
-    creationTime: '2018-11-19',
-    name: 'testPage',
-    type: 'page',
-    layout: 'vertical',
-    children: [
-        {
-            id: 'container1',
-            name: 'mainContainer',
-            type: 'container',
-            controlType: 'FormGroup',
-            layout: 'horizontal',
+    id: '',
+    name: '',
+    title: '',
+    mode: 'page',
+    author: '',
+    updateTime: '2019/03/19 17:11:05',
+    children: [{
+        id: 'c82311b11d094b94a7754badf90c1699',
+        type: 'container',
+        name: '',
+        visible: true,
+        width: 25,
+        layout: 'horizontal',
+        children: [{
+            id: '92b8be16a91c4e0981be20b2dd0af766',
+            type: 'datePicker',
+            name: 'mawbDate',
             visible: true,
-            validators: [
-                {
-                    type: 'custom',
-                    functionName: ''
-                }
-            ],
-            children: [
-                {
-                    id: 'account2',
-                    name: 'account',
-                    type: 'input',
-                    controlType: 'FormControl',
-                    layout: 'horizontal',
-                    nzSpan: 6,
-                    visible: true,
-                    validators: [
-                        {
-                            type: 'reg',
-                            regText: '',
-                        },
-                        {
-                            type: 'minLength',
-                            minLength: '1'
-                        }
-                    ],
-                    required: true,
-                    disabled: false,
-                    defaultValue: '',
-                    label: 'account',
-                    placeholder: 'account',
-                    events: []
-                },
-                {
-                    id: 'text3',
-                    name: 'text1',
-                    type: 'input',
-                    controlType: 'FormControl',
-                    layout: 'horizontal',
-                    nzSpan: 6,
-                    visible: true,
-                    required: false,
-                    disabled: false,
-                    defaultValue: '',
-                    label: 'text1',
-                    placeholder: 'text1'
-                }
-            ]
-        },
-        {
-            id: 'btn4',
-            name: 'btn1',
-            type: 'button',
-            controlType: '',
-            layout: 'horizontal',
-            nzSpan: '',
-            visible: true,
+            width: 25,
             disabled: false,
-            text: 'Button',
-            events: [
-                {
-                    type: 'click',
-                    queue: ['ac1', 'ac2']
-                }
-            ]
-        }
-    ],
-    actions: [
-        {
-            id: 'ac1',
-            type: 'sync',
-            data: ['dataItem', 'dataItem'],
-            functionName: '',
-            result: '??'
-
-        },
-        {
-            id: 'ac2',
-            type: 'async',
-            url: '',
-            group: [
-                {
-                    type: 'query',
-                    data: ['dataItem', 'dataItem'],
-                    result: []
-                },
-                {
-                    type: 'save',
-                    data: ['dataItem', 'dataItem'],
-                    result: []
-                }
-            ],
-            result: '??'
-        }
-    ],
-    dataGroup: []
+            required: false,
+            defaultValue: null,
+            hasLabel: true,
+            label: 'mawbDate',
+            labelWidth: 20,
+            events: [],
+            mode: 'single',
+            format: 'YYYY/MM/DD',
+            showTime: false,
+            placeholder1: '',
+            placeholder2: '',
+            defaultDate1: '',
+            defaultDate2: '',
+            value: null
+        }, {
+            id: '1da93e6ffe1a46a68af10da742a2241b',
+            type: 'input',
+            name: 'mawbNo',
+            visible: true,
+            width: 25,
+            disabled: false,
+            required: true,
+            defaultValue: '',
+            hasLabel: true,
+            label: 'mawbNo',
+            labelWidth: 20,
+            events: [],
+            placeholder: '',
+            inputType: 'text',
+            readonly: false,
+            areaRows: 3,
+            value: '',
+            prefix: '',
+            suffix: ''
+        }, {
+            id: 'a3b68de855864fc6bcdfb886a399d71b',
+            type: 'selectbox',
+            name: 'flight',
+            visible: true,
+            width: 25,
+            disabled: false,
+            required: false,
+            defaultValue: '',
+            hasLabel: true,
+            label: 'flight',
+            labelWidth: 20,
+            events: [],
+            placeholder: '',
+            dataSource: 'static',
+            dataAction: '',
+            selectOptions: []
+        }, {
+            id: '5a7fbdd4ab9d42f895d38100c20a0126',
+            type: 'input',
+            name: 'airCode',
+            visible: true,
+            width: 25,
+            disabled: false,
+            required: false,
+            defaultValue: '',
+            hasLabel: true,
+            label: 'airCode',
+            labelWidth: 20,
+            events: [],
+            placeholder: '',
+            inputType: 'text',
+            readonly: true,
+            areaRows: 3,
+            value: '',
+            prefix: '',
+            suffix: ''
+        }, {
+            id: '2defcb62ce14415aa8b8a3434defcf69',
+            type: 'input',
+            name: 'shippingPort',
+            visible: true,
+            width: 25,
+            disabled: false,
+            defaultValue: '',
+            hasLabel: true,
+            label: 'shippingPort',
+            labelWidth: 20,
+            events: [],
+            placeholder: '',
+            inputType: 'text',
+            readonly: true,
+            areaRows: 3,
+            value: '',
+            prefix: '',
+            suffix: ''
+        }, {
+            id: 'ab81f460a5764f589b23fccccf2e5241',
+            type: 'input',
+            name: 'destinationPort',
+            visible: true,
+            width: 25,
+            disabled: false,
+            required: false,
+            defaultValue: '',
+            hasLabel: true,
+            label: 'destinatePort',
+            labelWidth: 20,
+            events: [],
+            placeholder: '',
+            inputType: 'text',
+            readonly: true,
+            areaRows: 3,
+            value: '',
+            prefix: '',
+            suffix: ''
+        }, {
+            id: '28fd4fa9c95e42d7a2a39c25c34c7d38',
+            type: 'input',
+            name: 'clearNo',
+            visible: true,
+            width: 25,
+            disabled: false,
+            required: true,
+            defaultValue: '',
+            hasLabel: true,
+            label: 'clearNo',
+            labelWidth: 20,
+            events: [],
+            placeholder: '',
+            inputType: 'text',
+            readonly: true,
+            areaRows: 3,
+            value: '',
+            prefix: '',
+            suffix: ''
+        }, {
+            id: 'e97adb5fef8f4c8197d68d15a7c5fc8f',
+            type: 'input',
+            name: 'fakeNo',
+            visible: true,
+            width: 25,
+            disabled: false,
+            required: true,
+            defaultValue: '',
+            hasLabel: true,
+            label: 'fakeNo',
+            labelWidth: 20,
+            events: [],
+            placeholder: '',
+            inputType: 'text',
+            readonly: true,
+            areaRows: 3,
+            value: '',
+            prefix: '',
+            suffix: ''
+        }, {
+            id: 'dedc62a082ff4f079461aad71ecc7895',
+            type: 'input',
+            name: 'awbNo',
+            visible: true,
+            width: 25,
+            disabled: false,
+            required: true,
+            defaultValue: '',
+            hasLabel: true,
+            label: 'awbNo',
+            labelWidth: 20,
+            events: [],
+            placeholder: '',
+            inputType: 'text',
+            readonly: false,
+            areaRows: 3,
+            value: '',
+            prefix: '',
+            suffix: ''
+        }, {
+            id: 'f33a3730b9e74f9486a7300e3dee6be5',
+            type: 'button',
+            name: '',
+            visible: true,
+            width: 25,
+            disabled: false,
+            text: 'printLabel',
+            btnType: 'default'
+        }, {
+            id: '9ea1925c904d46d284b4be8b8750d3e1',
+            type: 'button',
+            name: 'airPack',
+            visible: true,
+            width: 25,
+            disabled: false,
+            text: 'airPack',
+            btnType: 'default'
+        }]
+    }],
+    actions: [],
+    events:[]
 };
 
 
@@ -343,8 +517,8 @@ class LdxSmart {
         let status = 200;
         let res = {status: '', errMsg: ''};
         // console.log(self.req.headers);
-        if (self.req.headers.token) {
-            res = {status: 'success', errMsg: '', menu: menu_data};
+        if (self.req.headers.token === '123456789') {
+            res = Object.assign({status: 'success', errMsg: ''}, menu_data);
         } else {
             status = 401;
             res = {status: 'failed', errMsg: 'Unauthorized'};
@@ -357,7 +531,7 @@ class LdxSmart {
         const body = self.req.body;
         let res = { status: '', errMsg: '' };
         if (body.userName === 'admin' && body.password === '888888') {
-            res =  { status: 'success', errMsg: '', token: new_token, menu: menu_data };
+            res =  { status: 'success', errMsg: '', token: new_token };
         } else {
             res =  { status: 'failed', errMsg: '账户或密码错误'};
         }
@@ -370,7 +544,7 @@ class LdxSmart {
        
         let res = { status: '', errMsg: '' };
         if (id === '1') {
-            res =  { status: 'success', errMsg: '', pageInfo: pageConfig };
+            res =  { status: 'success', errMsg: '', page: pageConfig };
         } else {
             res =  { status: 'failed', errMsg: '错误ID'};
         }
