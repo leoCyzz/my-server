@@ -272,7 +272,23 @@ const pageConfig = {
                 width: 25,
                 disabled: false,
                 text: 'printLabel',
-                btnType: 'default'
+                btnType: 'default',
+                events: [
+                    {
+                        type: 'click',
+                        local: {
+                            name: 'A1',
+                            params: ['1da93e6ffe1a46a68af10da742a2241b']
+                        },
+                        remote: {
+                            queue: []
+                        },
+                        afterRemote: {
+                            name: 'A2',
+                            params: ''
+                        }
+                    }
+                ]
             }, {
                 id: '9ea1925c904d46d284b4be8b8750d3e1',
                 type: 'button',

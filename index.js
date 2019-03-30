@@ -6,6 +6,7 @@ const LdxSmart = require('./services/ldxSmart');
 const WeChat = require('./services/weChat');
 const IDA = require('./services/ida');
 const KdbundWechat = require('./services/kdbund');
+const ZWCloud = require('./services/cloud');
 
 app.all('*',function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -150,6 +151,17 @@ app.get('/kw/login',function(req, res){
 });
 
 // --- kdbund wechat Part End ---
+
+// --- zw Cloud Part Start ---
+app.get('/zwc/getExpressCompanyInfo',function(req, res){
+    let zwc = new ZWCloud(req,res);
+    zwc.getExpressCompanyInfo();
+});
+app.get('/zwc/getExpressDelivery',function(req, res){
+    let zwc = new ZWCloud(req,res);
+    zwc.getExpressDelivery();
+});
+// --- zw Cloud wechat Part End ---
 
 
 app.listen(3000, function(){
