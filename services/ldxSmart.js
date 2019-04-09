@@ -120,7 +120,17 @@ const pageConfig = {
                 hasLabel: true,
                 label: 'mawbNo',
                 labelWidth: 20,
-                events: [],
+                events: [{
+                    id: '12312312312312312312312312',
+                    type: 'change',
+                    local: {
+                        name: 'a1',
+                        params:['92b8be16a91c4e0981be20b2dd0af766','1da93e6ffe1a46a68af10da742a2241b']
+                    },
+                    remote: {
+                        queue: ['1', '2']
+                    }
+                }],
                 placeholder: '',
                 inputType: 'text',
                 readonly: false,
@@ -300,7 +310,16 @@ const pageConfig = {
                 btnType: 'default'
             }]
         }],
-        actions: [],
+        actions: [{
+            id: '1',
+            type: 'query',
+            name: 'aaaa',
+            compNames: [],
+            filters: [],
+            functions: [],
+            transfers: [],
+            defaultDataList: []
+        }],
         events: []
     },
     modals: []
@@ -521,12 +540,24 @@ const editPage = {
     events:[]
 };
 
+const translation = {
+    t1: "t2"
+}
+
 
 class LdxSmart {
     constructor(req, res){
 		this.req = req
 		this.res = res
 	}
+
+    getTranslator() {
+        let self = this;
+        let status = 200;
+        let res = {status: 'success', errMsg: '', translation};
+        return self.res.status(status).json(res);
+    }
+
 
     getMenuData () {
         let self = this;
