@@ -28,10 +28,16 @@ app.get('/', function(req, res){
 });
 
 // --- LDX Smart Part Start ---
-    app.get('/ls/getTranslator', function(req, res) {
+    app.get('/ls/getTranslations', function(req, res) {
         let ldxSmartObj = new LdxSmart(req, res);
-        ldxSmartObj.getTranslator();
+        ldxSmartObj.getTranslations();
     });
+
+    app.get('/ls/getPageList', function(req, res) {
+        let ldxSmartObj = new LdxSmart(req, res);
+        ldxSmartObj.getPageList();
+    });
+
     app.get('/ls/getMenuData', function(req, res) {
         let ldxSmartObj = new LdxSmart(req, res);
         ldxSmartObj.getMenuData();

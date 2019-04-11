@@ -540,10 +540,37 @@ const editPage = {
     events:[]
 };
 
-const translation = {
-    t1: "t2"
-}
+const translations = [{
+    key: "t1",
+    value: "t2"
+}];
 
+const pageList = [
+    { id: '1', title: 'page1', updateTime: '2019/04/01 01:00' },
+    { id: '2', title: 'page2', updateTime: '2019/04/02 02:00' },
+    { id: '3', title: 'page3', updateTime: '2019/04/03 03:00' },
+    { id: '4', title: 'page4', updateTime: '2019/04/04 04:00' },
+    { id: '5', title: 'page5', updateTime: '2019/04/05 05:00' },
+    { id: '6', title: 'page6', updateTime: '2019/04/06 06:00' },
+    { id: '7', title: 'page7', updateTime: '2019/04/07 07:00' },
+    { id: '8', title: 'page8', updateTime: '2019/04/08 08:00' },
+    { id: '9', title: 'page9', updateTime: '2019/04/09 09:00' },
+    { id: '10', title: 'page10', updateTime: '2019/04/10 10:00' },
+    { id: '11', title: 'page11', updateTime: '2019/04/11 11:00' },
+    { id: '12', title: 'page12', updateTime: '2019/04/12 12:00' },
+    { id: '13', title: 'page13', updateTime: '2019/04/13 13:00' },
+    { id: '14', title: 'page14', updateTime: '2019/04/14 14:00' },
+    { id: '15', title: 'page15', updateTime: '2019/04/15 15:00' },
+    { id: '16', title: 'page16', updateTime: '2019/04/16 16:00' },
+    { id: '17', title: 'page17', updateTime: '2019/04/17 17:00' },
+    { id: '18', title: 'page18', updateTime: '2019/04/18 18:00' },
+    { id: '19', title: 'page19', updateTime: '2019/04/19 19:00' },
+    { id: '20', title: 'page20', updateTime: '2019/04/20 20:00' },
+    { id: '21', title: 'page21', updateTime: '2019/04/21 21:00' },
+    { id: '22', title: 'page22', updateTime: '2019/04/22 22:00' },
+    { id: '23', title: 'page23', updateTime: '2019/04/23 23:00' },
+    { id: '24', title: 'page24', updateTime: '2019/04/24 24:00' }
+]
 
 class LdxSmart {
     constructor(req, res){
@@ -551,13 +578,39 @@ class LdxSmart {
 		this.res = res
 	}
 
-    getTranslator() {
+    getTranslations() {
         let self = this;
         let status = 200;
-        let res = {status: 'success', errMsg: '', translation};
+        let res = {status: 'success', errMsg: '', translations};
         return self.res.status(status).json(res);
     }
 
+    getPageList() {
+        let self = this;
+        let status = 200;
+        let { title, index, size } = self.req.query;
+        let res = {status: '', errMsg: ''};
+        let newPageList = [];
+        let resPageList = [];
+        size = parseInt(size,10);
+        index = parseInt(index, 10);
+        const startIndex = size * (index - 1);
+        const endIndex = size * index - 1;
+        if (title === '') {
+            newPageList = pageList;
+        } else {
+            newPageList = pageList.filter(pageInfo => {
+                return pageInfo.title.indexOf(title) > -1;
+            });
+        }
+        
+        const total = newPageList.length;
+        if (total > 0) {
+            resPageList = newPageList.filter((pageinfo, index) => index >= startIndex && index <= endIndex )
+        }
+        res = {status: 'success', errMsg: '', pageList: resPageList, total: total};
+        return self.res.status(status).json(res);
+    }
 
     getMenuData () {
         let self = this;
@@ -601,10 +654,10 @@ class LdxSmart {
     getEditPageInfo() {
         let self = this;
         const { id } = self.req.query;
-       
+        console.log(self.req.query);
         let res = { status: '', errMsg: '' };
         if (id === '1') {
-            res =  { status: 'success', errMsg: '', page: editPage };
+            res =  { status: 'success', errMsg: '', config: editPage };
         } else {
             res =  { status: 'failed', errMsg: '错误ID'};
         }
