@@ -572,6 +572,80 @@ const pageList = [
     { id: '24', title: 'page24', updateTime: '2019/04/24 24:00' }
 ]
 
+const tableList = [
+	{
+		"id": "59145e9b2a6f9f25ac311573",
+		"name": "产品信息",
+		"fields": [
+			{ "name": "时效", "id": "5915755e8225d516987db9b8" },
+			{ "name": "默认配送服务", "id": "59cdf6f126b45e5a51108194" },
+			{ "name": "默认目的地区", "id": "59f7b788ff11900cf1e7c5aa" },
+			{ "name": "出口服务ID", "id": "5ac1fae5ff11900c1029da34" },
+			{ "name": "燃油费率", "id": "5a057be7ff11905277d8b08c" },
+			{ "name": "进口服务ID", "id": "5ac1fad0ff11900c1029da09" },
+			{ "name": "抛重系数", "id": "591575bc8225d516987db9b9" },
+			{ "name": "产品名称", "id": "593a61ad0c52f86ec9f3d6d9" },
+			{ "name": "站点", "id": "59145f032a6f9f25ac311575" },
+			{ "name": "抛重方式", "id": "5a5dee10ff119036952fb5ac" }
+		]
+	},
+	{
+		"id": "59144df22a6f9f25ac311551",
+		"name": "客户",
+		"fields": [
+			{ "name": "余额", "id": "5a12b4fbff11902184e21546" },
+			{ "name": "客户别名", "id": "5baaff02ff1190591563dbc2" },
+			{ "name": "出账日", "id": "5b56a98dff1190187ecf8d6e" },
+			{ "name": "业务类型", "id": "5baafedeff1190591563db9c" },
+			{ "name": "客户代码", "id": "591544228225d516987db979" },
+			{ "name": "常用收件国家地区", "id": "59c65111c54a6731a5024097" },
+			{ "name": "常用发件地址", "id": "591544f98225d516987db97e" },
+			{ "name": "常用英文发件地址", "id": "59434d66ad98c34baca0a1ba" },
+			{ "name": "常用发件城市", "id": "591545108225d516987db97f" },
+			{ "name": "常用英文发件城市", "id": "5c495d64c32d3350447f209d" },
+			{ "name": "常用发件公司", "id": "594a457b0c52f81ffe1bcbe9" },
+			{ "name": "常用发件区县", "id": "5c495c81c32d3350447f209b" },
+			{ "name": "常用英文发件区县", "id": "5c495d91c32d3350447f209e" },
+			{ "name": "常用发件省份", "id": "59c0bf9f26b45e11bb4e2375" },
+			{ "name": "常用英文发件省份", "id": "5c495cc1c32d3350447f209c" },
+			{ "name": "常用发件国家地区", "id": "59c650dec54a6731a5024096" },
+			{ "name": "常用发件联系电话", "id": "591544d68225d516987db97d" },
+			{ "name": "常用发件邮编", "id": "591545738225d516987db981" },
+			{ "name": "常用发件人", "id": "591544a98225d516987db97c" },
+			{ "name": "联系人", "id": "59cf524f26b45e5a511083a1" },
+			{ "name": "创建时间", "id": "5c4841c0c32d331070634d32" },
+			{ "name": "创建方式", "id": "5bb5b656ff11904e8f294abf" },
+			{ "name": "信用额度", "id": "5c495e0bc32d3350447f209f" },
+			{ "name": "信用等级", "id": "5c495e33c32d3350447f20a0" },
+			{ "name": "币种", "id": "5a27637eff11903c15b9a991" },
+			{ "name": "口座", "id": "5b56abdeff1190187ecf8e08" },
+			{ "name": "交货地址", "id": "591544358225d516987db97a" },
+			{ "name": "折扣", "id": "591545b88225d516987db983" },
+			{ "name": "邮箱", "id": "5c4841d1c32d331070634d33" },
+			{ "name": "预估余额", "id": "5c492a31ff119035c1756073" },
+			{ "name": "进出口编号", "id": "5b56a8b2ff1190187ecf8d3b" },
+			{ "name": "法人号", "id": "5a79595dff11905f47ebc843" },
+			{ "name": "客户名称", "id": "59144e032a6f9f25ac311552" },
+			{ "name": "英文名称", "id": "5a6580faff119020e545a110" },
+			{ "name": "付款期限", "id": "5b56a9acff1190187ecf8d70" },
+			{ "name": "常用产品", "id": "591545ec8225d516987db984" },
+			{ "name": "国家地区", "id": "5b56aa20ff1190187ecf8d7f" },
+			{ "name": "备注", "id": "5a7959d8ff11905f47ebc8b4" },
+			{ "name": "结算方式", "id": "591545968225d516987db982" },
+			{ "name": "站点", "id": "59152ed58225d516987db970" },
+			{ "name": "特殊标记", "id": "5bdfc780ff11905a2d59abbd" },
+			{ "name": "状态", "id": "5b56a9d5ff1190187ecf8d74" },
+			{ "name": "电话", "id": "591544728225d516987db97b" },
+			{ "name": "经办人", "id": "5a433ffcff1190023a409edc" },
+			{ "name": "客户类型", "id": "5a4340bdff1190023a409f24" },
+			{ "name": "创建用户", "id": "591d5f652a6f9f3a34e31179" },
+			{ "name": "微信", "id": "591d5d3e2a6f9f3a34e31178" }
+		]
+	}
+];
+
+const actionList = [];
+
 class LdxSmart {
     constructor(req, res){
 		this.req = req
@@ -582,6 +656,20 @@ class LdxSmart {
         let self = this;
         let status = 200;
         let res = {status: 'success', errMsg: '', translations};
+        return self.res.status(status).json(res);
+    }
+
+    getTableList() {
+        let self = this;
+        let status = 200;
+        let res = {status: 'success', errMsg: '', data: tableList};
+        return self.res.status(status).json(res);
+    }
+
+    getLocalActionList() {
+        let self = this;
+        let status = 200;
+        let res = {status: 'success', errMsg: '', data: actionList};
         return self.res.status(status).json(res);
     }
 

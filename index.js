@@ -33,6 +33,16 @@ app.get('/', function(req, res){
         ldxSmartObj.getTranslations();
     });
 
+    app.get('/ls/getTableList', function(req, res) {
+        let ldxSmartObj = new LdxSmart(req, res);
+        ldxSmartObj.getTableList();
+    });
+
+    app.get('/ls/getLocalActionList', function(req, res) {
+        let ldxSmartObj = new LdxSmart(req, res);
+        ldxSmartObj.getLocalActionList();
+    });
+
     app.get('/ls/getPageList', function(req, res) {
         let ldxSmartObj = new LdxSmart(req, res);
         ldxSmartObj.getPageList();
