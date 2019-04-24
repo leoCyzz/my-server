@@ -10,8 +10,8 @@ const menu_data = {
 	},
 	"menu": [
 		{
-			"text": "zwMid",
-			"i18n": "zw.menu.main",
+			"text": "",
+			"i18n": "",
 			"group": true,
 			"hideInBreadcrumb": true,
 			"children": [
@@ -719,7 +719,7 @@ class LdxSmart {
         const body = self.req.body;
         let res = { status: '', errMsg: '' };
         if (body.userName === 'admin' && body.password === '888888') {
-            res =  { status: 'success', errMsg: '', token: new_token };
+            res =  { status: 'success', errMsg: '', user: new_token };
         } else {
             res =  { status: 'failed', errMsg: '账户或密码错误'};
         }
