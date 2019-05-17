@@ -29,33 +29,18 @@ const menu_data = {
 				},
 				{
 					"text": "页面创造",
-					"i18n": "zw.menu.designer.main",
+					"i18n": "zw.menu.show",
 					"icon": "anticon-layout",
 					"children": [
 						{
-							"text": "页面列表",
-							"link": "/designer/index",
-							"i18n": "zw.menu.designer.index"
-						},
-						{
-							"text": "页面编辑0",
-							"link": "/designer/edit/0",
-							"i18n": "zw.menu.designer.edit.p0"
-						},
-						{
-							"text": "页面编辑1",
-							"link": "/designer/edit/1",
-							"i18n": "zw.menu.designer.edit.p1"
-						},
-						{
 							"text": "页面显示0",
-							"link": "/designer/show/0",
-							"i18n": "zw.menu.designer.show.p0"
+							"link": "/show/0",
+							"i18n": "zw.menu.show.p0"
 						},
 						{
 							"text": "页面显示1",
-							"link": "/designer/show/1",
-							"i18n": "zw.menu.designer.show.p1"
+							"link": "/show/1",
+							"i18n": "zw.menu.show.p1"
 						}
 					]
 				}
@@ -74,470 +59,715 @@ const new_token = {
 
 const pageConfig = {
     main: {
-        id: '',
-        name: '',
-        title: '',
-        mode: 'page',
-        author: '',
-        updateTime: '2019/03/19 17:11:05',
-        children: [{
-            id: 'c82311b11d094b94a7754badf90c1699',
-            type: 'container',
-            name: '',
-            visible: true,
-            width: 25,
-            layout: 'horizontal',
-            children: [{
-                id: '92b8be16a91c4e0981be20b2dd0af766',
-                type: 'datePicker',
-                name: 'mawbDate',
-                visible: true,
-                width: 25,
-                disabled: false,
-                required: false,
-                defaultValue: null,
-                hasLabel: true,
-                label: 'mawbDate',
-                labelWidth: 20,
-                events: [],
-                mode: 'single',
-                format: 'YYYY/MM/DD',
-                showTime: false,
-                placeholder1: '',
-                placeholder2: '',
-                defaultDate1: '',
-                defaultDate2: '',
-                value: null
+        "id": "123",
+        "pageId": "8cdde26a690142fd8af35b93a7e44b26",
+        "name": "demo",
+        "title": "",
+        "mode": "page",
+        "updateTime": "",
+        "children": [{
+            "id": "ffe74649fe4341e2b31064fb3c9d8657",
+            "type": "container",
+            "name": "",
+            "visible": true,
+            "layout": "horizontal",
+            "children": [{
+                "id": "e4d55be39236453ba3850d7aecb17e59",
+                "type": "checkbox",
+                "name": "check1",
+                "visible": true,
+                "disabled": false,
+                "required": false,
+                "label": "",
+                "defaultValue": null,
+                "events": [],
+                "checkOptions": [{
+                    "text": "",
+                    "value": "",
+                    "checked": false
+                }, {
+                    "text": "",
+                    "value": "",
+                    "checked": false
+                }]
             }, {
-                id: '1da93e6ffe1a46a68af10da742a2241b',
-                type: 'input',
-                name: 'mawbNo',
-                visible: true,
-                width: 25,
-                disabled: false,
-                required: true,
-                defaultValue: '',
-                hasLabel: true,
-                label: 'mawbNo',
-                labelWidth: 20,
-                events: [{
-                    id: '12312312312312312312312312',
-                    type: 'change',
-                    local: {
-                        name: 'a1',
-                        params:['92b8be16a91c4e0981be20b2dd0af766','1da93e6ffe1a46a68af10da742a2241b']
+                "id": "ee98fa06e9bf4ed386d9f5802bfcf064",
+                "type": "datepicker",
+                "name": "datepicker1",
+                "visible": true,
+                "disabled": false,
+                "required": false,
+                "label": "",
+                "defaultValue": null,
+                "events": [],
+                "mode": "single",
+                "placeholder1": "",
+                "placeholder2": "",
+                "showTime": false,
+                "format": "YYYY/MM/DD",
+                "initDate1": "",
+                "initDate2": ""
+            }, {
+                "id": "1d457bd5a48e441fada585572f68b1ef",
+                "type": "input",
+                "name": "input1",
+                "visible": true,
+                "disabled": false,
+                "required": false,
+                "label": "",
+                "defaultValue": null,
+                "events": [{
+                    "id": "096f8dbddfa746acb7c273576221d090",
+                    "type": "change",
+                    "local": {
+                        "name": "",
+                        "comps": []
                     },
-                    remote: {
-                        queue: ['1', '2']
+                    "afterRemote": {
+                        "name": "",
+                        "comps": []
                     }
                 }],
-                placeholder: '',
-                inputType: 'text',
-                readonly: false,
-                areaRows: 3,
-                value: '',
-                prefix: '',
-                suffix: ''
+                "inputType": "text",
+                "placeholder": "",
+                "readonly": false,
+                "areaRows": 5,
+                "prefix": "",
+                "suffix": ""
             }, {
-                id: 'a3b68de855864fc6bcdfb886a399d71b',
-                type: 'selectbox',
-                name: 'flight',
-                visible: true,
-                width: 25,
-                disabled: false,
-                required: false,
-                defaultValue: '',
-                hasLabel: true,
-                label: 'flight',
-                labelWidth: 20,
-                events: [],
-                placeholder: '',
-                dataSource: 'static',
-                dataAction: '',
-                selectOptions: []
+                "id": "518ada63e4e147cc81cd5f3c58c1af09",
+                "type": "inputnumber",
+                "name": "inputnumber1",
+                "visible": true,
+                "disabled": false,
+                "required": false,
+                "label": "",
+                "defaultValue": null,
+                "events": [],
+                "placeholder": "",
+                "max": 999,
+                "min": 0,
+                "step": 1
             }, {
-                id: '5a7fbdd4ab9d42f895d38100c20a0126',
-                type: 'input',
-                name: 'airCode',
-                visible: true,
-                width: 25,
-                disabled: false,
-                required: false,
-                defaultValue: '',
-                hasLabel: true,
-                label: 'airCode',
-                labelWidth: 20,
-                events: [],
-                placeholder: '',
-                inputType: 'text',
-                readonly: true,
-                areaRows: 3,
-                value: '',
-                prefix: '',
-                suffix: ''
+                "id": "3097cd341edc4d9d922fa73b57ba05ad",
+                "type": "radio",
+                "name": "radio1",
+                "visible": true,
+                "disabled": false,
+                "required": false,
+                "label": "",
+                "defaultValue": null,
+                "events": [],
+                "radioOptions": [{
+                    "text": "",
+                    "value": ""
+                }, {
+                    "text": "",
+                    "value": ""
+                }]
+            }]
+        }, {
+            "id": "61040a46b5564541b1b924faa7543a9f",
+            "type": "container",
+            "name": "",
+            "visible": true,
+            "layout": "horizontal",
+            "children": [{
+                "id": "9d383ba83a2543caa5e5d2cb7f730701",
+                "type": "scale",
+                "name": "scale1",
+                "visible": true,
+                "disabled": false,
+                "required": false,
+                "label": "",
+                "defaultValue": null,
+                "events": [],
+                "isAuto": false,
+                "placeholder": "",
+                "socketAddr": ""
             }, {
-                id: '2defcb62ce14415aa8b8a3434defcf69',
-                type: 'input',
-                name: 'shippingPort',
-                visible: true,
-                width: 25,
-                disabled: false,
-                defaultValue: '',
-                hasLabel: true,
-                label: 'shippingPort',
-                labelWidth: 20,
-                events: [],
-                placeholder: '',
-                inputType: 'text',
-                readonly: true,
-                areaRows: 3,
-                value: '',
-                prefix: '',
-                suffix: ''
+                "id": "600dd799e2db48d6bb71ba1b87617eed",
+                "type": "select",
+                "name": "select1",
+                "visible": true,
+                "disabled": false,
+                "required": false,
+                "label": "",
+                "defaultValue": null,
+                "events": [],
+                "placeholder": "",
+                "selectOptions": []
             }, {
-                id: 'ab81f460a5764f589b23fccccf2e5241',
-                type: 'input',
-                name: 'destinationPort',
-                visible: true,
-                width: 25,
-                disabled: false,
-                required: false,
-                defaultValue: '',
-                hasLabel: true,
-                label: 'destinatePort',
-                labelWidth: 20,
-                events: [],
-                placeholder: '',
-                inputType: 'text',
-                readonly: true,
-                areaRows: 3,
-                value: '',
-                prefix: '',
-                suffix: ''
+                "id": "be33b1915d274b8c894685a02ee278a0",
+                "type": "upload",
+                "name": "upload1",
+                "visible": true,
+                "disabled": false,
+                "required": false,
+                "label": "",
+                "defaultValue": null,
+                "events": [],
+                "text": "",
+                "accept": [],
+                "fileType": "",
+                "multiple": false,
+                "limit": 1,
+                "size": 10
             }, {
-                id: '28fd4fa9c95e42d7a2a39c25c34c7d38',
-                type: 'input',
-                name: 'clearNo',
-                visible: true,
-                width: 25,
-                disabled: false,
-                required: true,
-                defaultValue: '',
-                hasLabel: true,
-                label: 'clearNo',
-                labelWidth: 20,
-                events: [],
-                placeholder: '',
-                inputType: 'text',
-                readonly: true,
-                areaRows: 3,
-                value: '',
-                prefix: '',
-                suffix: ''
-            }, {
-                id: 'e97adb5fef8f4c8197d68d15a7c5fc8f',
-                type: 'input',
-                name: 'fakeNo',
-                visible: true,
-                width: 25,
-                disabled: false,
-                required: true,
-                defaultValue: '',
-                hasLabel: true,
-                label: 'fakeNo',
-                labelWidth: 20,
-                events: [],
-                placeholder: '',
-                inputType: 'text',
-                readonly: true,
-                areaRows: 3,
-                value: '',
-                prefix: '',
-                suffix: ''
-            }, {
-                id: 'dedc62a082ff4f079461aad71ecc7895',
-                type: 'input',
-                name: 'awbNo',
-                visible: true,
-                width: 25,
-                disabled: false,
-                required: true,
-                defaultValue: '',
-                hasLabel: true,
-                label: 'awbNo',
-                labelWidth: 20,
-                events: [],
-                placeholder: '',
-                inputType: 'text',
-                readonly: false,
-                areaRows: 3,
-                value: '',
-                prefix: '',
-                suffix: ''
-            }, {
-                id: 'f33a3730b9e74f9486a7300e3dee6be5',
-                type: 'button',
-                name: '',
-                visible: true,
-                width: 25,
-                disabled: false,
-                text: 'printLabel',
-                btnType: 'default',
-                events: [
-                    {
-                        type: 'click',
-                        local: {
-                            name: 'A1',
-                            params: ['1da93e6ffe1a46a68af10da742a2241b']
-                        },
-                        remote: {
-                            queue: []
-                        },
-                        afterRemote: {
-                            name: 'A2',
-                            params: ''
-                        }
+                "id": "a107a1f8a90549ef9e22a493b01def8c",
+                "type": "button",
+                "name": "button1",
+                "visible": true,
+                "text": "",
+                "btnType": "default",
+                "disabled": false,
+                "events": [{
+                    "id": "6b2dcdee923044c79e1047a701a1664c",
+                    "type": "click",
+                    "local": {
+                        "name": "",
+                        "comps": []
+                    },
+                    "afterRemote": {
+                        "name": "",
+                        "comps": []
                     }
-                ]
-            }, {
-                id: '9ea1925c904d46d284b4be8b8750d3e1',
-                type: 'button',
-                name: 'airPack',
-                visible: true,
-                width: 25,
-                disabled: false,
-                text: 'airPack',
-                btnType: 'default'
+                }]
+            }]
+        }, {
+            "id": "b5704aad22a345d3b1ffab80ae124dda",
+            "type": "print",
+            "name": "print1",
+            "visible": true,
+            "disabled": false,
+            "required": false,
+            "label": "",
+            "defaultValue": null,
+            "events": [],
+            "printTimes": 1,
+            "tempName": "",
+            "height": 200
+        }, {
+            "id": "9f35e0e97f364456915e6b7d7fc65675",
+            "type": "table",
+            "name": "table1",
+            "visible": true,
+            "disabled": false,
+            "required": false,
+            "label": "",
+            "defaultValue": null,
+            "events": [],
+            "hasSerialNumber": true,
+            "hasCheckkbox": false,
+            "columns": [],
+            "pageSize": 20
+        }],
+        "events": [{
+            "id": "a4ef6141ec1c478e9b943b396bb0fdfb",
+            "type": "init",
+            "local": {
+                "name": "",
+                "comps": []
+            },
+            "afterRemote": {
+                "name": "",
+                "comps": []
+            }
+        }],
+        "remotes": {
+            "8cdde26a690142fd8af35b93a7e44b26": {},
+            "1d457bd5a48e441fada585572f68b1ef": {
+                "096f8dbddfa746acb7c273576221d090": {
+                    "queue": []
+                }
+            },
+            "a107a1f8a90549ef9e22a493b01def8c": {
+                "6b2dcdee923044c79e1047a701a1664c": {
+                    "queue": []
+                }
+            },
+            "": {
+                "a4ef6141ec1c478e9b943b396bb0fdfb": {
+                    "queue": ["3342376aa1444d1eb79a9073201d8796"]
+                }
+            }
+        },
+        "dataGroups": [{
+            "name": "product",
+            "tableId": "59145e9b2a6f9f25ac311573",
+            "addRecord": false,
+            "fkMap": [],
+            "uniqueFields": []
+        }, {
+            "name": "customer",
+            "tableId": "59144df22a6f9f25ac311551",
+            "addRecord": false,
+            "fkMap": [],
+            "uniqueFields": []
+        }],
+        "dataItems": {
+            "e4d55be39236453ba3850d7aecb17e59": {
+                "fieldId": "5915755e8225d516987db9b8",
+                "groupName": "product",
+                "operator": "0",
+                "value": ""
+            },
+            "ee98fa06e9bf4ed386d9f5802bfcf064": {
+                "fieldId": "5baaff02ff1190591563dbc2",
+                "groupName": "customer",
+                "operator": 0,
+                "value": ""
+            },
+            "1d457bd5a48e441fada585572f68b1ef": {
+                "fieldId": "591575bc8225d516987db9b9",
+                "groupName": "product",
+                "operator": 0,
+                "value": ""
+            },
+            "518ada63e4e147cc81cd5f3c58c1af09": {
+                "fieldId": "5baafedeff1190591563db9c",
+                "groupName": "customer",
+                "operator": 0,
+                "value": ""
+            },
+            "3097cd341edc4d9d922fa73b57ba05ad": {
+                "fieldId": "59f7b788ff11900cf1e7c5aa",
+                "groupName": "product",
+                "operator": 0,
+                "value": ""
+            },
+            "9d383ba83a2543caa5e5d2cb7f730701": {
+                "fieldId": "5a12b4fbff11902184e21546",
+                "groupName": "customer",
+                "operator": 0,
+                "value": ""
+            },
+            "600dd799e2db48d6bb71ba1b87617eed": {
+                "fieldId": "59f7b788ff11900cf1e7c5aa",
+                "groupName": "product",
+                "operator": 0,
+                "value": ""
+            },
+            "be33b1915d274b8c894685a02ee278a0": {
+                "fieldId": null,
+                "groupName": null,
+                "operator": 0,
+                "value": ""
+            },
+            "b5704aad22a345d3b1ffab80ae124dda": {
+                "fieldId": null,
+                "groupName": null,
+                "operator": 0,
+                "value": ""
+            },
+            "9f35e0e97f364456915e6b7d7fc65675": {
+                "fieldId": null,
+                "groupName": null,
+                "operator": 0,
+                "value": ""
+            }
+        },
+        "actions": [{
+            "id": "3342376aa1444d1eb79a9073201d8796",
+            "name": "save1",
+            "type": "save",
+            "filters": [{
+                "fieldId": "59f7b788ff11900cf1e7c5aa",
+                "groupName": "product",
+                "operator": "5",
+                "value": "2"
+            }],
+            "extraFuncs": {
+                "prepare": [{
+                    "groupName": "product",
+                    "functionName": "1212"
+                }],
+                "after": [{
+                    "groupName": "customer",
+                    "functionName": "1212"
+                }],
+                "validate": [{
+                    "groupName": "product",
+                    "functionName": "1212"
+                }]
+            },
+            "transfers": [{
+                "origin": {
+                    "fieldId": "59cdf6f126b45e5a51108194",
+                    "groupName": "product"
+                },
+                "refers": {
+                    "fieldId": "591544f98225d516987db97e",
+                    "groupName": "customer"
+                }
+            }],
+            "defaultDataList": [{
+                "fieldId": "59f7b788ff11900cf1e7c5aa",
+                "groupName": "product",
+                "operator": 0,
+                "value": "1"
             }]
         }],
-        actions: [{
-            id: '1',
-            type: 'query',
-            name: 'aaaa',
-            compNames: [],
-            filters: [],
-            functions: [],
-            transfers: [],
-            defaultDataList: []
-        }],
-        events: []
+        "actionItems": {
+            "3342376aa1444d1eb79a9073201d8796": ["e4d55be39236453ba3850d7aecb17e59", "518ada63e4e147cc81cd5f3c58c1af09", "be33b1915d274b8c894685a02ee278a0", "a107a1f8a90549ef9e22a493b01def8c", "600dd799e2db48d6bb71ba1b87617eed", "9f35e0e97f364456915e6b7d7fc65675"]
+        }
     },
     modals: []
 };
 
 const editPage = {
-    id: '',
-    name: '',
-    title: '',
-    mode: 'page',
-    author: '',
-    updateTime: '2019/03/19 17:11:05',
-    children: [{
-        id: 'c82311b11d094b94a7754badf90c1699',
-        type: 'container',
-        name: '',
-        visible: true,
-        width: 25,
-        layout: 'horizontal',
-        children: [{
-            id: '92b8be16a91c4e0981be20b2dd0af766',
-            type: 'datePicker',
-            name: 'mawbDate',
-            visible: true,
-            width: 25,
-            disabled: false,
-            required: false,
-            defaultValue: null,
-            hasLabel: true,
-            label: 'mawbDate',
-            labelWidth: 20,
-            events: [],
-            mode: 'single',
-            format: 'YYYY/MM/DD',
-            showTime: false,
-            placeholder1: '',
-            placeholder2: '',
-            defaultDate1: '',
-            defaultDate2: '',
-            value: null
-        }, {
-            id: '1da93e6ffe1a46a68af10da742a2241b',
-            type: 'input',
-            name: 'mawbNo',
-            visible: true,
-            width: 25,
-            disabled: false,
-            required: true,
-            defaultValue: '',
-            hasLabel: true,
-            label: 'mawbNo',
-            labelWidth: 20,
-            events: [],
-            placeholder: '',
-            inputType: 'text',
-            readonly: false,
-            areaRows: 3,
-            value: '',
-            prefix: '',
-            suffix: ''
-        }, {
-            id: 'a3b68de855864fc6bcdfb886a399d71b',
-            type: 'selectbox',
-            name: 'flight',
-            visible: true,
-            width: 25,
-            disabled: false,
-            required: false,
-            defaultValue: '',
-            hasLabel: true,
-            label: 'flight',
-            labelWidth: 20,
-            events: [],
-            placeholder: '',
-            dataSource: 'static',
-            dataAction: '',
-            selectOptions: []
-        }, {
-            id: '5a7fbdd4ab9d42f895d38100c20a0126',
-            type: 'input',
-            name: 'airCode',
-            visible: true,
-            width: 25,
-            disabled: false,
-            required: false,
-            defaultValue: '',
-            hasLabel: true,
-            label: 'airCode',
-            labelWidth: 20,
-            events: [],
-            placeholder: '',
-            inputType: 'text',
-            readonly: true,
-            areaRows: 3,
-            value: '',
-            prefix: '',
-            suffix: ''
-        }, {
-            id: '2defcb62ce14415aa8b8a3434defcf69',
-            type: 'input',
-            name: 'shippingPort',
-            visible: true,
-            width: 25,
-            disabled: false,
-            defaultValue: '',
-            hasLabel: true,
-            label: 'shippingPort',
-            labelWidth: 20,
-            events: [],
-            placeholder: '',
-            inputType: 'text',
-            readonly: true,
-            areaRows: 3,
-            value: '',
-            prefix: '',
-            suffix: ''
-        }, {
-            id: 'ab81f460a5764f589b23fccccf2e5241',
-            type: 'input',
-            name: 'destinationPort',
-            visible: true,
-            width: 25,
-            disabled: false,
-            required: false,
-            defaultValue: '',
-            hasLabel: true,
-            label: 'destinatePort',
-            labelWidth: 20,
-            events: [],
-            placeholder: '',
-            inputType: 'text',
-            readonly: true,
-            areaRows: 3,
-            value: '',
-            prefix: '',
-            suffix: ''
-        }, {
-            id: '28fd4fa9c95e42d7a2a39c25c34c7d38',
-            type: 'input',
-            name: 'clearNo',
-            visible: true,
-            width: 25,
-            disabled: false,
-            required: true,
-            defaultValue: '',
-            hasLabel: true,
-            label: 'clearNo',
-            labelWidth: 20,
-            events: [],
-            placeholder: '',
-            inputType: 'text',
-            readonly: true,
-            areaRows: 3,
-            value: '',
-            prefix: '',
-            suffix: ''
-        }, {
-            id: 'e97adb5fef8f4c8197d68d15a7c5fc8f',
-            type: 'input',
-            name: 'fakeNo',
-            visible: true,
-            width: 25,
-            disabled: false,
-            required: true,
-            defaultValue: '',
-            hasLabel: true,
-            label: 'fakeNo',
-            labelWidth: 20,
-            events: [],
-            placeholder: '',
-            inputType: 'text',
-            readonly: true,
-            areaRows: 3,
-            value: '',
-            prefix: '',
-            suffix: ''
-        }, {
-            id: 'dedc62a082ff4f079461aad71ecc7895',
-            type: 'input',
-            name: 'awbNo',
-            visible: true,
-            width: 25,
-            disabled: false,
-            required: true,
-            defaultValue: '',
-            hasLabel: true,
-            label: 'awbNo',
-            labelWidth: 20,
-            events: [],
-            placeholder: '',
-            inputType: 'text',
-            readonly: false,
-            areaRows: 3,
-            value: '',
-            prefix: '',
-            suffix: ''
-        }, {
-            id: 'f33a3730b9e74f9486a7300e3dee6be5',
-            type: 'button',
-            name: '',
-            visible: true,
-            width: 25,
-            disabled: false,
-            text: 'printLabel',
-            btnType: 'default'
-        }, {
-            id: '9ea1925c904d46d284b4be8b8750d3e1',
-            type: 'button',
-            name: 'airPack',
-            visible: true,
-            width: 25,
-            disabled: false,
-            text: 'airPack',
-            btnType: 'default'
-        }]
-    }],
-    actions: [],
-    events:[]
+	"id": "123",
+	"pageId": "8cdde26a690142fd8af35b93a7e44b26",
+	"name": "demo",
+	"title": "",
+	"mode": "page",
+	"updateTime": "",
+	"children": [{
+		"id": "ffe74649fe4341e2b31064fb3c9d8657",
+		"type": "container",
+		"name": "",
+		"visible": true,
+		"layout": "horizontal",
+		"children": [{
+			"id": "e4d55be39236453ba3850d7aecb17e59",
+			"type": "checkbox",
+			"name": "check1",
+			"visible": true,
+			"disabled": false,
+			"required": true,
+			"label": "checkLabel",
+			"defaultValue": null,
+			"events": [],
+			"checkOptions": [{
+				"text": "",
+				"value": "",
+				"checked": false
+			}, {
+				"text": "",
+				"value": "",
+				"checked": false
+			}]
+		}, {
+			"id": "ee98fa06e9bf4ed386d9f5802bfcf064",
+			"type": "datepicker",
+			"name": "datepicker1",
+			"visible": true,
+			"disabled": false,
+			"required": false,
+			"label": "",
+			"defaultValue": null,
+			"events": [],
+			"mode": "single",
+			"placeholder1": "",
+			"placeholder2": "",
+			"showTime": false,
+			"format": "YYYY/MM/DD",
+			"initDate1": "",
+			"initDate2": ""
+		}, {
+			"id": "1d457bd5a48e441fada585572f68b1ef",
+			"type": "input",
+			"name": "input1",
+			"visible": true,
+			"disabled": false,
+			"required": false,
+			"label": "",
+			"defaultValue": null,
+			"events": [{
+				"id": "096f8dbddfa746acb7c273576221d090",
+				"type": "change",
+				"local": {
+					"name": "",
+					"comps": []
+				},
+				"afterRemote": {
+					"name": "",
+					"comps": []
+				}
+			}],
+			"inputType": "text",
+			"placeholder": "",
+			"readonly": false,
+			"areaRows": 5,
+			"prefix": "",
+			"suffix": ""
+		}, {
+			"id": "518ada63e4e147cc81cd5f3c58c1af09",
+			"type": "inputnumber",
+			"name": "inputnumber1",
+			"visible": true,
+			"disabled": false,
+			"required": false,
+			"label": "",
+			"defaultValue": null,
+			"events": [],
+			"placeholder": "",
+			"max": 999,
+			"min": 0,
+			"step": 1
+		}, {
+			"id": "3097cd341edc4d9d922fa73b57ba05ad",
+			"type": "radio",
+			"name": "radio1",
+			"visible": true,
+			"disabled": false,
+			"required": false,
+			"label": "",
+			"defaultValue": null,
+			"events": [],
+			"radioOptions": [{
+				"text": "",
+				"value": ""
+			}, {
+				"text": "",
+				"value": ""
+			}]
+		}]
+	}, {
+		"id": "61040a46b5564541b1b924faa7543a9f",
+		"type": "container",
+		"name": "",
+		"visible": true,
+		"layout": "horizontal",
+		"children": [{
+			"id": "9d383ba83a2543caa5e5d2cb7f730701",
+			"type": "scale",
+			"name": "scale1",
+			"visible": true,
+			"disabled": false,
+			"required": false,
+			"label": "",
+			"defaultValue": null,
+			"events": [],
+			"isAuto": false,
+			"placeholder": "",
+			"socketAddr": ""
+		}, {
+			"id": "600dd799e2db48d6bb71ba1b87617eed",
+			"type": "select",
+			"name": "select1",
+			"visible": true,
+			"disabled": false,
+			"required": false,
+			"label": "",
+			"defaultValue": null,
+			"events": [],
+			"placeholder": "",
+			"selectOptions": []
+		}, {
+			"id": "be33b1915d274b8c894685a02ee278a0",
+			"type": "upload",
+			"name": "upload1",
+			"visible": true,
+			"disabled": false,
+			"required": false,
+			"label": "",
+			"defaultValue": null,
+			"events": [],
+			"text": "",
+			"accept": [],
+			"fileType": "",
+			"multiple": false,
+			"limit": 1,
+			"size": 10
+		}, {
+			"id": "a107a1f8a90549ef9e22a493b01def8c",
+			"type": "button",
+			"name": "button1",
+			"visible": true,
+			"text": "",
+			"btnType": "default",
+			"disabled": false,
+			"events": [{
+				"id": "6b2dcdee923044c79e1047a701a1664c",
+				"type": "click",
+				"local": {
+					"name": "",
+					"comps": []
+				},
+				"afterRemote": {
+					"name": "",
+					"comps": []
+				}
+			}]
+		}]
+	}, {
+		"id": "b5704aad22a345d3b1ffab80ae124dda",
+		"type": "print",
+		"name": "print1",
+		"visible": true,
+		"disabled": false,
+		"required": false,
+		"label": "",
+		"defaultValue": null,
+		"events": [],
+		"printTimes": 1,
+		"tempName": "",
+		"height": 200
+	}, {
+		"id": "9f35e0e97f364456915e6b7d7fc65675",
+		"type": "table",
+		"name": "table1",
+		"visible": true,
+		"disabled": false,
+		"required": false,
+		"label": "",
+		"defaultValue": null,
+		"events": [],
+		"hasSerialNumber": true,
+		"hasCheckkbox": false,
+		"columns": [],
+		"pageSize": 20
+	}],
+	"events": [{
+		"id": "a4ef6141ec1c478e9b943b396bb0fdfb",
+		"type": "init",
+		"local": {
+			"name": "",
+			"comps": []
+		},
+		"afterRemote": {
+			"name": "",
+			"comps": []
+		}
+	}],
+	"remotes": {
+		"8cdde26a690142fd8af35b93a7e44b26": {},
+		"1d457bd5a48e441fada585572f68b1ef": {
+			"096f8dbddfa746acb7c273576221d090": {
+				"queue": []
+			}
+		},
+		"a107a1f8a90549ef9e22a493b01def8c": {
+			"6b2dcdee923044c79e1047a701a1664c": {
+				"queue": []
+			}
+		},
+		"": {
+			"a4ef6141ec1c478e9b943b396bb0fdfb": {
+				"queue": ["3342376aa1444d1eb79a9073201d8796"]
+			}
+		}
+	},
+	"dataGroups": [{
+		"name": "product",
+		"tableId": "59145e9b2a6f9f25ac311573",
+		"addRecord": false,
+		"fkMap": [],
+		"uniqueFields": []
+	}, {
+		"name": "customer",
+		"tableId": "59144df22a6f9f25ac311551",
+		"addRecord": false,
+		"fkMap": [],
+		"uniqueFields": []
+	}],
+	"dataItems": {
+		"e4d55be39236453ba3850d7aecb17e59": {
+			"fieldId": "5915755e8225d516987db9b8",
+			"groupName": "product",
+			"operator": "0",
+			"value": ""
+		},
+		"ee98fa06e9bf4ed386d9f5802bfcf064": {
+			"fieldId": "5baaff02ff1190591563dbc2",
+			"groupName": "customer",
+			"operator": 0,
+			"value": ""
+		},
+		"1d457bd5a48e441fada585572f68b1ef": {
+			"fieldId": "591575bc8225d516987db9b9",
+			"groupName": "product",
+			"operator": 0,
+			"value": ""
+		},
+		"518ada63e4e147cc81cd5f3c58c1af09": {
+			"fieldId": "5baafedeff1190591563db9c",
+			"groupName": "customer",
+			"operator": 0,
+			"value": ""
+		},
+		"3097cd341edc4d9d922fa73b57ba05ad": {
+			"fieldId": "59f7b788ff11900cf1e7c5aa",
+			"groupName": "product",
+			"operator": 0,
+			"value": ""
+		},
+		"9d383ba83a2543caa5e5d2cb7f730701": {
+			"fieldId": "5a12b4fbff11902184e21546",
+			"groupName": "customer",
+			"operator": 0,
+			"value": ""
+		},
+		"600dd799e2db48d6bb71ba1b87617eed": {
+			"fieldId": "59f7b788ff11900cf1e7c5aa",
+			"groupName": "product",
+			"operator": 0,
+			"value": ""
+		},
+		"be33b1915d274b8c894685a02ee278a0": {
+			"fieldId": null,
+			"groupName": null,
+			"operator": 0,
+			"value": ""
+		},
+		"b5704aad22a345d3b1ffab80ae124dda": {
+			"fieldId": null,
+			"groupName": null,
+			"operator": 0,
+			"value": ""
+		},
+		"9f35e0e97f364456915e6b7d7fc65675": {
+			"fieldId": null,
+			"groupName": null,
+			"operator": 0,
+			"value": ""
+		}
+	},
+	"actions": [{
+		"id": "3342376aa1444d1eb79a9073201d8796",
+		"name": "save1",
+		"type": "save",
+		"filters": [{
+			"fieldId": "59f7b788ff11900cf1e7c5aa",
+			"groupName": "product",
+			"operator": "5",
+			"value": "2"
+		}],
+		"extraFuncs": {
+			"prepare": [{
+				"groupName": "product",
+				"functionName": "1212"
+			}],
+			"after": [{
+				"groupName": "customer",
+				"functionName": "1212"
+			}],
+			"validate": [{
+				"groupName": "product",
+				"functionName": "1212"
+			}]
+		},
+		"transfers": [{
+			"origin": {
+				"fieldId": "59cdf6f126b45e5a51108194",
+				"groupName": "product"
+			},
+			"refers": {
+				"fieldId": "591544f98225d516987db97e",
+				"groupName": "customer"
+			}
+		}],
+		"defaultDataList": [{
+			"fieldId": "59f7b788ff11900cf1e7c5aa",
+			"groupName": "product",
+			"operator": 0,
+			"value": "1"
+		}]
+	}],
+	"actionItems": {
+		"3342376aa1444d1eb79a9073201d8796": ["e4d55be39236453ba3850d7aecb17e59", "518ada63e4e147cc81cd5f3c58c1af09", "be33b1915d274b8c894685a02ee278a0", "a107a1f8a90549ef9e22a493b01def8c", "600dd799e2db48d6bb71ba1b87617eed", "9f35e0e97f364456915e6b7d7fc65675"]
+	}
 };
 
 const translations = [{

@@ -7,6 +7,7 @@ const WeChat = require('./services/weChat');
 const IDA = require('./services/ida');
 const KdbundWechat = require('./services/kdbund');
 const ZWCloud = require('./services/cloud');
+const NineCoast = require('./services/ninecoast');
 
 app.all('*',function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -183,6 +184,17 @@ app.get('/zwc/getExpressDelivery',function(req, res){
 });
 // --- zw Cloud wechat Part End ---
 
+// --- NineCoast Part Start ---
+app.get('/nc/getMenuData', function(req, res) {
+    let ncObj = new NineCoast(req, res);
+    ncObj.getMenuData();
+});
+
+app.post('/nc/login', function(req, res) {
+    let ncObj = new NineCoast(req, res);
+    ncObj.login();
+});
+// --- NineCoast Part End ---
 
 app.listen(3000, function(){
     console.log('Service listening on port 3000');
