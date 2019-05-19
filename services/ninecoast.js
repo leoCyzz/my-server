@@ -16,16 +16,9 @@ const menu_data = {
 			"hideInBreadcrumb": true,
 			"children": [
 				{
-					"text": "仪表盘",
-					"i18n": "menu.dashboard",
+					"text": "欢迎页",
 					"icon": "anticon-dashboard",
-					"children": [
-						{
-							"text": "仪表盘",
-							"link": "/dashboard",
-							"i18n": "menu.dashboard"
-						}
-					]
+					"link": "/dashboard"
 				},
 				{
 					"text": "系统信息",
@@ -38,10 +31,6 @@ const menu_data = {
 						{
 							"text": "系统角色",
 							"link": "/system/role"
-						},
-						{
-							"text": "系统权限",
-							"link": "/system/auth"
 						},
 						{
 							"text": "个人设置",
