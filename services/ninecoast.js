@@ -41,40 +41,123 @@ const menu_data = {
 				{
 					"text": "基本信息",
 					"icon": "anticon-database",
-					"children": []
+					"children": [
+						{
+							"text": "国家设置",
+							"link": "/base/country"
+						},
+						{
+							"text": "产区设置",
+							"link": "/base/production-area"
+						},
+						{
+							"text": "葡萄酒类别设置",
+							"link": "/base/wine-type"
+						},
+						{
+							"text": "葡萄种类设置",
+							"link": "/base/grape-type"
+						},
+						{
+							"text": "酒精度设置",
+							"link": "/base/alcohol"
+						},
+						{
+							"text": "酒标类别",
+							"link": "/base/label-type"
+						},
+						{
+							"text": "酒标设计",
+							"link": "/base/label-design"
+						},
+						{
+							"text": "酒标材质",
+							"link": "/base/label-material"
+						},
+						{
+							"text": "汇率设置",
+							"link": "/base/exchange"
+						}
+					]
 				},
 				{
 					"text": "产品信息",
 					"icon": "anticon-copy",
-					"children": []
+					"children": [
+						{
+							"text": "原酒",
+							"link": "/product/liquor"
+						},
+						{
+							"text": "酒瓶",
+							"link": "/product/bottle"
+						},
+						{
+							"text": "酒帽",
+							"link": "/product/cap"
+						},
+						{
+							"text": "酒塞",
+							"link": "/product/cork"
+						},
+						{
+							"text": "酒标",
+							"link": "/product/label"
+						},
+						{
+							"text": "外箱",
+							"link": "/product/box"
+						},
+						{
+							"text": "葡萄酒",
+							"link": "/product/wine"
+						},
+						{
+							"text": "产品费用",
+							"link": "/product/cost"
+						},
+						{
+							"text": "产品加价率",
+							"link": "/product/markup"
+						}
+					]
 				},
 				{
 					"text": "客户",
 					"icon": "anticon-solution",
-					"children": []
+					"children": [
+						{
+							"text": "公司客户",
+							"link": "/customer/company"
+						},
+						{
+							"text": "用户列表",
+							"link": "/customer/user"
+						},
+						{
+							"text": "用户订单",
+							"link": "/customer/order"
+						}
+					]
 				},
 				{
 					"text": "APP",
 					"icon": "anticon-mobile",
-					"children": []
+					"children": [
+						{
+							"text": "生产产地",
+							"link": "/mobile/mfg"
+						},
+						{
+							"text": "App新闻",
+							"link": "/mobile/news"
+						},
+						{
+							"text": "App欢迎页",
+							"link": "/mobile/welcome"
+						}
+					]
 				}
-				// {
-				// 	"text": "页面创造",
-				// 	"i18n": "zw.menu.show",
-				// 	"icon": "anticon-layout",
-				// 	"children": [
-				// 		{
-				// 			"text": "页面显示0",
-				// 			"link": "/show/0",
-				// 			"i18n": "zw.menu.show.p0"
-				// 		},
-				// 		{
-				// 			"text": "页面显示1",
-				// 			"link": "/show/1",
-				// 			"i18n": "zw.menu.show.p1"
-				// 		}
-				// 	]
-				// }
 			]
 		}
 	]
