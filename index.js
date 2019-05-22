@@ -194,6 +194,32 @@ app.post('/nc/login', function(req, res) {
     let ncObj = new NineCoast(req, res);
     ncObj.login();
 });
+
+app.get('/nc/getSysRoles', function(req, res) {
+    let ncObj = new NineCoast(req, res);
+    ncObj.getSysRoles();
+});
+
+app.get('/nc/getSysUsers', function(req, res) {
+    let ncObj = new NineCoast(req, res);
+    ncObj.getSysUsers();
+});
+app.get('/nc/getSysUserInfo', function(req, res) {
+    let ncObj = new NineCoast(req, res);
+    ncObj.getSysUserInfo();
+});
+app.post('/nc/togggleSysUserState', function(req, res) {
+    let ncObj = new NineCoast(req, res);
+    ncObj.togggleSysUserState();
+});
+app.post('/nc/updateSysUserInfo', function(req, res) {
+    let ncObj = new NineCoast(req, res);
+    ncObj.updateSysUserInfo();
+});
+app.post('/nc/deleteSysUserInfo', function(req, res) {
+    let ncObj = new NineCoast(req, res);
+    ncObj.deleteSysUserInfo();
+});
 // --- NineCoast Part End ---
 
 app.listen(3000, function(){
