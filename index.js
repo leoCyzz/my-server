@@ -185,41 +185,24 @@ app.get('/zwc/getExpressDelivery',function(req, res){
 // --- zw Cloud wechat Part End ---
 
 // --- NineCoast Part Start ---
-app.get('/nc/getMenuData', function(req, res) {
-    let ncObj = new NineCoast(req, res);
-    ncObj.getMenuData();
+app.get('/nc/*', function(req, res) {
+    const actionName = req.params[0];
+    if (actionName) {
+        let ncObj = new NineCoast(req, res);
+        ncObj.doAction(actionName);
+    }
+    
 });
 
-app.post('/nc/login', function(req, res) {
-    let ncObj = new NineCoast(req, res);
-    ncObj.login();
+app.post('/nc/*', function(req, res) {
+    const actionName = req.params[0];
+    if (actionName) {
+        let ncObj = new NineCoast(req, res);
+        ncObj.doAction(actionName);
+    }
+    
 });
 
-app.get('/nc/getSysRoles', function(req, res) {
-    let ncObj = new NineCoast(req, res);
-    ncObj.getSysRoles();
-});
-
-app.get('/nc/getSysUsers', function(req, res) {
-    let ncObj = new NineCoast(req, res);
-    ncObj.getSysUsers();
-});
-app.get('/nc/getSysUserInfo', function(req, res) {
-    let ncObj = new NineCoast(req, res);
-    ncObj.getSysUserInfo();
-});
-app.post('/nc/togggleSysUserState', function(req, res) {
-    let ncObj = new NineCoast(req, res);
-    ncObj.togggleSysUserState();
-});
-app.post('/nc/updateSysUserInfo', function(req, res) {
-    let ncObj = new NineCoast(req, res);
-    ncObj.updateSysUserInfo();
-});
-app.post('/nc/deleteSysUserInfo', function(req, res) {
-    let ncObj = new NineCoast(req, res);
-    ncObj.deleteSysUserInfo();
-});
 // --- NineCoast Part End ---
 
 app.listen(3000, function(){

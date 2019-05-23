@@ -326,81 +326,60 @@ class NineCoast {
     constructor(req, res){
 		this.req = req
 		this.res = res
-    }
-    getMenuData () {
-        let self = this;
-        let status = 200;
+	}
+	
+	doAction(actionName) {
+		let self = this;
+		let status = 200;
+        const res = this[actionName](self.req);
+		
+		return self.res.status(status).json(res);
+	}
+
+    getMenuData (req) {
         let res = {status: 1, msg: ''};
-        // console.log(self.req.headers);
-        if (self.req.headers.token === new_token.token) {
+        if (req.headers.token === new_token.token) {
             res = {status: 0, msg: '', data: menu_data};
         } else {
 			// status = 401;
             res = {status: 401, msg: 'Unauthorized'};
         }
-        return self.res.status(status).json(res);
+        return res;
     }
 
-    login () {
-        let self = this;
-        const body = self.req.body;
+    login (req) {
+        const body = req.body;
         let res = { status: 1, msg: '' };
         if (body.account === 'admin' && body.password === '888888') {
             res =  { status: 0, msg: '', data: new_token };
         } else {
             res =  { status: 1, msg: '账户或密码错误'};
         }
-        return self.res.status(200).json(res);
-	}
-	
-	getSysRoles() {
-		let self = this;
-        let status = 200;
-        let res = {status: 1, msg: ''};
-        // console.log(self.req.headers);
-        if (self.req.headers.token === new_token.token) {
-            res = {status: 0, msg: '', data: sysRoleList};
-        } else {
-            res = {status: 1, msg: 'Unauthorized'};
-        }
-        return self.res.status(status).json(res);
+        return res;
 	}
 
-	getSysUsers() {
-		let self = this;
-		let status = 200;
-        let res = {status: 1, msg: ''};
-        if (self.req.headers.token === new_token.token) {
-            res = {status: 0, msg: '', data: {users: sysUserList, total: 200}};
-        } else {
-            res = {status: 1, msg: 'Unauthorized'};
-        }
-        return self.res.status(status).json(res);
+	getSysUsers(req) {
+        return {status: 0, msg: '', data: {users: sysUserList, total: 200}};
 	}
 
 	getSysUserInfo() {
-		let self = this;
-		let status = 200;
-        let res = {status: 1, msg: ''};
-        if (self.req.headers.token === new_token.token) {
-            res = {status: 0, msg: '', data: {id: '1',
-			account: 'ncyy1',
-			name: '运营1',
-			role: '2',
-			creationTime: '2019/05/20 12:00:00',
-			state: 0}};
-        } else {
-            res = {status: 1, msg: 'Unauthorized'};
-        }
-        return self.res.status(status).json(res);
+        return {
+			status: 0, 
+			data: {
+				id: '1',
+				account: 'ncyy1',
+				name: '运营1',
+				role: '2',
+				creationTime: '2019/05/20 12:00:00',
+				state: 0
+			}
+		};  
 	}
 
-	updateSysUserInfo() {
-		let self = this;
-		let status = 200;
+	updateSysUserInfo(req) {
         let res = {status: 1, msg: ''};
-        if (self.req.headers.token === new_token.token) {
-			const body = self.req.body;
+        if (req.headers.token === new_token.token) {
+			const body = req.body;
 			let data = null;
 			if (body && body.id) {
 				data = Object.assign(body, {
@@ -414,36 +393,65 @@ class NineCoast {
 					state: 0
 				});
 			}
-			console.log(data);
 			res = {status: 0, msg: '', data}
         } else {
             res = {status: 1, msg: 'Unauthorized'};
         }
-        return self.res.status(status).json(res);
+        return res;
 	}
 	
-	togggleSysUserState() {
-		let self = this;
-		let status = 200;
-        let res = {status: 1, msg: ''};
-        if (self.req.headers.token === new_token.token) {
-            res = {status: 0, msg: '', data: {id: 1, state: 0}};
-        } else {
-            res = {status: 1, msg: 'Unauthorized'};
-        }
-        return self.res.status(status).json(res);
+	togggleSysUserState(req) {
+        return {status: 0, msg: '', data: {id: 1, state: 0}};
 	}
 
-	deleteSysUserInfo() {
-		let self = this;
-		let status = 200;
-        let res = {status: 1, msg: ''};
-        if (self.req.headers.token === new_token.token) {
-            res = {status: 0, msg: '', data: 'success'};
-        } else {
-            res = {status: 1, msg: 'Unauthorized'};
-        }
-        return self.res.status(status).json(res);
+	deleteSysUserInfo(req) {
+        return {status: 0, msg: '', data: 'success'};
+	}
+
+	getSysRoles(req) {
+        return {status: 0, msg: '', data: sysRoleList};
+	}
+
+	getSysRoleInfo(req) {
+		return {
+			status: 0,
+			data: {
+				id: '1',
+				name: '运营',
+			}
+		};
+	}
+
+	updateSysRoleInfo(req) {
+		return {
+			status: 0,
+			data: {
+				id: '1',
+				name: '运营',
+			}
+		};
+	}
+
+	deleteSysRoleInfo() {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+	getSysRoleMenu() {
+		return {
+			status: 0,
+			data: null
+		};
+
+	}
+
+	updateSysRoleMenu() {
+		return {
+			status: 0,
+			data: null
+		};
 	}
 }
 
