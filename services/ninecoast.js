@@ -164,6 +164,11 @@ const menu_data1 = {
 };
 
 const menu_data = {
+	"user": {
+		"id": "1",
+		"name": "hhh",
+		"role": "运营"
+	},
 	"menu": [
 		{
 			"text": "系统信息",
@@ -306,8 +311,7 @@ const menu_data = {
 	]
 };
 const new_token = {
-    token: '12345678',
-    name: 'admin'
+    token: '12345678'
 };
 
 const sysRoleList = [
@@ -322,21 +326,27 @@ const sysUserList = [
 	{ id: '3', account: 'ncxs1', name: '销售1', role: '销售', creationTime: '2019/05/21 13:00:00', state: 1 },
 ];
 
+const BaseElementList = [
+	{ id: '1', name: '原料1' },
+	{ id: '2', name: '原料2' },
+	{ id: '3', name: '原料3' },
+	{ id: '4', name: '原料4' },
+	{ id: '5', name: '原料5' },
+	{ id: '6', name: '原料6' },
+	{ id: '7', name: '原料7' },
+	{ id: '8', name: '原料8' },
+	{ id: '9', name: '原料9' },
+	{ id: '10', name: '原料10' }
+];
+
+
 class NineCoast {
     constructor(req, res){
 		this.req = req
 		this.res = res
 	}
-	
-	doAction(actionName) {
-		let self = this;
-		let status = 200;
-        const res = this[actionName](self.req);
-		
-		return self.res.status(status).json(res);
-	}
 
-    getMenuData (req) {
+    getSysData (req) {
         let res = {status: 1, msg: ''};
         if (req.headers.token === new_token.token) {
             res = {status: 0, msg: '', data: menu_data};
@@ -442,16 +452,58 @@ class NineCoast {
 	getSysRoleMenu() {
 		return {
 			status: 0,
-			data: null
+			data: ['sys0', 'base1', 'base2']
 		};
 
 	}
 
-	updateSysRoleMenu() {
+	updateSysRoleMenu(req) {
+		console.log(req.body);
 		return {
 			status: 0,
-			data: null
+			data: 'success'
 		};
+	}
+
+	updateSelfInfo(req) {
+		const body = req.body;
+		const res = body.newPwd === '123' ? { status: 0, data: 'success'} : { status: 1, msg: '错误'} ;
+		return res;
+	}
+
+	getBaseElements(req) {
+        return {status: 0, msg: '', data: BaseElementList};
+	}
+
+	getBaseElementInfo(req) {
+		return {
+			status: 0,
+			data: BaseElementList[0]
+		};
+	}
+
+	updateBaseElementInfo(req) {
+		return {
+			status: 0,
+			data: BaseElementList[0]
+		};
+	}
+
+	deleteBaseElementInfo() {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+	doAction(actionName) {
+		let status = 200;
+		if(this[actionName]) {
+			const res = this[actionName](this.req);
+			return this.res.status(status).json(res);
+		} else {
+			return this.res.status(404).json('');
+		}	
 	}
 }
 
