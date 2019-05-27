@@ -414,7 +414,19 @@ const newsList = [
 	{id: '8', title: '新闻8', creationTime: '2019/02/26 07:00:00', topIndex: 8, listImgUrl: '', detailImgUrl: ''},
 	{id: '9', title: '新闻9', creationTime: '2019/02/26 08:00:00', topIndex: 9, listImgUrl: '', detailImgUrl: ''},
 	{id: '10', title: '新闻10', creationTime: '2019/02/26 09:00:00', topIndex: 10, listImgUrl: '', detailImgUrl: ''}
+];
 
+const welcomeList = [
+	{id: '1', title: '欢迎页1', creationTime: '2019/02/26 00:00:00', topIndex: 1, imgUrl: ''},
+	{id: '2', title: '欢迎页2', creationTime: '2019/02/26 01:00:00', topIndex: 2, imgUrl: ''},
+	{id: '3', title: '欢迎页3', creationTime: '2019/02/26 02:00:00', topIndex: 3, imgUrl: ''},
+	{id: '4', title: '欢迎页4', creationTime: '2019/02/26 03:00:00', topIndex: 4, imgUrl: ''},
+	{id: '5', title: '欢迎页5', creationTime: '2019/02/26 04:00:00', topIndex: 5, imgUrl: ''},
+	{id: '6', title: '欢迎页6', creationTime: '2019/02/26 05:00:00', topIndex: 6, imgUrl: ''},
+	{id: '7', title: '欢迎页7', creationTime: '2019/02/26 06:00:00', topIndex: 7, imgUrl: ''},
+	{id: '8', title: '欢迎页8', creationTime: '2019/02/26 07:00:00', topIndex: 8, imgUrl: ''},
+	{id: '9', title: '欢迎页9', creationTime: '2019/02/26 08:00:00', topIndex: 9, imgUrl: ''},
+	{id: '10', title: '欢迎页10', creationTime: '2019/02/26 09:00:00', topIndex: 10, imgUrl: ''}
 ];
 
 class NineCoast {
@@ -793,6 +805,31 @@ class NineCoast {
 		};
 	}
 
+
+	getWelcomePageList() {
+		return {status: 0, msg: '', data: welcomeList};
+	}
+
+	getWelcomePageInfo() {
+		return {
+			status: 0,
+			data: {id: '1', title: '欢迎1', creationTime: '2019/02/26 00:00:00', topIndex: 1, imgUrl: ''}
+		};
+	}
+
+	updateWelcomePageInfo() {
+		return {
+			status: 0,
+			data: {id: '1', title: '修改', creationTime: '2019/02/26 00:00:00', topIndex: 1,  imgUrl: ''}
+		};
+	}
+
+	deleteWelcomePageInfo() {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
 
 	doAction(actionName) {
 		let status = 200;
