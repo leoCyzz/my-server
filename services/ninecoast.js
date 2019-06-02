@@ -1,168 +1,3 @@
-const menu_data1 = {
-	"app": {
-		"name": "NineCoast",
-		"description": ""
-	},
-	"user": {
-		"name": "Admin",
-    	"avatar": "./assets/tmp/img/avatar.jpg",
-    	"email": "admin@ninecoast.com"
-	},
-	"menu": [
-		{
-			"text": "",
-			"i18n": "",
-			"group": true,
-			"hideInBreadcrumb": true,
-			"children": [
-				{
-					"text": "欢迎页",
-					"icon": "anticon-dashboard",
-					"link": "/dashboard"
-				},
-				{
-					"text": "系统信息",
-					"icon": "anticon-setting",
-					"children": [
-						{
-							"text": "系统用户",
-							"link": "/system/user"
-						},
-						{
-							"text": "系统角色",
-							"link": "/system/role"
-						},
-						{
-							"text": "个人设置",
-							"link": "/system/self"
-						}
-					]
-				},
-				{
-					"text": "基本信息",
-					"icon": "anticon-database",
-					"children": [
-						{
-							"text": "国家设置",
-							"link": "/base/country"
-						},
-						{
-							"text": "产区设置",
-							"link": "/base/production-area"
-						},
-						{
-							"text": "葡萄酒类别设置",
-							"link": "/base/wine-type"
-						},
-						{
-							"text": "葡萄种类设置",
-							"link": "/base/grape-type"
-						},
-						{
-							"text": "酒精度设置",
-							"link": "/base/alcohol"
-						},
-						{
-							"text": "酒标类别",
-							"link": "/base/label-type"
-						},
-						{
-							"text": "酒标设计",
-							"link": "/base/label-design"
-						},
-						{
-							"text": "酒标材质",
-							"link": "/base/label-material"
-						},
-						{
-							"text": "生产产地",
-							"link": "/base/mfg"
-						},
-						{
-							"text": "汇率设置",
-							"link": "/base/exchange"
-						}
-					]
-				},
-				{
-					"text": "产品信息",
-					"icon": "anticon-copy",
-					"children": [
-						{
-							"text": "原酒",
-							"link": "/product/bulk"
-						},
-						{
-							"text": "酒瓶",
-							"link": "/product/bottle"
-						},
-						{
-							"text": "酒帽",
-							"link": "/product/cap"
-						},
-						{
-							"text": "酒塞",
-							"link": "/product/cork"
-						},
-						{
-							"text": "酒标",
-							"link": "/product/label"
-						},
-						{
-							"text": "外箱",
-							"link": "/product/box"
-						},
-						{
-							"text": "葡萄酒",
-							"link": "/product/wine"
-						},
-						{
-							"text": "产品费用",
-							"link": "/product/cost"
-						},
-						{
-							"text": "产品加价率",
-							"link": "/product/markup"
-						}
-					]
-				},
-				{
-					"text": "客户",
-					"icon": "anticon-solution",
-					"children": [
-						{
-							"text": "公司客户",
-							"link": "/customer/company"
-						},
-						{
-							"text": "用户列表",
-							"link": "/customer/user"
-						},
-						{
-							"text": "用户订单",
-							"link": "/customer/order"
-						}
-					]
-				},
-				{
-					"text": "APP",
-					"icon": "anticon-mobile",
-					"children": [
-						{
-							"text": "App新闻",
-							"link": "/mobile/news"
-						},
-						{
-							"text": "App欢迎页",
-							"link": "/mobile/welcome"
-						}
-					]
-				}
-			]
-		}
-	]
-};
-
 const menu_data = {
 	"user": {
 		"id": "1",
@@ -429,6 +264,12 @@ const welcomeList = [
 	{id: '10', title: '欢迎页10', creationTime: '2019/02/26 09:00:00', topIndex: 10, imgUrl: ''}
 ];
 
+const exchangeRateList = [
+	{id: '1', local: 'CNY', foreign: 'USD', rate: '0.147'},
+	{id: '2', local: 'USD', foreign: 'CNY', rate: '7'},
+	{id: '3', local: 'USD', foreign: 'AUD', rate: '1.1'}
+];
+
 class NineCoast {
     constructor(req, res){
 		this.req = req
@@ -560,6 +401,8 @@ class NineCoast {
 		return res;
 	}
 
+// Base Start
+
 	getBaseElements(req) {
         return {status: 0, msg: '', data: BaseElementList};
 	}
@@ -574,7 +417,7 @@ class NineCoast {
 	updateBaseElementInfo(req) {
 		return {
 			status: 0,
-			data: BaseElementList[0]
+			data: {id: 3123, name: '修改'}
 		};
 	}
 
@@ -610,7 +453,6 @@ class NineCoast {
 			}
 		}
 	}
-
 
 	getPorts(req) {
         return {status: 0, msg: '', data: counrtyList};
@@ -720,6 +562,32 @@ class NineCoast {
 			data: 'success'
 		};
 	}
+
+	getExchangeRateList() {
+		return {status: 0, data: exchangeRateList};
+	}
+
+	getExchangeRateInfo() {
+		return {status: 0, data: exchangeRateList[0]};
+	}
+
+	updateExchangeRateInfo(req) {
+		return {
+			status: 0,
+			data: exchangeRateList[0]
+		};
+	}
+
+	deleteExchangeRateInfo() {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+// Base End
+
+// Product End
 
 	getBulkList() {
 		return {status: 0, msg: '', data: bulkList};
