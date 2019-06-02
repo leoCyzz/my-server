@@ -209,3 +209,10 @@ app.listen(3000, function(){
     console.log('Service listening on port 3000');
 });
 
+
+app.get('/ncapp/assets/images/*', function(req, res) {
+    // console.log(__dirname);
+    const url = req.url.substring(6);
+    // console.log(url);
+    res.sendFile(__dirname + url)
+});
