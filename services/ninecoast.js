@@ -182,19 +182,6 @@ const warehouseList = [
 	{id: 3, name: '成都仓', code: '789', address: 'xx xx xxx'},
 ];
 
-const bulkList = [
-	{id: 1, name: 'AA', country: '澳大利亚', vendor: 'AA供应商', cost: 1000, currency: 'AUD', minQty: 10000, imageUrl: '/assets/tmp/img/2.png'},
-	{id: 2, name: 'BB', country: '法国', vendor: 'BB供应商', cost: 2000, currency: 'USD', minQty: 20000, imageUrl: '/assets/tmp/img/2.png'},
-	{id: 3, name: 'CC', country: '澳大利亚', vendor: 'CC供应商', cost: 3000, currency: 'USD', minQty: 30000, imageUrl: '/assets/tmp/img/2.png'},
-	{id: 4, name: 'DD', country: '智利', vendor: 'DD供应商', cost: 4000, currency: 'CNY', minQty: 20000, imageUrl: '/assets/tmp/img/2.png'},
-	{id: 5, name: 'EE', country: '法国', vendor: 'EE供应商', cost: 5000, currency: 'USD', minQty: 10000, imageUrl: '/assets/tmp/img/2.png'},
-	{id: 6, name: 'FF', country: '澳大利亚', vendor: 'FF供应商', cost: 6000, currency: 'AUD', minQty: 40000, imageUrl: '/assets/tmp/img/2.png'},
-	{id: 7, name: 'GG', country: '智利', vendor: 'GG供应商', cost: 7000, currency: 'USD', minQty: 30000, imageUrl: '/assets/tmp/img/2.png'},
-	{id: 8, name: 'HH', country: '法国', vendor: 'HH供应商', cost: 8000, currency: 'CNY', minQty: 20000, imageUrl: '/assets/tmp/img/2.png'},
-	{id: 9, name: 'II', country: '澳大利亚', vendor: 'II供应商', cost: 9000, currency: 'AUD', minQty: 20000, imageUrl: '/assets/tmp/img/2.png'},
-	{id: 10, name: 'JJ', country: '智利', vendor: 'JJ供应商', cost: 10000, currency: 'AUD', minQty: 60000, imageUrl: '/assets/tmp/img/2.png'}
-];
-
 const imageList = [
 	{id: 1, name: '图片1', type: 'bulk', url: '/assets/tmp/img/1.png'},
 	{id: 2, name: '图片2', type: 'bulk', url: '/assets/tmp/img/2.png'},
@@ -294,7 +281,109 @@ const CustomsInspectionList = [
 	{id: '3', oriQty: 10000, desQty: 20000, fee: 123456, currency: 'USD'},
 	{id: '4', oriQty: 10000, desQty: 20000, fee: 123456, currency: 'USD'},
 	{id: '5', oriQty: 10000, desQty: 20000, fee: 123456, currency: 'USD'},
-]
+];
+
+const Laminates = [
+	{id: '1', name: '层板', cost: 12.34, currency: 'USD'},
+	{id: '1', name: '层板', cost: 12.34, currency: 'USD'},
+	{id: '1', name: '层板', cost: 12.34, currency: 'USD'},
+	{id: '1', name: '层板', cost: 12.34, currency: 'USD'},
+	{id: '1', name: '层板', cost: 12.34, currency: 'USD'},
+	{id: '1', name: '层板', cost: 12.34, currency: 'USD'}
+];
+
+const BulkList = [
+	{id: '1', name: '原酒', country: '法国', vendor: '某某某供应商', cost: 12.34, currency: 'USD', minQty: 10000},
+	{id: '1', name: '原酒', country: '法国', vendor: '某某某供应商', cost: 12.34, currency: 'USD', minQty: 10000},
+	{id: '1', name: '原酒', country: '法国', vendor: '某某某供应商', cost: 12.34, currency: 'USD', minQty: 10000},
+	{id: '1', name: '原酒', country: '法国', vendor: '某某某供应商', cost: 12.34, currency: 'USD', minQty: 10000},
+	{id: '1', name: '原酒', country: '法国', vendor: '某某某供应商', cost: 12.34, currency: 'USD', minQty: 10000},
+	{id: '1', name: '原酒', country: '法国', vendor: '某某某供应商', cost: 12.34, currency: 'USD', minQty: 10000},
+];
+
+const Boxes = [
+	{id: '1', name: '酒箱', dimension: '规格', trayQty: 1000, cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png'},
+	{id: '1', name: '酒箱', dimension: '规格', trayQty: 1000, cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png'},
+	{id: '1', name: '酒箱', dimension: '规格', trayQty: 1000, cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png'},
+	{id: '1', name: '酒箱', dimension: '规格', trayQty: 1000, cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png'},
+	{id: '1', name: '酒箱', dimension: '规格', trayQty: 1000, cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png'},
+];
+
+const Caps = [
+	{ id: '1', name: '酒帽', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', maxFitLevel: 5, hasScrew: false },
+	{ id: '1', name: '酒帽', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', maxFitLevel: 5, hasScrew: false },
+	{ id: '1', name: '酒帽', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', maxFitLevel: 5, hasScrew: false },
+	{ id: '1', name: '酒帽', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', maxFitLevel: 5, hasScrew: false },
+	{ id: '1', name: '酒帽', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', maxFitLevel: 5, hasScrew: false },
+	{ id: '1', name: '酒帽', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', maxFitLevel: 5, hasScrew: false },
+	{ id: '1', name: '酒帽', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', maxFitLevel: 5, hasScrew: false },
+	{ id: '1', name: '酒帽', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', maxFitLevel: 5, hasScrew: false },
+	{ id: '1', name: '酒帽', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', maxFitLevel: 5, hasScrew: false },
+];
+
+const Corks = [
+	{id: '1', name: '酒塞', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', maxFitLevel: 5},
+	{id: '1', name: '酒塞', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', maxFitLevel: 5},
+	{id: '1', name: '酒塞', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', maxFitLevel: 5},
+	{id: '1', name: '酒塞', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', maxFitLevel: 5},
+	{id: '1', name: '酒塞', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', maxFitLevel: 5},
+	{id: '1', name: '酒塞', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', maxFitLevel: 5},
+];
+
+const Labels = [
+	{id: '1', name: '酒标', code: '001', country: '法国', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', type: '类型', style: '风格', material: '材质', maxFitLevel: 5},
+	{id: '1', name: '酒标', code: '001', country: '法国', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', type: '类型', style: '风格', material: '材质', maxFitLevel: 5},
+	{id: '1', name: '酒标', code: '001', country: '法国', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', type: '类型', style: '风格', material: '材质', maxFitLevel: 5},
+	{id: '1', name: '酒标', code: '001', country: '法国', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', type: '类型', style: '风格', material: '材质', maxFitLevel: 5},
+	{id: '1', name: '酒标', code: '001', country: '法国', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', type: '类型', style: '风格', material: '材质', maxFitLevel: 5},
+	{id: '1', name: '酒标', code: '001', country: '法国', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', type: '类型', style: '风格', material: '材质', maxFitLevel: 5},
+	{id: '1', name: '酒标', code: '001', country: '法国', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', type: '类型', style: '风格', material: '材质', maxFitLevel: 5},
+	{id: '1', name: '酒标', code: '001', country: '法国', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', type: '类型', style: '风格', material: '材质', maxFitLevel: 5},
+	{id: '1', name: '酒标', code: '001', country: '法国', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', type: '类型', style: '风格', material: '材质', maxFitLevel: 5},
+];
+
+const Bottles = [
+	{
+		id: '1',
+		name: '酒瓶',
+		country: '法国',
+		dimension: 123, 
+		height: 123,
+		weight: 123, 
+		isHighBottle: false, 
+		isAbnormalBottle: false,
+		hasScrew: false, 
+		largeCabQty: 123,
+		largeCabTrayQty: 123,
+		smallCabQty: 123, 
+		smallCabTrayQty: 123, 
+		cost: 12.34, 
+		currency: 'USD', 
+		minQty: 10000, 
+		image: 'xxx.png',
+		maxFitLevel: 5
+	},
+	{
+		id: '1',
+		name: '酒瓶',
+		country: '法国',
+		dimension: 123, 
+		height: 123,
+		weight: 123, 
+		isHighBottle: false, 
+		isAbnormalBottle: false,
+		hasScrew: false, 
+		largeCabQty: 123,
+		largeCabTrayQty: 123,
+		smallCabQty: 123, 
+		smallCabTrayQty: 123, 
+		cost: 12.34, 
+		currency: 'USD', 
+		minQty: 10000, 
+		image: 'xxx.png',
+		maxFitLevel: 5
+	}
+];
 
 class NineCoast {
     constructor(req, res){
@@ -694,6 +783,7 @@ class NineCoast {
 			data: 'success'
 		};
 	}
+
 	getCustomsInspectionList() {
 		return {status: 0, msg: '', data: CustomsInspectionList};
 	}
@@ -718,6 +808,202 @@ class NineCoast {
 			data: 'success'
 		};
 	}
+
+	getLaminates() {
+		return {status: 0, msg: '', data: {list: Laminates, total: 20}};
+	}
+
+	getLaminateInfo() {
+		return {
+			status: 0,
+			data: {id: '1', name: '层板', cost: 12.34, currency: 'USD'},
+		};
+	}
+
+	updateLaminateInfo(req) {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+	deleteLaminateInfo() {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+	getBulkList() {
+		return {status: 0, msg: '', data:  {list: BulkList, total: 20 }};
+	}
+
+	getBulkInfo() {
+		return {
+			status: 0,
+			data: {id: '1', name: '原酒', country: '法国', vendor: '某某某供应商', cost: 12.34, currency: 'USD', minQty: 10000}
+		};
+	}
+
+	updateBulkInfo(req) {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+	deleteBulkInfo() {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+	getBoxes() {
+		return {status: 0, msg: '', data:  {list: Boxes, total: 20 }};
+	}
+
+	getBoxInfo() {
+		return {
+			status: 0,
+			data: {id: '1', name: '酒箱', dimension: '规格', trayQty: 1000, cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png'}
+		};
+	}
+
+	updateBoxInfo(req) {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+	deleteBoxInfo() {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+	getCaps() {
+		return {status: 0, msg: '', data:  {list: Caps, total: 20 }};
+	}
+
+	getCapInfo() {
+		return {
+			status: 0,
+			data: { id: '1', name: '酒帽', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', maxFitLevel: 5, hasScrew: false }
+		};
+	}
+
+	updateCapInfo(req) {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+	deleteCapInfo() {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+	
+	getCorks() {
+		return {status: 0, msg: '', data:  {list: Corks, total: 20 }};
+	}
+
+	getCorkInfo() {
+		return {
+			status: 0,
+			data:{id: '1', name: '酒塞', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', maxFitLevel: 5},
+		};
+	}
+
+	updateCorkInfo(req) {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+	deleteCorkInfo() {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+
+	getLabels() {
+		return {status: 0, msg: '', data:  {list: Labels, total: 20 }};
+	}
+
+	getLabelInfo() {
+		return {
+			status: 0,
+			data:{id: '1', name: '酒标', code: '001', country: '法国', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', type: '类型', style: '风格', material: '材质', maxFitLevel: 5},
+		};
+	}
+
+	updateLabelInfo(req) {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+	deleteLabelInfo() {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+	getBottles() {
+		return {status: 0, msg: '', data:  {list: Bottles, total: 20 }};
+	}
+
+	getBottleInfo() {
+		return {
+			status: 0,
+			data: {
+				id: '1',
+				name: '酒瓶',
+				country: '法国',
+				dimension: 123, 
+				height: 123,
+				weight: 123, 
+				isHighBottle: false, 
+				isAbnormalBottle: false,
+				hasScrew: false, 
+				largeCabQty: 123,
+				largeCabTrayQty: 123,
+				smallCabQty: 123, 
+				smallCabTrayQty: 123, 
+				cost: 12.34, 
+				currency: 'USD', 
+				minQty: 10000, 
+				image: 'xxx.png',
+				maxFitLevel: 5
+			},
+		};
+	}
+
+	updateBottleInfo(req) {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+	deleteBottleInfo() {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
 // Product End
 
 // customer start
