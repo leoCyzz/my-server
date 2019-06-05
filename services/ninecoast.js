@@ -6,144 +6,130 @@ const menu_data = {
 	},
 	"menu": [
 		{
-		  text: '系统信息',
-		  icon: 'anticon-setting',
-		  title: '系统信息',
-		  key: 'sys0',
-		  children: [
-			{
-			  text: '系统用户',
-			  isLeaf: true,
-			  title: '系统用户',
-			  key: 'sys1',
-			  link: '/system/user',
-			},
-			{
-			  text: '系统角色',
-			  isLeaf: true,
-			  title: '系统角色',
-			  key: 'sys2',
-			  link: '/system/role',
-			},
-			{
-			  text: '个人设置',
-			  isLeaf: true,
-			  title: '个人设置',
-			  key: 'sys3',
-			  link: '/system/self',
-			},
-		  ],
+			text: '系统信息',
+			icon: 'anticon-setting',
+			title: '系统信息',
+			key: 'sys',
+			children: [
+				{
+					text: '系统用户',
+					isLeaf: true,
+					title: '系统用户',
+					key: 'sys-user',
+					link: '/system/user',
+				},
+				{
+					text: '系统角色',
+					isLeaf: true,
+					title: '系统角色',
+					key: 'sys-role',
+					link: '/system/role',
+				},
+			],
 		},
 		{
-		  text: '基础信息维护',
-		  icon: 'anticon-database',
-		  title: '基础信息维护',
-		  key: 'base',
-		  children: [
-			{
-			  text: '九岸简介',
-			  isLeaf: true,
-			  title: '九岸简介',
-			  key: 'base-ninecoast',
-			  link: '/base/ninecoast',
-			},
-			{
-			  text: '国家地区设置',
-			  isLeaf: true,
-			  title: '国家地区设置',
-			  key: 'base-district',
-			  link: '/base/district',
-			},
-			{
-			  text: '默认分类类别',
-			  isLeaf: true,
-			  title: '默认分类类别',
-			  key: 'base-category',
-			  link: '/base/category',
-			},
-			{
-			  text: '图片上传',
-			  isLeaf: true,
-			  title: '图片上传',
-			  key: 'base-picture',
-			  link: '/base/picture',
-			},
-		  ],
+			text: '基础信息维护',
+			icon: 'anticon-database',
+			title: '基础信息维护',
+			key: 'base',
+			children: [
+				{
+					text: '九岸简介',
+					isLeaf: true,
+					title: '九岸简介',
+					key: 'base-ninecoast',
+					link: '/base/ninecoast',
+				},
+				{
+					text: '国家地区设置',
+					isLeaf: true,
+					title: '国家地区设置',
+					key: 'base-district',
+					link: '/base/district',
+				},
+				{
+					text: '默认分类类别',
+					isLeaf: true,
+					title: '默认分类类别',
+					key: 'base-category',
+					link: '/base/category',
+				},
+				{
+					text: '图片上传',
+					isLeaf: true,
+					title: '图片上传',
+					key: 'base-upload',
+					link: '/base/upload',
+				},
+			],
 		},
 		{
-		  text: '产品信息',
-		  icon: 'anticon-copy',
-		  title: '产品信息',
-		  key: 'product',
-		  children: [
-			{
-			  text: '原酒',
-			  isLeaf: true,
-			  title: '原酒',
-			  key: 'product-bulk',
-			  link: '/product/bulk',
-			},
-			{
-			  text: '材料',
-			  isLeaf: true,
-			  title: '材料',
-			  key: 'product-material',
-			  link: '/product/material',
-			},
-			{
-			  text: '产品',
-			  isLeaf: true,
-			  title: '产品',
-			  key: 'product-wine',
-			  link: '/product/wine',
-			},
-			{
-			  text: '其他费用',
-			  isLeaf: true,
-			  title: '其他费用',
-			  key: 'product-other',
-			  link: '/product/other',
-			},
-		  ],
+			text: '产品信息',
+			icon: 'anticon-copy',
+			title: '产品信息',
+			key: 'product',
+			children: [
+				{
+					text: '原酒及材料',
+					isLeaf: true,
+					title: '原酒及材料',
+					key: 'product-material',
+					link: '/product/material',
+				},
+				{
+					text: '产品',
+					isLeaf: true,
+					title: '产品',
+					key: 'product-wine',
+					link: '/product/wine',
+				},
+				{
+					text: '其他费用',
+					isLeaf: true,
+					title: '其他费用',
+					key: 'product-other',
+					link: '/product/other',
+				},
+			],
 		},
 		{
-		  text: '客户',
-		  icon: 'anticon-solution',
-		  title: '客户',
-		  key: 'customer',
-		  children: [
-			{
-			  text: '公司客户',
-			  isLeaf: true,
-			  title: '公司客户',
-			  key: 'customer-company',
-			  link: '/customer/company',
-			},
-			{
-			  text: '用户列表',
-			  isLeaf: true,
-			  title: '用户列表',
-			  key: 'customer-user',
-			  link: '/customer/user',
-			},
-			{
-			  text: '用户订单',
-			  isLeaf: true,
-			  title: '用户订单',
-			  key: 'customer-order',
-			  link: '/customer/order',
-			},
-		  ],
+			text: '客户',
+			icon: 'anticon-solution',
+			title: '客户',
+			key: 'customer',
+			children: [
+				{
+					text: '公司客户',
+					isLeaf: true,
+					title: '公司客户',
+					key: 'customer-company',
+					link: '/customer/company',
+				},
+				{
+					text: '用户列表',
+					isLeaf: true,
+					title: '用户列表',
+					key: 'customer-user',
+					link: '/customer/user',
+				},
+				{
+					text: '用户订单',
+					isLeaf: true,
+					title: '用户订单',
+					key: 'customer-order',
+					link: '/customer/order',
+				},
+			],
 		},
 		{
-		  text: 'APP维护',
-		  icon: 'anticon-mobile',
-		  title: 'APP维护',
-		  key: 'app',
-		  isLeaf: true,
-		  link: '/mobile'
+			text: 'APP维护',
+			icon: 'anticon-mobile',
+			title: 'APP维护',
+			key: 'app',
+			isLeaf: true,
+			link: '/mobile',
 		},
-	  ]
+	]
 };
 const new_token = {
     token: '12345678'
@@ -191,7 +177,7 @@ const productionAreaList = [
 ];
 
 const warehouseList = [
-	{id: 1, name: '上海仓', code: '123', address: 'xx xx xxx'},
+	{id: 1, name: '上海仓', code: '110102', address: 'xx xx xxx'},
 	{id: 2, name: '南通仓', code: '456', address: 'xx xx xxx'},
 	{id: 3, name: '成都仓', code: '789', address: 'xx xx xxx'},
 ];
@@ -238,6 +224,20 @@ const customerCompanyList = [
 	{id: '9', name: '客户9', code: 'KH9', level: 5, contacts: 'aaa', phone: '123456789012', address: 'xxx xx xxxx xx', sales: '销售1', remarks: 'xxxxxxxxxxxxxxxxxxxx\\naaaaaaaaaaaaaaaaaaaaaa'}
 ];
 
+const appUsers = [
+	{id: '1', account: '1234567651', nickName: 'aa', level: 0, phone: '2313123123123', companyName: 'xxxx公司', companyId: '1', businessArea: 'xxxx', license: 'xxx.png', creationTime: '2019/06/01 17:50:00'},
+	{id: '2', account: '1234567652', nickName: 'bb', level: 1, phone: '2313123123123', companyName: 'xxxx公司', companyId: '1', businessArea: 'xxxx', license: 'xxx.png', creationTime: '2019/06/02 17:50:00'},
+	{id: '3', account: '1234567653', nickName: 'cc', level: 2, phone: '2313123123123', companyName: 'xxxx公司', companyId: '1', businessArea: 'xxxx', license: 'xxx.png', creationTime: '2019/06/03 17:50:00'},
+	{id: '4', account: '1234567654', nickName: 'dd', level: 3, phone: '2313123123123', companyName: 'xxxx公司', companyId: '1', businessArea: 'xxxx', license: 'xxx.png', creationTime: '2019/06/04 17:51:00'},
+	{id: '5', account: '1234567655', nickName: 'ee', level: 4, phone: '2313123123123', companyName: 'xxxx公司', companyId: '1', businessArea: 'xxxx', license: 'xxx.png', creationTime: '2019/01/04 17:50:00'},
+	{id: '6', account: '1234567656', nickName: 'ff', level: 5, phone: '2313123123123', companyName: 'xxxx公司', companyId: '1', businessArea: 'xxxx', license: 'xxx.png', creationTime: '2019/02/04 17:50:00'},
+	{id: '7', account: '1234567657', nickName: 'gg', level: 2, phone: '2313123123123', companyName: 'xxxx公司', companyId: '1', businessArea: 'xxxx', license: 'xxx.png', creationTime: '2019/03/04 17:50:00'},
+	{id: '8', account: '1234567658', nickName: 'hh', level: 2, phone: '2313123123123', companyName: 'xxxx公司', companyId: '1', businessArea: 'xxxx', license: 'xxx.png', creationTime: '2019/04/04 17:50:00'},
+	{id: '9', account: '1234567659', nickName: 'ii', level: 1, phone: '2313123123123', companyName: 'xxxx公司', companyId: '1', businessArea: 'xxxx', license: 'xxx.png', creationTime: '2019/05/04 17:50:00'},
+	{id: '10', account: '1234567660', nickName: 'jj', level: 1, phone: '2313123123123', companyName: 'xxxx公司', companyId: '1', businessArea: 'xxxx', license: 'xxx.png', creationTime: '2019/06/04 17:50:00'}
+];
+
+
 const newsList = [
 	{id: '1', title: '新闻1', creationTime: '2019/02/26 00:00:00', topIndex: 1, listImgUrl: '', detailImgUrl: ''},
 	{id: '2', title: '新闻2', creationTime: '2019/02/26 01:00:00', topIndex: 2, listImgUrl: '', detailImgUrl: ''},
@@ -269,6 +269,32 @@ const exchangeRateList = [
 	{id: '2', local: 'USD', foreign: 'CNY', rate: '7'},
 	{id: '3', local: 'USD', foreign: 'AUD', rate: '1.1'}
 ];
+
+const orderFreightList = [
+	{id: '1', oriCode: '110011', oriAddress: 'xx xxx xxx', desCode: '120011', desAddress: 'xx xxx xxx', price: 12.31},
+	{id: '2', oriCode: '110011', oriAddress: 'xx xxx xxx', desCode: '120011', desAddress: 'xx xxx xxx', price: 12.31},
+	{id: '3', oriCode: '110011', oriAddress: 'xx xxx xxx', desCode: '120011', desAddress: 'xx xxx xxx', price: 12.31},
+	{id: '4', oriCode: '110011', oriAddress: 'xx xxx xxx', desCode: '120011', desAddress: 'xx xxx xxx', price: 12.31},
+	{id: '5', oriCode: '110011', oriAddress: 'xx xxx xxx', desCode: '120011', desAddress: 'xx xxx xxx', price: 12.31},
+	{id: '6', oriCode: '110011', oriAddress: 'xx xxx xxx', desCode: '120011', desAddress: 'xx xxx xxx', price: 12.31},
+	{id: '7', oriCode: '110011', oriAddress: 'xx xxx xxx', desCode: '120011', desAddress: 'xx xxx xxx', price: 12.31}
+];
+
+const OceanFreightList = [
+	{id: '1', oriCountry: '法国', desPort: 'xx港口', fee: 123.45, currency: 'USD', containerType: '半柜'},
+	{id: '2', oriCountry: '法国', desPort: 'xx港口', fee: 123.45, currency: 'USD', containerType: '整柜'},
+	{id: '3', oriCountry: '法国', desPort: 'xx港口', fee: 123.45, currency: 'USD', containerType: '半柜'},
+	{id: '4', oriCountry: '法国', desPort: 'xx港口', fee: 123.45, currency: 'USD', containerType: '整柜'},
+	{id: '5', oriCountry: '法国', desPort: 'xx港口', fee: 123.45, currency: 'USD', containerType: '半柜'},
+];
+
+const CustomsInspectionList = [
+	{id: '1', oriQty: 10000, desQty: 20000, fee: 123456, currency: 'USD'},
+	{id: '2', oriQty: 10000, desQty: 20000, fee: 123456, currency: 'USD'},
+	{id: '3', oriQty: 10000, desQty: 20000, fee: 123456, currency: 'USD'},
+	{id: '4', oriQty: 10000, desQty: 20000, fee: 123456, currency: 'USD'},
+	{id: '5', oriQty: 10000, desQty: 20000, fee: 123456, currency: 'USD'},
+]
 
 class NineCoast {
     constructor(req, res){
@@ -306,12 +332,12 @@ class NineCoast {
         return {
 			status: 0, 
 			data: {
-				id: '1',
-				account: 'ncyy1',
-				name: '运营1',
+				id: '2',
+				account: 'ncyy2',
+				name: '运营2',
 				role: '2',
 				creationTime: '2019/05/20 12:00:00',
-				state: 0
+				state: 1
 			}
 		};  
 	}
@@ -382,7 +408,7 @@ class NineCoast {
 	getSysRoleMenu() {
 		return {
 			status: 0,
-			data: ['sys0', 'base1', 'base2']
+			data: ['sys', 'base-category', 'base-district', 'product']
 		};
 
 	}
@@ -424,6 +450,7 @@ class NineCoast {
 	deleteBaseElementInfo() {
 		return {
 			status: 0,
+			msg:'false',
 			data: 'success'
 		};
 	}
@@ -587,7 +614,7 @@ class NineCoast {
 
 // Base End
 
-// Product End
+// Product start
 
 	getBulkList() {
 		return {status: 0, msg: '', data: bulkList};
@@ -618,13 +645,89 @@ class NineCoast {
 		return {status: 0, msg: '', data: imageList};
 	}
 
+	getOrderFreightList() {
+		return {status: 0, msg: '', data: orderFreightList};
+	}
+
+	getOrderFreightInfo() {
+		return {
+			status: 0,
+			data: orderFreightList[0]
+		};
+	}
+
+	updateOrderFreightInfo(req) {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+	deleteOrderFreightInfo() {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+	getOceanFreightList() {
+		return {status: 0, msg: '', data: OceanFreightList};
+	}
+
+	getOceanFreightInfo() {
+		return {
+			status: 0,
+			data: {id: '1', oriCountry: '1', desPort: '2', fee: 123.45, currency: 'USD', containerType: '1'}
+		};
+	}
+
+	updateOceanFreightInfo(req) {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+	deleteOceanFreightInfo() {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+	getCustomsInspectionList() {
+		return {status: 0, msg: '', data: CustomsInspectionList};
+	}
+
+	getCustomsInspectionInfo() {
+		return {
+			status: 0,
+			data: {id: '1', oriQty: 10000, desQty: 20000, fee: 123456, currency: 'USD'},
+		};
+	}
+
+	updateCustomsInspectionInfo(req) {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+	deleteCustomsInspectionInfo() {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+// Product End
+
+// customer start
 
 	getCustomerSales() {
 		return {status: 0, msg: '', data: salesList};
 	}
 
 	getCustomerCompanies() {
-		return {status: 0, msg: '', data: {companies: customerCompanyList, total: 200}};
+		return {status: 0, msg: '', data: customerCompanyList};
 	}
 
 	getCustomerCompanyInfo() {
@@ -647,6 +750,50 @@ class NineCoast {
 			data: 'success'
 		};
 	}
+
+	getAppUsers() {
+		return {status: 0, msg: '', data: {users: appUsers, total: 200}};
+	}
+
+
+	getAppUserInfo() {
+		return {
+			status: 0,
+			data: appUsers[0]
+		};
+	}
+
+	updateAppUserInfo() {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+	deleteAppUserInfo() {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+	getAppUserAuthInfo() {
+		return {
+			status: 0,
+			data: {
+				id: '1',
+				 level: 1,
+				company: ''
+			}
+		};
+	}
+	updateAppUserAuth() {
+		return {status: 0, data: 'success'}
+	}
+// customer End
+
+// app start
+
 
 	getNewsList() {
 		return {status: 0, msg: '', data: newsList};
