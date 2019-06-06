@@ -191,6 +191,16 @@ const imageList = [
 	{id: 6, name: '图片6', type: 'bulk', url: '/assets/tmp/img/6.png'}
 ];
 
+const newImageList = [
+	{id: 1, name: '图片1', type: 'welcome', url: '/assets/tmp/img'},
+	{id: 2, name: '图片2', type: 'welcome', url: '/assets/tmp/img'},
+	{id: 3, name: '图片3', type: 'welcome', url: '/assets/tmp/img'},
+	{id: 4, name: '图片4', type: 'welcome', url: '/assets/tmp/img'},
+	{id: 5, name: '图片5', type: 'welcome', url: '/assets/tmp/img'},
+	{id: 6, name: '图片6', type: 'welcome', url: '/assets/tmp/img'}
+];
+
+
 const salesList = [
 	{ id: '1',  name: '销售1' },
 	{ id: '2',  name: '销售2' },
@@ -222,33 +232,6 @@ const appUsers = [
 	{id: '8', account: '1234567658', nickName: 'hh', level: 2, phone: '2313123123123', companyName: 'xxxx公司', companyId: '1', businessArea: 'xxxx', license: 'xxx.png', creationTime: '2019/04/04 17:50:00'},
 	{id: '9', account: '1234567659', nickName: 'ii', level: 1, phone: '2313123123123', companyName: 'xxxx公司', companyId: '1', businessArea: 'xxxx', license: 'xxx.png', creationTime: '2019/05/04 17:50:00'},
 	{id: '10', account: '1234567660', nickName: 'jj', level: 1, phone: '2313123123123', companyName: 'xxxx公司', companyId: '1', businessArea: 'xxxx', license: 'xxx.png', creationTime: '2019/06/04 17:50:00'}
-];
-
-
-const newsList = [
-	{id: '1', title: '新闻1', creationTime: '2019/02/26 00:00:00', topIndex: 1, listImgUrl: '', detailImgUrl: ''},
-	{id: '2', title: '新闻2', creationTime: '2019/02/26 01:00:00', topIndex: 2, listImgUrl: '', detailImgUrl: ''},
-	{id: '3', title: '新闻3', creationTime: '2019/02/26 02:00:00', topIndex: 3, listImgUrl: '', detailImgUrl: ''},
-	{id: '4', title: '新闻4', creationTime: '2019/02/26 03:00:00', topIndex: 4, listImgUrl: '', detailImgUrl: ''},
-	{id: '5', title: '新闻5', creationTime: '2019/02/26 04:00:00', topIndex: 5, listImgUrl: '', detailImgUrl: ''},
-	{id: '6', title: '新闻6', creationTime: '2019/02/26 05:00:00', topIndex: 6, listImgUrl: '', detailImgUrl: ''},
-	{id: '7', title: '新闻7', creationTime: '2019/02/26 06:00:00', topIndex: 7, listImgUrl: '', detailImgUrl: ''},
-	{id: '8', title: '新闻8', creationTime: '2019/02/26 07:00:00', topIndex: 8, listImgUrl: '', detailImgUrl: ''},
-	{id: '9', title: '新闻9', creationTime: '2019/02/26 08:00:00', topIndex: 9, listImgUrl: '', detailImgUrl: ''},
-	{id: '10', title: '新闻10', creationTime: '2019/02/26 09:00:00', topIndex: 10, listImgUrl: '', detailImgUrl: ''}
-];
-
-const welcomeList = [
-	{id: '1', title: '欢迎页1', creationTime: '2019/02/26 00:00:00', topIndex: 1, imgUrl: ''},
-	{id: '2', title: '欢迎页2', creationTime: '2019/02/26 01:00:00', topIndex: 2, imgUrl: ''},
-	{id: '3', title: '欢迎页3', creationTime: '2019/02/26 02:00:00', topIndex: 3, imgUrl: ''},
-	{id: '4', title: '欢迎页4', creationTime: '2019/02/26 03:00:00', topIndex: 4, imgUrl: ''},
-	{id: '5', title: '欢迎页5', creationTime: '2019/02/26 04:00:00', topIndex: 5, imgUrl: ''},
-	{id: '6', title: '欢迎页6', creationTime: '2019/02/26 05:00:00', topIndex: 6, imgUrl: ''},
-	{id: '7', title: '欢迎页7', creationTime: '2019/02/26 06:00:00', topIndex: 7, imgUrl: ''},
-	{id: '8', title: '欢迎页8', creationTime: '2019/02/26 07:00:00', topIndex: 8, imgUrl: ''},
-	{id: '9', title: '欢迎页9', creationTime: '2019/02/26 08:00:00', topIndex: 9, imgUrl: ''},
-	{id: '10', title: '欢迎页10', creationTime: '2019/02/26 09:00:00', topIndex: 10, imgUrl: ''}
 ];
 
 const exchangeRateList = [
@@ -340,6 +323,19 @@ const Labels = [
 	{id: '1', name: '酒标', code: '001', country: '法国', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', type: '类型', style: '风格', material: '材质', maxFitLevel: 5},
 	{id: '1', name: '酒标', code: '001', country: '法国', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', type: '类型', style: '风格', material: '材质', maxFitLevel: 5},
 	{id: '1', name: '酒标', code: '001', country: '法国', cost: 12.34, currency: 'USD', minQty: 10000, image: '/assets/tmp/img/2.png', type: '类型', style: '风格', material: '材质', maxFitLevel: 5},
+];
+
+const newsList = [
+	{id: '1', title: '这是一个新闻标题1', creationTime: '2019/02/26 00:00:00', topIndex: 1, url: '/assets/tmp/img/'},
+	{id: '2', title: '这是一个新闻标题2', creationTime: '2019/02/26 01:00:00', topIndex: 2, url: '/assets/tmp/img/'},
+	{id: '3', title: '这是一个新闻标题3', creationTime: '2019/02/26 02:00:00', topIndex: 3, url: '/assets/tmp/img/'},
+	{id: '4', title: '这是一个新闻标题4', creationTime: '2019/02/26 03:00:00', topIndex: 4, url: '/assets/tmp/img/'},
+	{id: '5', title: '这是一个新闻标题5', creationTime: '2019/02/26 04:00:00', topIndex: 5, url: '/assets/tmp/img/'},
+	{id: '6', title: '这是一个新闻标题6', creationTime: '2019/02/26 05:00:00', topIndex: 0, url: '/assets/tmp/img/'},
+	{id: '7', title: '这是一个新闻标题7', creationTime: '2019/02/26 06:00:00', topIndex: 0, url: '/assets/tmp/img/'},
+	{id: '8', title: '这是一个新闻标题8', creationTime: '2019/02/26 07:00:00', topIndex: 0, url: '/assets/tmp/img/'},
+	{id: '9', title: '这是一个新闻标题9', creationTime: '2019/02/26 08:00:00', topIndex: 0, url: '/assets/tmp/img/'},
+	{id: '10', title: '这是一个新闻标题10', creationTime: '2019/02/26 09:00:00', topIndex: 0, url: '/assets/tmp/img/'}
 ];
 
 const Bottles = [
@@ -503,7 +499,6 @@ class NineCoast {
 	}
 
 	updateSysRoleMenu(req) {
-		console.log(req.body);
 		return {
 			status: 0,
 			data: 'success'
@@ -730,7 +725,10 @@ class NineCoast {
 		};
 	}
 
-	getImgList() {
+	getImgList(req) {
+		if (req.query.type === 'welcome' || req.query.type === 'news') {
+			return {status: 0, msg: '', data: newImageList}
+		}
 		return {status: 0, msg: '', data: imageList};
 	}
 
@@ -1081,51 +1079,33 @@ class NineCoast {
 // app start
 
 
-	getNewsList() {
-		return {status: 0, msg: '', data: newsList};
+	getAppAds() {
+		return {status: 0, msg: '', data: {list: newsList, total: 20}};
 	}
 
-	getNewsInfo() {
+	getAppAdInfo() {
 		return {
 			status: 0,
-			data: {id: '1', title: '新闻1', creationTime: '2019/02/26 00:00:00', topIndex: 1, listImgUrl: '', detailImgUrl: ''}
+			data: {id: '1', title: '这是一个新闻标题1', creationTime: '2019/02/26 00:00:00', topIndex: 1, url: '2'}
 		};
 	}
 
-	updateNewsInfo() {
-		return {
-			status: 0,
-			data: {id: '1', title: '修改', creationTime: '2019/02/26 00:00:00', topIndex: 1, listImgUrl: '', detailImgUrl: ''}
-		};
-	}
-
-	deleteNewsInfo() {
+	updateAppAdInfo() {
 		return {
 			status: 0,
 			data: 'success'
 		};
 	}
 
-
-	getWelcomePageList() {
-		return {status: 0, msg: '', data: welcomeList};
-	}
-
-	getWelcomePageInfo() {
+	deleteAppAdInfo() {
 		return {
 			status: 0,
-			data: {id: '1', title: '欢迎1', creationTime: '2019/02/26 00:00:00', topIndex: 1, imgUrl: ''}
+			data: 'success'
 		};
 	}
 
-	updateWelcomePageInfo() {
-		return {
-			status: 0,
-			data: {id: '1', title: '修改', creationTime: '2019/02/26 00:00:00', topIndex: 1,  imgUrl: ''}
-		};
-	}
-
-	deleteWelcomePageInfo() {
+	updateAdInfo(req) {
+		console.log(req.body);
 		return {
 			status: 0,
 			data: 'success'
