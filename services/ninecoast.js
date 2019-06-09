@@ -381,6 +381,96 @@ const Bottles = [
 	}
 ];
 
+const WineList = [
+	{id: '1', name: '产品1', country: '法国', area: '波尔多产区', code: 'AAAA', level: 9, state: 1, priority: 5, inventory: 1000, minQty: 2000},
+	{id: '2', name: '产品2', country: '法国', area: '波尔多产区', code: 'BBBB', level: 1, state: 2, priority: 1, inventory: 4000, minQty: 3000},
+];
+
+const UploadList = [
+	{id: '1', name: '上传1', url: '/aaa/bbb', type: 'bottle' },
+	{id: '2', name: '上传2', url: '/aaa/bbb', type: 'cap' },
+	{id: '3', name: '上传3', url: '/aaa/bbb', type: 'cork' },
+	{id: '4', name: '上传4', url: '/aaa/bbb', type: 'news' },
+	{id: '5', name: '上传5', url: '/aaa/bbb', type: 'welcome' },
+	{id: '6', name: '上传6', url: '/aaa/bbb', type: 'box' },
+	{id: '7', name: '上传7', url: '/aaa/bbb', type: 'label' },
+	{id: '8', name: '上传8', url: '/aaa/bbb', type: 'wine' },
+	{id: '9', name: '上传9', url: '/aaa/bbb', type: 'wine' },
+];
+
+const WineInfo = {
+	id: '1',
+	nameEn: 'Golden Fleece',
+	nameZh: '金羊毛精选干红',
+	country: '澳大利亚',
+	area: '南澳产区',
+	businessType: '现货',
+	level: '9',
+	inventory: 1000,
+	alcohol: '10%vol',
+	grapeType: '歌海娜',
+	wineType: '干红',
+	mfg: '澳洲',
+	year: 2016,
+	briefInfo: '本品产自于法国，酒呈深宝石红色，浓郁的黑莓、月桂和薰衣草的气息；口感充满活力，单宁精致，结构清晰，余味悠长。',
+	recommendTemp:'14-18℃',
+	palate: '品鉴表现',
+	collocation: '搭配牛肉、羊肉和烤猪肉等食物',
+	occasion: '自饮、聚会、团圆、婚宴等',
+	containerType: '小柜',
+	isNew: true,
+	isHot: true,
+	isPromotion: true,
+	image: '/aaa/bbb',
+	code: 'AAA',
+	state: '1',
+	warehouse: '上海仓',
+	bulk: '原酒',
+	label: '酒标',
+	bottle: '酒瓶',
+	cork: '酒塞',
+	cap: '酒帽',
+	box: '外箱',
+	laminate: '层板',
+	priority: 5,
+	minQty: 1001
+};
+
+const ChargeList = [
+	{id: 1, type: '1', item: 'aaa费用', unit: '瓶子', wastageRate: '10', cannedWastageRate: '20', currency: 'USD', isAddPrice: true, hasTray: false, isAbnormalBottle: true, isHighBottle: false, calculateType: '百分比'}
+];
+
+const markupdata = [
+	{
+		quantity: 10,
+		list: [
+			{id: 1, rate: 1, calculateType: '1'},
+			{id: 2, rate: 2, calculateType: '1'},
+			{id: 3, rate: 3, calculateType: '2'},
+			{id: 4, rate: 4, calculateType: '2'},
+			{id: 5, rate: 5, calculateType: '1'},
+		]
+	},
+	{
+		quantity: 20,
+		list: [
+			{id: 1, rate: 2, calculateType: 1},
+			{id: 2, rate: 2, calculateType: 2},
+			{id: 3, rate: 3, calculateType: 2},
+			{id: 4, rate: 4, calculateType: 1},
+			{id: 5, rate: 5, calculateType: 1},
+		]
+	}
+];
+
+const QuantityRangeList = [
+	{id: 1, quantity: '10', unit: '箱'}
+];
+
+const OrderList = [
+	{id: 1, orderNo: '123123', waybillNo: '323323', creationTime: '2019/06/09 17:00:00', user: 'user1', sale: 'sale1', status: '已关闭'}
+];
+
 class NineCoast {
     constructor(req, res){
 		this.req = req
@@ -696,6 +786,10 @@ class NineCoast {
 		};
 	}
 
+	getUploadList() {
+		return {status: 0, msg: '', data: {list:UploadList, total: 200} };
+	}
+
 // Base End
 
 // Product start
@@ -1002,6 +1096,84 @@ class NineCoast {
 		};
 	}
 
+	getWineList() {
+		return {status: 0, msg: '', data:  {list: WineList, total: 20 }};
+	}
+
+	getWineInfo() {
+		return {status: 0, data: WineInfo};
+	}
+
+	getWineBaselist() {
+		return {	
+			status: 0,
+			data: {
+				country: counrtyList,
+				warehouse: warehouseList,
+				grape: BaseElementList,
+				wine: BaseElementList,
+				alcohol: BaseElementList,
+				mfg: BaseElementList,
+				bulk: BulkList,
+				bottle: Bottles,
+				cork: Corks,
+				cap: Caps,
+				label: Labels,
+				box: Boxes,
+				laminate: Laminates,
+				img: imageList
+			}
+		}
+	}
+
+	updateWineInfo() {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+	deleteWineInfo() {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+	getChargeList () {
+		return {status: 0, data: ChargeList};
+	}
+
+	getChargeInfo() {
+		return {status: 0, 
+			data:{id: 1, type: '1', item: 'aaa费用', unit: '1', wastageRate: '10', cannedWastageRate: '20', currency: 'USD', isAddPrice: true, hasTray: false, isAbnormalBottle: true, isHighBottle: false, calculateType: '1'}};
+	}
+
+	updateChargeInfo() {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+	deleteChargeInfo() {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+	
+	getMarkupData() {
+		return {
+			status: 0, msg: '', data: markupdata
+		}
+	}
+
+	getQuantityRangeList() {
+		return {
+			status: 0, msg: '', data: QuantityRangeList
+		}
+	}
 // Product End
 
 // customer start
@@ -1072,6 +1244,29 @@ class NineCoast {
 		};
 	}
 	updateAppUserAuth() {
+		return {status: 0, data: 'success'}
+	}
+
+	getOrderList() {
+		return {status: 0, msg: '', data: {list: OrderList, total: 20}};
+	}
+
+	getOrderInfo() {
+		return {status: 0, data: OrderList[0]}
+	}
+
+	getOrderRecieverInfo() {
+		return {status: 0, data: {
+			address: 'xxxxxxxxxxx',
+			name: 'name1',
+			phone: '13546546548'
+		}}
+	}
+
+	updateOrderRecieverInfo() {
+		return {status: 0, data: 'success'}
+	}
+	updateOrderStatus() {
 		return {status: 0, data: 'success'}
 	}
 // customer End
