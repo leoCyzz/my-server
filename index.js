@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const bodyParser = require('body-parser');
 // const mongoService = require('./services/mongoTest')
@@ -9,11 +10,14 @@ const KdbundWechat = require('./services/kdbund');
 const ZWCloud = require('./services/cloud');
 const NineCoast = require('./services/ninecoast');
 
+// app.use(cors({origin: 'http://localhost:4200'}));
+
 app.all('*',function (req, res, next) {
-    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
     res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With, token');
     res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
-  
+    res.header('Access-Control-Allow-Credentials','true');
+
     if (req.method == 'OPTIONS') {
       res.sendStatus(200); // 让options请求快速返回
     }
@@ -21,6 +25,16 @@ app.all('*',function (req, res, next) {
       next();
     }
   });
+
+// var allowCors = function(req, res, next) {
+//     res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
+//     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+//     res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With, token');
+//     res.header('Access-Control-Allow-Credentials','true');
+//     next();
+//   };
+//   app.use(allowCors);//使用跨域中间件
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended : false}));
 

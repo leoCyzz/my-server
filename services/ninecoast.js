@@ -471,6 +471,43 @@ const OrderList = [
 	{id: 1, orderNo: '123123', waybillNo: '323323', creationTime: '2019/06/09 17:00:00', user: 'user1', sale: 'sale1', status: '已关闭'}
 ];
 
+const OrderInfo = {
+	id: '1',
+	orderType: '3',
+	orderNo: '2019021205245248',
+	waybillNo: '123123111122',
+	product: 'AAAA产品',
+	quantity: 20000,
+	creationTime: '2019-06-09',
+	appUser: '我是客户',
+	sale: '销售1',
+	status: '待发货',
+	warehouse: '上海仓',
+	receiveDistrict: '上海 上海市 闵行区',
+	receiveDetail: '古北路1899号',
+	receiveName: '我是收件人',
+	receivePhone: '123456789012',
+	unitPrice: 13.34,
+	totalPrice: 1234567.00,
+	isSample: false,
+	remark: '这是一条备注,这是一条备注',
+	currency: 'CNY',
+	cost: 12345.00,
+
+	label: '酒标1',
+	box: '外箱1',
+	brand: '自有品牌',
+
+	deliveryPort: '澳大利亚港',
+	tradeMode: 'AA贸易',
+	payType: 'BB付款',
+	bottle: '酒瓶1',
+	cap: '酒帽1',
+	cork: '酒塞1',
+	hasTray: true,
+
+};
+
 class NineCoast {
     constructor(req, res){
 		this.req = req
@@ -1252,12 +1289,15 @@ class NineCoast {
 	}
 
 	getOrderInfo() {
-		return {status: 0, data: OrderList[0]}
+		return {status: 0, data: OrderInfo}
 	}
 
 	getOrderRecieverInfo() {
 		return {status: 0, data: {
-			address: 'xxxxxxxxxxx',
+			id: '1',
+			detailAddr: 'detailAddr',
+			districtAddr: 'xx xxx xxx',
+			code: '110010',
 			name: 'name1',
 			phone: '13546546548'
 		}}
@@ -1269,6 +1309,7 @@ class NineCoast {
 	updateOrderStatus() {
 		return {status: 0, data: 'success'}
 	}
+
 // customer End
 
 // app start
@@ -1305,6 +1346,12 @@ class NineCoast {
 			status: 0,
 			data: 'success'
 		};
+	}
+
+	uploadImgFiles(req) {
+		console.log(req.file);
+		return {status: 0,
+			data: 'success'};
 	}
 
 	doAction(actionName) {
