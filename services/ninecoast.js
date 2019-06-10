@@ -442,24 +442,26 @@ const ChargeList = [
 
 const markupdata = [
 	{
+		id: 1,
 		quantity: 10,
-		list: [
-			{id: 1, rate: 1, calculateType: '1'},
-			{id: 2, rate: 2, calculateType: '1'},
-			{id: 3, rate: 3, calculateType: '2'},
-			{id: 4, rate: 4, calculateType: '2'},
-			{id: 5, rate: 5, calculateType: '1'},
-		]
+		value: {
+			star1: { rate: 1, calculateType: '1'},
+			star2: { rate: 2, calculateType: '1'},
+			star3: { rate: 3, calculateType: '1'},
+			star4: { rate: 4, calculateType: '1'},
+			star5: { rate: 6, calculateType: '1'},
+		}
 	},
 	{
-		quantity: 20,
-		list: [
-			{id: 1, rate: 2, calculateType: 1},
-			{id: 2, rate: 2, calculateType: 2},
-			{id: 3, rate: 3, calculateType: 2},
-			{id: 4, rate: 4, calculateType: 1},
-			{id: 5, rate: 5, calculateType: 1},
-		]
+		id: 2,
+		quantity:20,
+		value: {
+			star1: { rate: 2, calculateType: '2'},
+			star2: { rate: 3, calculateType: '2'},
+			star3: { rate: 5, calculateType: '2'},
+			star4: { rate: 6, calculateType: '2'},
+			star5: { rate: 7, calculateType: '2'},
+		}
 	}
 ];
 
@@ -827,6 +829,12 @@ class NineCoast {
 		return {status: 0, msg: '', data: {list:UploadList, total: 200} };
 	}
 
+	deleteUploadInfo() {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
 // Base End
 
 // Product start
@@ -1200,10 +1208,24 @@ class NineCoast {
 		};
 	}
 	
-	getMarkupData() {
+	getMarkupList() {
 		return {
 			status: 0, msg: '', data: markupdata
 		}
+	}
+
+	updateMarkupInfo() {
+		return {
+			status: 0,
+			data: 'success'
+		};
+	}
+
+	deleteMarkupInfo() {
+		return {
+			status: 0,
+			data: 'success'
+		};
 	}
 
 	getQuantityRangeList() {
@@ -1349,7 +1371,6 @@ class NineCoast {
 	}
 
 	uploadImgFiles(req) {
-		console.log(req.file);
 		return {status: 0,
 			data: 'success'};
 	}
