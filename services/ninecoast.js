@@ -444,6 +444,7 @@ const markupdata = [
 	{
 		id: 1,
 		quantity: 10,
+		unit: '1',
 		value: {
 			star1: { rate: 1, calculateType: '1'},
 			star2: { rate: 2, calculateType: '1'},
