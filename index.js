@@ -14,9 +14,9 @@ const NineCoast = require('./services/ninecoast');
 
 app.all('*',function (req, res, next) {
     res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With, token');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With');
     res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
-    res.header('Access-Control-Allow-Credentials','true');
+    res.header('Access-Control-Allow-Credentials','false');
 
     if (req.method == 'OPTIONS') {
       res.sendStatus(200); // 让options请求快速返回
@@ -167,6 +167,14 @@ app.post('/lw/emailBind', function(req, res) {
 app.get('/ida/getIDAInfo',function(req, res){
     let idaObj = new IDA(req,res);
     idaObj.getIDAInfo();
+});
+app.get('/ida/reactjs',function(req, res){
+    let idaObj = new IDA(req,res);
+    idaObj.reactjs();
+});
+app.get('/ida/frontend',function(req, res){
+    let idaObj = new IDA(req,res);
+    idaObj.frontend();
 });
 // --- IDA Part End ---
 

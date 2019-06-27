@@ -1376,6 +1376,13 @@ class NineCoast {
 			data: 'success'};
 	}
 
+	getWelcomeInfo() {
+		return {
+			status: 0,
+			data: 'https://image.freepik.com/free-photo/3d-wooden-table-grunge-black-background_1048-10179.jpg'
+		}
+	}
+
 	doAction(actionName) {
 		let status = 200;
 		if(this[actionName]) {

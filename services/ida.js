@@ -76,6 +76,44 @@ const ida_info = {
     ]
 };
 
+const rr = {
+	"kind": "Listing",
+	"data": {
+		"modhash": "",
+		"dist": 27,
+		"children": [{
+			"kind": "t3",
+			"data": {
+				"title": "Beginner's Thread / Easy Questions (June 2019)",
+			}
+		}, {
+			"kind": "t3",
+			"data": {
+				"title": "Who's Available? [June 2019]",
+			}
+		}]
+	}
+};
+
+const fe = {
+	"kind": "Listing",
+	"data": {
+		"modhash": "",
+		"dist": 27,
+		"children": [{
+			"kind": "t3",
+			"data": {
+				"title": "Beginner's Thread / Easy Questions (June 2022)",
+			}
+		}, {
+			"kind": "t3",
+			"data": {
+				"title": "Who's Available? [June 2022]",
+			}
+		}]
+	}
+};
+
 class IDA {
     constructor(req, res){
 		this.req = req
@@ -89,6 +127,25 @@ class IDA {
         res = {status: 'success', errMsg: '', idaInfo: ida_info};
         
         return self.res.status(status).json(res);
+    }
+
+    reactjs() {
+        let self = this;
+        let status = 200;
+        let res = {status: '', errMsg: ''};
+        res = rr;
+        
+        return self.res.status(status).json(res);  
+    }
+
+
+    frontend() {
+        let self = this;
+        let status = 200;
+        let res = {status: '', errMsg: ''};
+        res = fe;
+        
+        return self.res.status(status).json(res);  
     }
 }
 
