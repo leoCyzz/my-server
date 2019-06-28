@@ -13,10 +13,10 @@ const NineCoast = require('./services/ninecoast');
 // app.use(cors({origin: 'http://localhost:4200'}));
 
 app.all('*',function (req, res, next) {
-    res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With');
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With, token');
     res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
-    res.header('Access-Control-Allow-Credentials','false');
+    res.header('Access-Control-Allow-Credentials','true');
 
     if (req.method == 'OPTIONS') {
       res.sendStatus(200); // 让options请求快速返回
