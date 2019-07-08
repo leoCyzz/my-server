@@ -9,6 +9,7 @@ const IDA = require('./services/ida');
 const KdbundWechat = require('./services/kdbund');
 const ZWCloud = require('./services/cloud');
 const NineCoast = require('./services/ninecoast');
+const NineCoastApp = require('./services/ncapp');
 
 // app.use(cors({origin: 'http://localhost:4200'}));
 
@@ -222,6 +223,24 @@ app.post('/nc/*', function(req, res) {
     const actionName = req.params[0];
     if (actionName) {
         let ncObj = new NineCoast(req, res);
+        ncObj.doAction(actionName);
+    }
+    
+});
+
+app.get('/ncapp/*', function(req, res) {
+    const actionName = req.params[0];
+    if (actionName) {
+        let ncObj = new NineCoastApp(req, res);
+        ncObj.doAction(actionName);
+    }
+    
+});
+
+app.post('/ncapp/*', function(req, res) {
+    const actionName = req.params[0];
+    if (actionName) {
+        let ncObj = new NineCoastApp(req, res);
         ncObj.doAction(actionName);
     }
     

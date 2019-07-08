@@ -383,7 +383,7 @@ const Bottles = [
 
 const WineList = [
 	{id: '1', name: '产品1', country: '法国', area: '波尔多产区', code: 'AAAA', level: 9, state: 1, priority: 5, inventory: 1000, minQty: 2000},
-	{id: '2', name: '产品2', country: '法国', area: '波尔多产区', code: 'BBBB', level: 1, state: 2, priority: 1, inventory: 4000, minQty: 3000},
+	{id: '2', name: '产品2', country: '法国', area: '波尔多产区', code: 'BBBB', level: 1, state: 0, priority: 1, inventory: 4000, minQty: 3000},
 ];
 
 const UploadList = [
@@ -436,9 +436,89 @@ const WineInfo = {
 	minQty: 1001
 };
 
+const WineInfoEdit = {
+	id: '1',
+	nameEn: 'Golden Fleece',
+	nameZh: '金羊毛精选干红',
+	country: '1',
+	area: '2',
+	businessType: 1,
+	level: '9',
+	inventory: 1000,
+	alcohol: '10%vol',
+	grapeType: 1,
+	wineType: 1,
+	mfg: 1,
+	year: 2016,
+	briefInfo: '本品产自于法国，酒呈深宝石红色，浓郁的黑莓、月桂和薰衣草的气息；口感充满活力，单宁精致，结构清晰，余味悠长。',
+	recommendTemp:'14-18℃',
+	palate: '品鉴表现',
+	collocation: '搭配牛肉、羊肉和烤猪肉等食物',
+	occasion: '自饮、聚会、团圆、婚宴等',
+	containerType: 1,
+	isNew: true,
+	isHot: true,
+	isPromotion: true,
+	image: '/aaa/bbb',
+	code: 'AAA',
+	state: '1',
+	warehouse: 1,
+	bulk: 1,
+	label: 1,
+	bottle: 1,
+	cork: 1,
+	cap: 1,
+	box: 1,
+	laminate: 1,
+	priority: 5,
+	minQty: 1001
+};
+
 const ChargeList = [
-	{id: 1, type: '1', item: 'aaa费用', unit: '瓶子', wastageRate: '10', cannedWastageRate: '20', currency: 'USD', isAddPrice: true, hasTray: false, isAbnormalBottle: true, isHighBottle: false, calculateType: '百分比'}
+	{
+		id: '1',
+		type: '1',
+		item: 'aaa费用',
+		unit: '瓶',
+		wastageRate: '10',
+		cannedWastageRate: '20',
+		currency: 'USD',
+		isAddPrice: true,
+		fee: [
+			{
+				key: 'default',
+				keyName: '基础价',
+				value: 222,
+				calculateType: 1
+			}
+		]
+	}
 ];
+
+const ChargeItem = {
+	id: '1',
+	type: 1,
+	item: 'aaa费用',
+	unit: 1,
+	wastageRate: '10',
+	cannedWastageRate: '20',
+	currency: 'USD',
+	isAddPrice: true,
+	fee: [
+		{
+			key: 'default',
+			keyName: '基础价',
+			value: 222,
+			calculateType: 1
+		},
+		{
+			key: 'bt',
+			keyName: '大柜价',
+			value: 55,
+			calculateType: 2
+		}
+	]
+};
 
 const markupdata = [
 	{
@@ -1149,6 +1229,9 @@ class NineCoast {
 	getWineInfo() {
 		return {status: 0, data: WineInfo};
 	}
+	getWineInfoEdit() {
+		return {status: 0, data: WineInfoEdit};
+	}
 
 	getWineBaselist() {
 		return {	
@@ -1191,8 +1274,7 @@ class NineCoast {
 	}
 
 	getChargeInfo() {
-		return {status: 0, 
-			data:{id: 1, type: '1', item: 'aaa费用', unit: '1', wastageRate: '10', cannedWastageRate: '20', currency: 'USD', isAddPrice: true, hasTray: false, isAbnormalBottle: true, isHighBottle: false, calculateType: '1'}};
+		return {status: 0, data:ChargeItem};
 	}
 
 	updateChargeInfo() {
