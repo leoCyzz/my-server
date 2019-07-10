@@ -82,6 +82,32 @@ class NineCoastApp {
 			data: array
 		}
 	}
+
+	getProductsByName() {
+		return {
+			status: 0,
+			data: [
+				{
+					title: '简标定制',
+					content: [
+						{ id: '0', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', title: '黑羊肖恩赤霞珠干红葡萄酒', price: 666.12 },
+						{ id: '1', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', title: '黑羊肖恩赤霞珠干红葡萄酒' },
+						{ id: '2', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', title: '黑羊肖恩赤霞珠干红葡萄酒' },
+						{ id: '3', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', title: '黑羊肖恩赤霞珠干红葡萄酒', price: 500 },
+					],
+				},
+				{
+					title: '品牌现货',
+					content: [
+						{ id: '0', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', title: '1黑羊肖恩赤霞珠干红葡萄酒', price: 666.12 },
+						{ id: '1', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', title: '2黑羊肖恩赤霞珠干红葡萄酒' },
+						{ id: '2', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', title: '3黑羊肖恩赤霞珠干红葡萄酒' },
+						{ id: '3', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', title: '4黑羊肖恩赤霞珠干红葡萄酒', price: 500 },
+					],
+				},
+			]
+		}
+	}
 }
 
 module.exports = NineCoastApp;
