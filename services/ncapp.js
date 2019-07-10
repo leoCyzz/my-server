@@ -108,6 +108,27 @@ class NineCoastApp {
 			]
 		}
 	}
+
+	getLoginState() {
+		return {
+			status: 0,
+			data: {
+				token: '1234567890',
+				brief: {
+					nickName: 'test',
+					avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+					level: 5,
+					address: {
+						name: '收件人',
+						phone: '12345678912',
+						district: '上海 上海市 闵行区',
+						districtCode: '110011',
+						detail: '某某弄某某街道某某号'
+					}
+				}
+			}
+		}
+	}
 }
 
 module.exports = NineCoastApp;
