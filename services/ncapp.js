@@ -52,14 +52,14 @@ class NineCoastApp {
 		}
 	}
 
-	getHomeProducts() {
+	getHomeCategories() {
 		return {
 			status: 0,
 			data: {
 				latest: [
 					{ id: '0', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', title: '黑羊肖恩赤霞珠干红葡萄酒', price: 666.12 },
-					{ id: '1', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', title: '黑羊肖恩赤霞珠干红葡萄酒' },
-					{ id: '2', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', title: '黑羊肖恩赤霞珠干红葡萄酒' },
+					{ id: '1', imgUrl: '', title: '黑羊肖恩赤霞珠干红葡萄酒' },
+					{ id: '2', imgUrl: 'https://image.freepik.com/free-vector/wine.jpg', title: '黑羊肖恩赤霞珠干红葡萄酒' },
 					{ id: '3', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', title: '黑羊肖恩赤霞珠干红葡萄酒', price: 500 },
 				],
 				hot: [
@@ -78,7 +78,7 @@ class NineCoastApp {
 		}
 	}
 
-	getProuductList(req) {
+	getHomeProductList(req) {
 		let array = [];
 		for (let index = 0; index < 10; index++) {
 			const id = Math.ceil(Math.random()*1000000000).toString();
@@ -445,10 +445,7 @@ class NineCoastApp {
 					'https://image.freepik.com/free-psd/monstera-leaves-living-room_53876-93346.jpg',
 					'https://image.freepik.com/free-psd/styled-botanical-design-poster_53876-93350.jpg'
 				],
-				dimension: {
-					unit: '箱',
-					value: 6
-				},
+				dimension: '6瓶/箱',
 				range: [
 					{
 						id: '1',
