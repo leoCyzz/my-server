@@ -526,13 +526,11 @@ class NineCoastApp {
 			data: [
 				{
 					id: '1',
+					productId: '123',
 					type: '现货',
 					nameZh: '金羊毛精选干红',
 					nameEn: 'Golden Fleece',
-					dimension: {
-						unit: '箱',
-						value: 6
-					},
+					dimension: '6瓶/箱',
 					price: 123,
 					imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg'
 				}
