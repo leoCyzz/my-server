@@ -483,6 +483,12 @@ class NineCoastApp {
 			}
 		}
 	}
+	addCart() {
+		return {
+			status: 0,
+			data: 'success'
+		}
+	}
 
 	getCartList() {
 		return {
@@ -494,8 +500,9 @@ class NineCoastApp {
 					warehouse: '上海仓',
 					nameZh: '金羊毛精选干红',
 					nameEn: 'Golden Fleece',
-					box: 2,
-					bottles: 24,
+					sum: '1箱(共12瓶)',
+					qty: 24, // 共几瓶
+            		isSample: false,
 					price: 123.12,
 					imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg'
 				}
@@ -507,8 +514,9 @@ class NineCoastApp {
 		return {
 			status: 0,
 			data: {
-			   sumPrice: 123,
-				freight: 33
+				sum: '2箱（共24瓶）',
+				sumPrice: 123,
+			 	freight: 33
 			}
 		}
 	}
@@ -552,6 +560,37 @@ class NineCoastApp {
 		}
 	}
 
+	getConfirmOrder() {
+		return {
+			status: 0,
+			data: {
+				freight: 20,
+				sumPrice: 200,
+				list: [
+					{
+						id: '123',
+						imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg',
+						nameZh: '金羊毛精选干红',
+						type: '样品',
+						warehouse: '上海仓',
+						unitPrice: 30,
+						sum: '2箱(共24瓶)',
+						sumPrice: 200
+					},
+					{
+						id: '123',
+						imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg',
+						nameZh: '金羊毛精选干红',
+						type: '样品',
+						warehouse: '上海仓',
+						unitPrice: 30,
+						sum: '2箱(共24瓶)',
+						sumPrice: 200
+					}
+				]
+			}
+		}
+	}
 }
 
 module.exports = NineCoastApp;
