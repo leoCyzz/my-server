@@ -435,11 +435,12 @@ class NineCoastApp {
 	}
 
 	getProductInfo() {
+		// const type = Math.random() 
 		return {
 			status: 0,
 			data: {
 				id: '13123123',
-				type: 1, 
+				type: 2, 
 				imgs: [
 					'https://image.freepik.com/free-photo/3d-wooden-table-grunge-black-background_1048-10179.jpg',
 					'https://image.freepik.com/free-psd/monstera-leaves-living-room_53876-93346.jpg',
@@ -560,7 +561,7 @@ class NineCoastApp {
 		}
 	}
 
-	getConfirmOrder() {
+	genConfirmOrder() {
 		return {
 			status: 0,
 			data: {
@@ -586,6 +587,51 @@ class NineCoastApp {
 						unitPrice: 30,
 						sum: '2箱(共24瓶)',
 						sumPrice: 200
+					}
+				]
+			}
+		}
+	}
+
+	getSLDesignInfo() {
+		return {
+			status: 0,
+			data: {
+				product: {
+					id: '123',
+					nameZh: '金羊毛精选干红',
+					nameEn: 'Golden Fleece',
+					imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg',
+					dimension: '6瓶/箱'
+				},
+				boxList: [
+					{
+						id: '123',
+						imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg',
+						name: '标准彩箱',
+						option: '默认配置',
+						isDefault: true
+					},
+					{
+						id: '123',
+						imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg',
+						name: '横卧彩箱',
+						option: '起订量1000箱',
+						isDefault: false
+					},
+					{
+						id: '123',
+						imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg',
+						name: '横卧彩箱',
+						option: '起订量1000箱',
+						isDefault: false
+					},
+					{
+						id: '123',
+						imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg',
+						name: '横卧彩箱',
+						option: '起订量1000箱',
+						isDefault: false
 					}
 				]
 			}
