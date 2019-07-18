@@ -598,36 +598,38 @@ class NineCoastApp {
 			status: 0,
 			data: {
 				product: {
-					id: '123',
+					id: '111',
 					nameZh: '金羊毛精选干红',
 					nameEn: 'Golden Fleece',
 					imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg',
-					dimension: '6瓶/箱'
+					dimension: '6瓶/箱',
+					minQty: 500,
+					samplePrice: 30
 				},
 				boxList: [
 					{
-						id: '123',
+						id: '222',
 						imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg',
 						name: '标准彩箱',
 						option: '默认配置',
 						isDefault: true
 					},
 					{
-						id: '123',
+						id: '333',
 						imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg',
 						name: '横卧彩箱',
 						option: '起订量1000箱',
 						isDefault: false
 					},
 					{
-						id: '123',
+						id: '444',
 						imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg',
 						name: '横卧彩箱',
 						option: '起订量1000箱',
 						isDefault: false
 					},
 					{
-						id: '123',
+						id: '555',
 						imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg',
 						name: '横卧彩箱',
 						option: '起订量1000箱',
@@ -635,6 +637,130 @@ class NineCoastApp {
 					}
 				]
 			}
+		}
+	}
+
+	getWineLabelList() {
+		return {
+			status: 0,
+			data: [
+				{
+					id: '111',
+					imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg',
+					name: '这是酒标名称',
+					sn: '001',
+					price: 1000
+				},
+				{
+					id: '222',
+					imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg',
+					name: '这是酒标名称',
+					sn: '001',
+					price: 1000
+				},
+				{
+					id: '333',
+					imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg',
+					name: '这是酒标名称',
+					sn: '001',
+					price: 1000
+				},
+				{
+					id: '444',
+					imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg',
+					name: '这是酒标名称',
+					sn: '001',
+					price: 1000
+				},
+				{
+					id: '555',
+					imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg',
+					name: '这是酒标名称',
+					sn: '001',
+					price: 1000
+				},
+				{
+					id: '666',
+					imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg',
+					name: '这是酒标名称',
+					sn: '001',
+					price: 1000
+				},
+				{
+					id: '777',
+					imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg',
+					name: '这是酒标名称',
+					sn: '001',
+					price: 1000
+				},
+				{
+					id: '888',
+					imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg',
+					name: '这是酒标名称',
+					sn: '001',
+					price: 1000
+				},
+				{
+					id: '999',
+					imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg',
+					name: '这是酒标名称',
+					sn: '001',
+					price: 1000
+				},
+				{
+					id: '1000',
+					imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg',
+					name: '这是酒标名称',
+					sn: '001',
+					price: 1000
+				},
+			]
+		}
+	}
+
+	getLabelFilterList(req) {
+		return {
+			status: 0,
+			data: [
+				{ 
+					title: '国家',
+					list: [
+						{ type: 'country', key: 'FRA', name: '法国' },
+						{ type: 'country', key: 'CHN', name: '中国' },
+						{ type: 'country', key: 'AUS', name: '澳大利亚' },
+						{ type: 'country', key: 'CL', name: '智利' },
+						{ type: 'country', key: 'OTHER', name: '其他' }
+					],
+				},
+				{ 
+					title: '类型',
+					list: [
+						{ type: 'type', key: 'bld', name: '波尔多' },
+						{ type: 'type', key: 'lgdk', name: '朗格多克' },
+						{ type: 'type', key: 'bgd', name: '勃艮第' },
+						{ type: 'type', key: 'other', name: '其他' }
+					],
+				},
+				{ 
+					title: '风格',
+					list: [
+						{ type: 'style', key: 'byl', name: '白玉露' },
+						{ type: 'style', key: 'xl', name: '西拉' },
+						{ type: 'style', key: 'cxz', name: '赤霞珠' },
+						{ type: 'style', key: 'ghn', name: '歌海娜' },
+						{ type: 'style', key: 'other', name: '其他' }
+					],
+				},
+				{ 
+					title: '材质',
+					list: [
+						{ type: 'material', key: '10', name: '<=10%' },
+						{ type: 'material', key: '103', name: '10%~13%' },
+						{ type: 'material', key: '135', name: '13%~15%' },
+						{ type: 'material', key: '15', name: '>=15%' }
+					],
+				}
+			]
 		}
 	}
 }
