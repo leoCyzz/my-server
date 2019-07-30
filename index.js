@@ -10,6 +10,7 @@ const KdbundWechat = require('./services/kdbund');
 const ZWCloud = require('./services/cloud');
 const NineCoast = require('./services/ninecoast');
 const NineCoastApp = require('./services/ncapp');
+const JYWeb = require('./services/jy');
 
 // app.use(cors({origin: 'http://localhost:4200'}));
 
@@ -247,6 +248,24 @@ app.post('/ncapp/*', function(req, res) {
 });
 
 // --- NineCoast Part End ---
+
+app.get('/jy/*', function(req, res) {
+    const actionName = req.params[0];
+    if (actionName) {
+        let jyObj = new JYWeb(req, res);
+        jyObj.doAction(actionName);
+    }
+    
+});
+
+app.post('/jy/*', function(req, res) {
+    const actionName = req.params[0];
+    if (actionName) {
+        let jyObj = new JYWeb(req, res);
+        jyObj.doAction(actionName);
+    }
+    
+});
 
 app.listen(3000, function(){
     console.log('Service listening on port 3000');
