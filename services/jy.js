@@ -87,7 +87,7 @@ class JYWeb {
         }
     }
 
-    trackInfo() {
+    track() {
         return {
           TrackInfo: {
             WaybillNo: '123123123',
@@ -190,7 +190,7 @@ class JYWeb {
         }
     }
 
-    trackInfod() {
+    trackInfo() {
         return {
             UserId: '111',
             WaybillId: '222',
