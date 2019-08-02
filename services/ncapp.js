@@ -52,7 +52,7 @@ class NineCoastApp {
 			]
 		}
 	}
-
+	
 	getHomeCategories() {
 		return {
 			status: 0,
