@@ -1,18 +1,17 @@
 const userBrief = {
 	token: '1234567890',
-	user: {
+	brief: {
 		nickName: 'test',
 		avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
 		level: 5,
-		
+		address: {
+			name: '收件人',
+			phone: '12345678912',
+			district: '上海 上海市 闵行区',
+			districtCode: '110011',
+			detail: '某某弄某某街道某某号'
+		}
 	},
-	address: {
-		name: '收件人',
-		phone: '12345678912',
-		district: '上海 上海市 闵行区',
-		districtCode: '110011',
-		detail: '某某弄某某街道某某号'
-	}
 };
 
 class NineCoastApp {
@@ -498,13 +497,14 @@ class NineCoastApp {
 			data: [
 				{
 					id: '1',
+					productId:'123',
 					type: '现货',
 					warehouse: '上海仓',
 					nameZh: '金羊毛精选干红',
 					nameEn: 'Golden Fleece',
 					sum: '1箱(共12瓶)',
 					qty: 24, // 共几瓶
-            		isSample: false,
+					isSample: false,
 					price: 123.12,
 					imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg'
 				}
