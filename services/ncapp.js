@@ -287,7 +287,9 @@ class NineCoastApp {
 					name: '我是收件人',
 					phone: '123456789',
 					district: '上海 上海市 闵行区',
-					detail: 'xxxx路xxx弄xxx号'
+					code: '123456',
+					detail: 'xxxx路xxx弄xxx号',
+					isDefault: true
 				},
 				{
 					id: '2',
@@ -543,6 +545,16 @@ class NineCoastApp {
 					dimension: '6瓶/箱',
 					price: 123,
 					imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg'
+				},
+				{
+					id: '2',
+					productId: '12d1223',
+					type: '现货',
+					nameZh: '金羊毛精选干红',
+					nameEn: 'Golden Fleece',
+					dimension: '6瓶/箱',
+					price: 123,
+					imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg'
 				}
 			]
 		}
@@ -762,6 +774,13 @@ class NineCoastApp {
 					],
 				}
 			]
+		}
+	}
+
+	calSLCombinePrice() {
+		return {
+			status: 0,
+			data: 999
 		}
 	}
 }
