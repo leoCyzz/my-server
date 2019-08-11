@@ -106,19 +106,79 @@ class NineCoastApp {
 				{
 					title: '简标定制',
 					content: [
-						{ id: '0', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', title: '黑羊肖恩赤霞珠干红葡萄酒', price: 666.12 },
-						{ id: '1', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', title: '黑羊肖恩赤霞珠干红葡萄酒' },
-						{ id: '2', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', title: '黑羊肖恩赤霞珠干红葡萄酒' },
-						{ id: '3', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', title: '黑羊肖恩赤霞珠干红葡萄酒', price: 500 },
+						{ 
+							id: '0', 
+							imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', 
+							nameZh: '黑羊肖恩赤霞珠干红葡萄酒',
+							nameEn: 'asdasfasdafg',
+							dimension: '1箱(共12瓶)',
+							type: '简标'
+						},
+						{ 
+							id: '1', 
+							imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', 
+							nameZh: '黑羊肖恩赤霞珠干红葡萄酒',
+							nameEn: 'asdasfasdafg',
+							dimension: '1箱(共12瓶)',
+							type: '简标'
+						},
+						{ 
+							id: '2', 
+							imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', 
+							nameZh: '黑羊肖恩赤霞珠干红葡萄酒',
+							nameEn: 'asdasfasdafg',
+							dimension: '1箱(共12瓶)',
+							type: '简标'
+						},
+						{ 
+							id: '3', 
+							imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', 
+							nameZh: '黑羊肖恩赤霞珠干红葡萄酒',
+							nameEn: 'asdasfasdafg',
+							dimension: '1箱(共12瓶)',
+							type: '简标'
+						},
 					],
 				},
 				{
 					title: '品牌现货',
 					content: [
-						{ id: '0', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', title: '1黑羊肖恩赤霞珠干红葡萄酒', price: 666.12 },
-						{ id: '1', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', title: '2黑羊肖恩赤霞珠干红葡萄酒' },
-						{ id: '2', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', title: '3黑羊肖恩赤霞珠干红葡萄酒' },
-						{ id: '3', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', title: '4黑羊肖恩赤霞珠干红葡萄酒', price: 500 },
+						{ 
+							id: '0', 
+							imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', 
+							nameZh: '黑羊肖恩赤霞珠干红葡萄酒',
+							nameEn: 'asdasfasdafg',
+							dimension: '1箱(共12瓶)',
+							type: '现货',
+							price: 123
+						},
+						{ 
+							id: '1', 
+							imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', 
+							nameZh: '黑羊肖恩赤霞珠干红葡萄酒',
+							nameEn: 'asdasfasdafg',
+							dimension: '1箱(共12瓶)',
+							type: '现货',
+							price: 222
+						},
+						{ 
+							id: '2', 
+							imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', 
+							nameZh: '黑羊肖恩赤霞珠干红葡萄酒',
+							nameEn: 'asdasfasdafg',
+							dimension: '1箱(共12瓶)',
+							type: '现货',
+							price: 333
+						},
+						{ 
+							id: '3', 
+							imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', 
+							nameZh: '黑羊肖恩赤霞珠干红葡萄酒',
+							nameEn: 'asdasfasdafg',
+							dimension: '1箱(共12瓶)',
+							type: '现货',
+							price: 444
+						},
 					],
 				},
 			]
@@ -781,6 +841,13 @@ class NineCoastApp {
 		return {
 			status: 0,
 			data: 999
+		}
+	}
+
+	uploadAvatar () {
+		return {
+			status: 0,
+			data: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg'
 		}
 	}
 }
