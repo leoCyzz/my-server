@@ -844,7 +844,32 @@ class NineCoastApp {
 		}
 	}
 
-	uploadAvatar () {
+	uploadAvatar() {
+		return {
+			status: 0,
+			data: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg'
+		}
+	}
+
+	getNineCoastInfo() {
+		return {
+			status: 0,
+			data: {
+				sales: '九岸客服',
+				email: 'ninecoast@gmail.com',
+				phone: '400-080-7099'
+			}
+		}
+	}
+
+	getCompanyAbout() {
+		return {
+			status: 0,
+			data: '上海九岸网络技术有限公司，是中国领先的散装葡萄酒进口贸易商，全球定制酒专家。公司与法国、意大利、西班牙、澳大利亚、智利、南非、摩尔多瓦等国家领先的原酒供货商和装瓶商，建立了长期稳定的战略合作关系，可为客户提供原产地整柜定制/名庄定制、保税区简标酒定制、保税区灌装定制、进口原酒国内灌装等全面定制服务。'
+		}
+	}
+
+	NewsDetail() {
 		return {
 			status: 0,
 			data: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg'
