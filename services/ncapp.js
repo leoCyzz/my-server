@@ -869,7 +869,7 @@ class NineCoastApp {
 		}
 	}
 
-	NewsDetail() {
+	getNewsDetail() {
 		return {
 			status: 0,
 			data: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg'
