@@ -502,7 +502,7 @@ class NineCoastApp {
 			status: 0,
 			data: {
 				id: '13123123',
-				type: 2, 
+				type: 1, 
 				imgs: [
 					'https://image.freepik.com/free-photo/3d-wooden-table-grunge-black-background_1048-10179.jpg',
 					'https://image.freepik.com/free-psd/monstera-leaves-living-room_53876-93346.jpg',
@@ -875,6 +875,75 @@ class NineCoastApp {
 			data: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg'
 		}
 	}
+
+	getOEMMaterials() {
+		return {
+			status: 0,
+			data: {
+				countryList: [
+					{ id: '1', name: '法国' },
+					{ id: '2', name: '中国' },
+					{ id: '3', name: '澳大利亚' },
+					{ id: '4', name: '智利' },
+					{ id: '5', name: '其他' }
+				],
+				bulkList: [
+					{ id: '1', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', nameZh: '库尔瓦拉1', nameEn: 'Coonawarra' },
+					{ id: '2', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', nameZh: '库尔瓦拉2', nameEn: 'Coonawarra' },
+					{ id: '3', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', nameZh: '库尔瓦拉3', nameEn: 'Coonawarra' },
+					{ id: '4', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', nameZh: '库尔瓦拉4', nameEn: 'Coonawarra' },
+					{ id: '5', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', nameZh: '库尔瓦拉5', nameEn: 'Coonawarra' },
+					{ id: '6', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', nameZh: '库尔瓦拉6', nameEn: 'Coonawarra' },
+					{ id: '7', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', nameZh: '库尔瓦拉7', nameEn: 'Coonawarra' },
+				],
+				bottleList: [
+					{ id: '1', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '法国宽肩瓶1', dimension: '330mm500mm宽' },
+					{ id: '2', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '法国宽肩瓶2', dimension: '330mm500mm宽' },
+					{ id: '3', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '法国宽肩瓶3', dimension: '330mm500mm宽' },
+					{ id: '4', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '法国宽肩瓶4', dimension: '330mm500mm宽' },
+					{ id: '5', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '法国宽肩瓶5', dimension: '330mm500mm宽' },
+					{ id: '6', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '法国宽肩瓶6', dimension: '330mm500mm宽' },
+					{ id: '7', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '法国宽肩瓶7', dimension: '330mm500mm宽' },
+				],
+				corkList: [
+					{ id: '1', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '原木塞1', dimension: '默认配置' },
+					{ id: '2', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '原木塞2', dimension: '起订量: 1000箱' },
+					{ id: '3', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '原木塞3', dimension: '起订量: 1000箱' },
+					{ id: '4', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '原木塞4', dimension: '起订量: 1000箱' },
+					{ id: '5', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '原木塞5', dimension: '起订量: 1000箱' },
+					{ id: '6', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '原木塞6', dimension: '起订量: 1000箱' },
+					{ id: '7', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '原木塞7', dimension: '起订量: 1000箱' },
+				],
+				capList: [
+					{ id: '1', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '黑色帽1', dimension: '默认配置' },
+					{ id: '2', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '黑色帽2', dimension: '起订量: 1000箱' },
+					{ id: '3', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '黑色帽3', dimension: '起订量: 1000箱' },
+					{ id: '4', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '黑色帽4', dimension: '起订量: 1000箱' },
+					{ id: '5', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '黑色帽5', dimension: '起订量: 1000箱' },
+					{ id: '6', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '黑色帽6', dimension: '起订量: 1000箱' },
+					{ id: '7', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '黑色帽7', dimension: '起订量: 1000箱' },
+				],
+				boxList: [
+					{ id: '1', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '标准彩箱1', dimension: '默认配置' },
+					{ id: '2', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '标准彩箱2', dimension: '起订量: 1000箱' },
+					{ id: '3', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '标准彩箱3', dimension: '起订量: 1000箱' },
+					{ id: '4', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '标准彩箱4', dimension: '起订量: 1000箱' },
+					{ id: '5', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '标准彩箱5', dimension: '起订量: 1000箱' },
+					{ id: '6', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '标准彩箱6', dimension: '起订量: 1000箱' },
+					{ id: '7', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '标准彩箱7', dimension: '起订量: 1000箱' },
+				],
+				select: {
+					country: '1',
+					bulk: '2',
+					bottle: '3',
+					cork: '4',
+					cap: '5',
+					box: '6'
+				}
+			}
+		}
+	}
+
 }
 
 module.exports = NineCoastApp;
