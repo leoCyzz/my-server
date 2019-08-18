@@ -944,6 +944,45 @@ class NineCoastApp {
 		}
 	}
 
+	getOEMOptions() {
+		return {
+			status: 0,
+			data: {
+				tray: [
+					{ id: '1', name: '是' },
+					{ id: '2', name: '否' },
+				],
+				payment: [
+					{ id: '1', name: '前T/T-后T/T' },
+					{ id: '2', name: '前T/T-后D/P' },
+					{ id: '3', name: 'LC(1个月)' },
+					{ id: '4', name: 'LC(2个月)' },
+					{ id: '5', name: 'LC(3个月)' },
+				],
+				port: [
+					{ id: '1', name: '上海' },
+					{ id: '2', name: '南通' },
+					{ id: '3', name: '天津' },
+					{ id: '4', name: '成都' },
+					{ id: '5', name: '宁波' },
+					{ id: '6', name: '深圳' },
+					{ id: '7', name: '烟台' },
+				],
+				settlement: [
+					{ id: '1', name: 'FOB(产品成本价货币)' },
+					{ id: '2', name: 'CIF(产品成本价货币)' },
+					{ id: '3', name: '港口自提(RMB)' },
+				],
+				select: {
+					tray: '1',
+					payment: '2',
+					port: '3',
+					settlement: '4'
+				},
+				minQty: 123
+			}
+		}
+	}
 }
 
 module.exports = NineCoastApp;
