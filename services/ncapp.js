@@ -931,15 +931,7 @@ class NineCoastApp {
 					{ id: '5', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '标准彩箱5', dimension: '起订量: 1000箱' },
 					{ id: '6', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '标准彩箱6', dimension: '起订量: 1000箱' },
 					{ id: '7', imgUrl: 'https://image.freepik.com/free-vector/wine_24908-53989.jpg', name: '标准彩箱7', dimension: '起订量: 1000箱' },
-				],
-				select: {
-					country: '1',
-					bulk: '2',
-					bottle: '3',
-					cork: '4',
-					cap: '5',
-					box: '6'
-				}
+				]
 			}
 		}
 	}
@@ -973,12 +965,6 @@ class NineCoastApp {
 					{ id: '2', name: 'CIF(产品成本价货币)' },
 					{ id: '3', name: '港口自提(RMB)' },
 				],
-				select: {
-					tray: '1',
-					payment: '2',
-					port: '3',
-					settlement: '4'
-				},
 				minQty: 123
 			}
 		}
