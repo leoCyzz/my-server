@@ -502,11 +502,10 @@ class NineCoastApp {
 			status: 0,
 			data: {
 				id: '13123123',
-				type: 1, 
+				type: 2, 
 				imgs: [
 					'https://image.freepik.com/free-photo/3d-wooden-table-grunge-black-background_1048-10179.jpg',
-					'https://image.freepik.com/free-psd/monstera-leaves-living-room_53876-93346.jpg',
-					'https://image.freepik.com/free-psd/styled-botanical-design-poster_53876-93350.jpg'
+					'https://image.freepik.com/free-psd/monstera-leaves-living-room_53876-93346.jpg'
 				],
 				dimension: '6瓶/箱',
 				range: [
