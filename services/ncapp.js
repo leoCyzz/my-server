@@ -968,6 +968,25 @@ class NineCoastApp {
 			}
 		}
 	}
+
+	genCustomConfirmOrder () {
+		return {
+			status: 0,
+			data: {
+				unitPrice: 100,
+				orderSum: '6000瓶',
+				sumPrice: 600000,
+				currency: 'CNY'
+			}
+		}
+	}
+
+	confirmCustomOrder() {
+		return {
+			status: 0,
+			data: 'success'
+		}
+	}
 }
 
 module.exports = NineCoastApp;
