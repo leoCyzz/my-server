@@ -497,12 +497,12 @@ class NineCoastApp {
 	}
 
 	getProductInfo() {
-		// const type = Math.random() 
+		const type = Math.ceil(Math.random()*10) % 2 === 0 ? 1 : 2;
 		return {
 			status: 0,
 			data: {
 				id: '13123123',
-				type: 2, 
+				type: type, 
 				imgs: [
 					'https://image.freepik.com/free-photo/3d-wooden-table-grunge-black-background_1048-10179.jpg',
 					'https://image.freepik.com/free-psd/monstera-leaves-living-room_53876-93346.jpg'
