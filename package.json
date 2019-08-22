@@ -10,8 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "buffer": "^5.4.0",
     "cors": "^2.8.5",
     "express": "^4.16.3",
+    "jsrsasign": "^8.0.12",
     "mongodb": "^3.1.0-beta4"
   }
 }

@@ -1,3 +1,5 @@
+const PaySign = require('./paySign');
+
 const userBrief = {
 	token: '1234567890',
 	user: {
@@ -464,27 +466,7 @@ class NineCoastApp {
 			status: 0,
 			data: {
 				id: '123',
-				reciver: {
-					id: '',
-					name: '',
-					phone: '',
-					detail: '',
-					district: ''
-				},
-				product: {
-					imgUrl: '',
-					nameZh: '',
-					nameEn: '',
-					quantity: '2箱(共24瓶)',
-					type: '现货',
-					dimension: {
-						unit: '箱',
-						value: 6
-					},
-					price: 123,
-					freight: 12,
-					sumPrice: 135,
-				},
+				sumPrice: 345,
 			}
 		}
 	}
@@ -985,6 +967,30 @@ class NineCoastApp {
 		return {
 			status: 0,
 			data: 'success'
+		}
+	}
+
+	pay() {
+		let params = {
+			app_id: 2016101400684492,
+			biz_content: '{"timeout_express":"30m","product_code":"QUICK_MSECURITY_PAY","total_amount":"0.01","subject":"1","body":"我是测试数据","out_trade_no":"IQJZSRC1YMQB5HU"}',
+			subject: '1',
+			method: 'alipay.trade.app.pay',
+			charset: 'utf-8',
+			format: 'json',
+			sign_type: 'RSA2',
+			timestamp: '2019-08-22 15:26:00',
+			version: '1.0',
+		};
+
+		let signQuery = PaySign.aliSign(params);
+		console.log('signQuery', signQuery);
+
+		return {
+			status: 0,
+			data: {
+				orderStr: signQuery
+			}
 		}
 	}
 }
