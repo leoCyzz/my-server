@@ -35,6 +35,7 @@ PaySign.aliSign = (object) => {
 
   // Create signature
   let alg = {RSA: 'SHA1withRSA', RSA2: 'SHA256withRSA'}[object.sign_type];
+  console.log(alg);
   let sig = new RSASign.KJUR.crypto.Signature({alg});
   const key = RSASign.KEYUTIL.getKey(privateKey);
   sig.init(key);

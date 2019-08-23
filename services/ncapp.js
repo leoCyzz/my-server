@@ -972,15 +972,15 @@ class NineCoastApp {
 
 	pay() {
 		let params = {
-			app_id: 2016101400684492,
-			biz_content: '{"timeout_express":"30m","product_code":"QUICK_MSECURITY_PAY","total_amount":"0.01","subject":"1","body":"我是测试数据","out_trade_no":"IQJZSRC1YMQB5HU"}',
-			subject: '1',
+			// app_id: 2016101400684492,
+			app_id: 2019081966332559,
 			method: 'alipay.trade.app.pay',
 			charset: 'utf-8',
-			format: 'json',
 			sign_type: 'RSA2',
-			timestamp: '2019-08-22 15:26:00',
+			timestamp: '2019-08-23 16:43:00',
 			version: '1.0',
+			notify_url: 'http://192.168.1.16:3000/ncapp/a.html',
+			biz_content: '{"timeout_express":"30m","product_code":"QUICK_MSECURITY_PAY","total_amount":"0.01","subject":"ssuubbjj","body":"我是测试数据","out_trade_no":"IQJZSRC1YMQB5HU"}',
 		};
 
 		let signQuery = PaySign.aliSign(params);
