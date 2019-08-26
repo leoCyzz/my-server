@@ -37,7 +37,7 @@ PaySign.aliSign = (object) => {
     aQuery += `${(i === 0) ? '' : '&'}${key}=${value}`;
     sortedQuery += `${(i === 0) ? '' : '&'}${encodeURIComponent(key)}=${encodeURIComponent(value)}`;
   }
-  console.log(aQuery + '\n');
+  // console.log(aQuery + '\n');
 
   // Create signature
   let alg = {RSA: 'SHA1withRSA', RSA2: 'SHA256withRSA'}[object.sign_type];

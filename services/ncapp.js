@@ -465,8 +465,8 @@ class NineCoastApp {
 		return {
 			status: 0,
 			data: {
-				id: '123',
-				sumPrice: 345,
+				idList: ['123'],
+				totalPrice: 345,
 			}
 		}
 	}
@@ -970,26 +970,47 @@ class NineCoastApp {
 		}
 	}
 
-	pay() {
-		let params = {
-			app_id: 2016101400684492,
-			// app_id: 2019081966332559,
-			method: 'alipay.trade.app.pay',
-			charset: 'utf-8',
-			sign_type: 'RSA2',
-			timestamp: '2019-08-25 01:28:26',
-			version: '1.0',
-			notify_url: 'http://192.168.1.16:3000/ncapp/a.html',
-			biz_content: '{"body":"我是测试数据","subject":"ssuubbjj","out_trade_no":"IQJZSRC1YMQB5HU","total_amount":"0.01","product_code":"QUICK_MSECURITY_PAY"}',
-		};
-
-		let signQuery = PaySign.aliSign(params);
-		console.log('signQuery', signQuery);
-
-		return {
-			status: 0,
-			data: {
-				orderStr: signQuery
+	pay(req) {
+		const {orderIds, payType} = req.body;
+		if (payType === 'alipay') {
+			let params = {
+				app_id: 2016101400684492,
+				// app_id: 2019081966332559,
+				method: 'alipay.trade.app.pay',
+				charset: 'utf-8',
+				sign_type: 'RSA2',
+				timestamp: '2019-08-25 01:28:26',
+				version: '1.0',
+				notify_url: 'http://192.168.1.16:3000/ncapp/a.html',
+				biz_content: '{"body":"我是测试数据","subject":"ssuubbjj","out_trade_no":"IQJZSRC1YMQB5HU","total_amount":"0.01","product_code":"QUICK_MSECURITY_PAY"}',
+			};
+	
+			let signQuery = PaySign.aliSign(params);
+			// console.log('signQuery', signQuery);
+	
+			return {
+				status: 0,
+				data: {
+					payResult: signQuery
+				}
+			}
+		}
+		
+		if (payType === 'wxpay') {
+			let order = {
+				"appid":"wxb4ba3c02aa476ea1",
+				"partnerid":"1900006771",
+				"package":"Sign=WXPay",
+				"noncestr":"23e2dde0630e1c3a1bb56174a6371bdf",
+				"timestamp":"1566806448",
+				"prepayid":"wx26160048482574a2214191081608900032",
+				"sign":"55429931E3FB03EE71F8037ADEA963CB"
+			};
+			return {
+				status: 0,
+				data: {
+					payResult: order
+				}
 			}
 		}
 	}
