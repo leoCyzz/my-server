@@ -432,7 +432,7 @@ class NineCoastApp {
 			status: 0,
 			data: {
 				id: '123',
-				reciver: {
+				receiver: {
 					id: '1',
 					name: '我是收件人',
 					phone: '123456789',
