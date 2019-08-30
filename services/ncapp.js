@@ -997,14 +997,15 @@ class NineCoastApp {
 		}
 		
 		if (payType === 'wxpay') {
+			// e599136ee5bef3fdc2bac8b1ea9cc62e
 			let order = {
-				"appid":"wxb4ba3c02aa476ea1",
-				"partnerid":"1900006771",
-				"package":"Sign=WXPay",
-				"noncestr":"23e2dde0630e1c3a1bb56174a6371bdf",
-				"timestamp":"1566806448",
-				"prepayid":"wx26160048482574a2214191081608900032",
-				"sign":"55429931E3FB03EE71F8037ADEA963CB"
+				"appid": "wx67b789f250efbf11",
+				"partnerid": "1552168361",
+				"package": "Sign=WXPay",
+				"noncestr": "sf0MfuO8a8pEAS08MxSlazu90MUjX1uU",
+				"timestamp": '1567132609',
+				"prepayid": "wx30103637891137f199d19d381791463200",
+				"sign": "1C5D34B4EFE8EB5EC1A797324F3A07A1"
 			};
 			return {
 				status: 0,
