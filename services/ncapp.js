@@ -228,49 +228,54 @@ class NineCoastApp {
 				{ 
 					title: '国家',
 					list: [
-						{ type: 'country', key: 'FRA', name: '法国' },
-						{ type: 'country', key: 'CHN', name: '中国' },
-						{ type: 'country', key: 'AUS', name: '澳大利亚' },
-						{ type: 'country', key: 'CL', name: '智利' },
-						{ type: 'country', key: 'OTHER', name: '其他' }
+						{ id: 'FRA', name: '法国' },
+						{ id: 'CHN', name: '中国' },
+						{ id: 'AUS', name: '澳大利亚' },
+						{ id: 'CL', name: '智利' },
+						{ id: 'OTHER', name: '其他' }
 					],
+					type: 'country',
 				},
 				{ 
 					title: '产地',
 					list: [
-						{ type: 'area', key: 'bld', name: '波尔多' },
-						{ type: 'area', key: 'lgdk', name: '朗格多克' },
-						{ type: 'area', key: 'bgd', name: '勃艮第' },
-						{ type: 'area', key: 'other', name: '其他' }
+						{ id: 'bld', name: '波尔多' },
+						{ id: 'lgdk', name: '朗格多克' },
+						{ id: 'bgd', name: '勃艮第' },
+						{ id: 'other', name: '其他' }
 					],
+					type: 'area',
 				},
 				{ 
 					title: '葡萄品种',
 					list: [
-						{ type: 'grape', key: 'byl', name: '白玉露' },
-						{ type: 'grape', key: 'xl', name: '西拉' },
-						{ type: 'grape', key: 'cxz', name: '赤霞珠' },
-						{ type: 'grape', key: 'ghn', name: '歌海娜' },
-						{ type: 'grape', key: 'other', name: '其他' }
+						{ id: 'byl', name: '白玉露' },
+						{ id: 'xl', name: '西拉' },
+						{ id: 'cxz', name: '赤霞珠' },
+						{ id: 'ghn', name: '歌海娜' },
+						{ id: 'other', name: '其他' }
 					],
+					type: 'grape',
 				},
 				{ 
 					title: '酒精度',
 					list: [
-						{ type: 'alcohol', key: '10', name: '<=10%' },
-						{ type: 'alcohol', key: '103', name: '10%~13%' },
-						{ type: 'alcohol', key: '135', name: '13%~15%' },
-						{ type: 'alcohol', key: '15', name: '>=15%' }
+						{ id: '10', name: '<=10%' },
+						{ id: '103', name: '10%~13%' },
+						{ id: '135', name: '13%~15%' },
+						{ id: '15', name: '>=15%' }
 					],
+					type: 'alcohol',
 				},
 				{ 
 					title: '灌装地区',
 					list: [
-						{ type: 'mfg', key: '1', name: '国内灌装' },
-						{ type: 'mfg', key: '2', name: '保税区灌装' },
-						{ type: 'mfg', key: '3', name: '国外灌装' },
-						{ type: 'mfg', key: '4', name: '其他' }
+						{ id: '1', name: '国内灌装' },
+						{ id: '2', name: '保税区灌装' },
+						{ id: '3', name: '国外灌装' },
+						{ id: '4', name: '其他' }
 					],
+					type: 'mfg',
 				}
 			]
 		}
@@ -779,40 +784,44 @@ class NineCoastApp {
 				{ 
 					title: '国家',
 					list: [
-						{ type: 'country', key: 'FRA', name: '法国' },
-						{ type: 'country', key: 'CHN', name: '中国' },
-						{ type: 'country', key: 'AUS', name: '澳大利亚' },
-						{ type: 'country', key: 'CL', name: '智利' },
-						{ type: 'country', key: 'OTHER', name: '其他' }
+						{ id: 'FRA', name: '法国' },
+						{ id: 'CHN', name: '中国' },
+						{ id: 'AUS', name: '澳大利亚' },
+						{ id: 'CL', name: '智利' },
+						{ id: 'OTHER', name: '其他' }
 					],
+					type: 'country',
 				},
 				{ 
 					title: '类型',
 					list: [
-						{ type: 'type', key: 'bld', name: '波尔多' },
-						{ type: 'type', key: 'lgdk', name: '朗格多克' },
-						{ type: 'type', key: 'bgd', name: '勃艮第' },
-						{ type: 'type', key: 'other', name: '其他' }
+						{ id: 'bld', name: '波尔多' },
+						{ id: 'lgdk', name: '朗格多克' },
+						{ id: 'bgd', name: '勃艮第' },
+						{ id: 'other', name: '其他' }
 					],
+					type: 'type',
 				},
 				{ 
 					title: '风格',
 					list: [
-						{ type: 'style', key: 'byl', name: '白玉露' },
-						{ type: 'style', key: 'xl', name: '西拉' },
-						{ type: 'style', key: 'cxz', name: '赤霞珠' },
-						{ type: 'style', key: 'ghn', name: '歌海娜' },
-						{ type: 'style', key: 'other', name: '其他' }
+						{ id: 'byl', name: '白玉露' },
+						{ id: 'xl', name: '西拉' },
+						{ id: 'cxz', name: '赤霞珠' },
+						{ id: 'ghn', name: '歌海娜' },
+						{ id: 'other', name: '其他' }
 					],
+					type: 'style',
 				},
 				{ 
 					title: '材质',
 					list: [
-						{ type: 'material', key: '10', name: '<=10%' },
-						{ type: 'material', key: '103', name: '10%~13%' },
-						{ type: 'material', key: '135', name: '13%~15%' },
-						{ type: 'material', key: '15', name: '>=15%' }
+						{ id: '10', name: '<=10%' },
+						{ id: '103', name: '10%~13%' },
+						{ id: '135', name: '13%~15%' },
+						{ id: '15', name: '>=15%' }
 					],
+					type: 'material',
 				}
 			]
 		}
